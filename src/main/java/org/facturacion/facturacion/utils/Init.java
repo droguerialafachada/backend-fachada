@@ -15,6 +15,7 @@ public class Init implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        usuarioRepository.deleteAll();
         Usuario usuario = new Usuario();
         usuario.setContrasenia(new BCryptPasswordEncoder().encode("admin"));
         usuario.setNombre("admin@gmail.com");

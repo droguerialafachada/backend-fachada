@@ -2,6 +2,7 @@ package org.facturacion.facturacion.services.implementation;
 
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.domain.Cliente;
+import org.facturacion.facturacion.dto.cliente.ActualizarClienteDTO;
 import org.facturacion.facturacion.dto.cliente.ClienteDTO;
 import org.facturacion.facturacion.dto.cliente.CrearClienteDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteExisteException;
@@ -10,6 +11,9 @@ import org.facturacion.facturacion.services.specification.ClienteService;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 @AllArgsConstructor
 public class IClienteService implements ClienteService {
@@ -17,8 +21,12 @@ public class IClienteService implements ClienteService {
     private final ClienteRepository clienteRepository;
 
     @Override
-    public void listarClientes() {
+    public List<ClienteDTO> listarClientes() {
 
+        return clienteRepository.findAllByEliminadoIsFalse().stream().map(
+                cliente ->
+                        new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"")
+        ).toList();
     }
 
     @Override
@@ -27,28 +35,47 @@ public class IClienteService implements ClienteService {
     }
 
     @Override
-    public void verificarSiExiteCliente(String cedula){
-
+    public Boolean verificarSiExiteCliente(String cedula){
+        return clienteRepository.existsByCedula(cedula);
     }
 
     @Override
-    public ClienteDTO crearCliente(@Validated CrearClienteDTO crearClienteDTO) {
+    public ClienteDTO crearCliente(CrearClienteDTO crearClienteDTO) {
 
         if(clienteRepository.findByCedula(crearClienteDTO.cedula()) != null){
-            throw new ClienteExisteException(crearClienteDTO.cedula());
+            throw new ClienteExisteException("El cliente con cedula "+crearClienteDTO.cedula()+" ya existe");
         }
         Cliente cliente = crearClienteDTO.ToEntity();
-        return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(), cliente.getFechaCreacion());
+        clienteRepository.save(cliente);
+        return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
 
     }
 
     @Override
-    public void actualizarCliente(ClienteDTO clienteDTO) {
+    public ClienteDTO actualizarCliente(ActualizarClienteDTO clienteDTO, Integer id) {
+        Optional<Cliente> cliente = clienteRepository.findById(id);
 
+        if(cliente.isEmpty()) throw new ClienteExisteException("El cliente con id "+id+" no existe");
+
+        Cliente clienteActualizado = cliente.get();
+        clienteActualizado.setNombre(clienteDTO.nombre());
+        clienteActualizado.setDireccion(clienteDTO.direccion());
+        clienteActualizado.setCorreo(clienteDTO.correo());
+        clienteActualizado.setActivo(clienteDTO.activo());
+        clienteRepository.save(clienteActualizado);
+        return new ClienteDTO(clienteActualizado.getCedula(), clienteActualizado.getDireccion(), clienteActualizado.getCorreo(), clienteActualizado.isActivo(), clienteActualizado.getFechaCreacion(), clienteActualizado.getNombre(), clienteActualizado.getId()+"");
     }
 
     @Override
-    public void eliminarCliente(Integer id) {
+    public Boolean eliminarCliente(Integer id) {
+
+        Optional<Cliente> cliente = clienteRepository.findById(id);
+        if(cliente.isEmpty()) throw new ClienteExisteException("El cliente con id "+id+" no existe");
+
+        Cliente clienteEliminado = cliente.get();
+        clienteEliminado.setEliminado(true);
+        clienteRepository.save(clienteEliminado);
+        return true;
 
     }
 }

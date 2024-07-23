@@ -9,7 +9,9 @@ public record ClienteDTO(
        String direccion,
        String correo,
        boolean activo,
-       Date fechaCreacion
+       Date fechaCreacion,
+       String nombre,
+       String id
 ) {
 
 }

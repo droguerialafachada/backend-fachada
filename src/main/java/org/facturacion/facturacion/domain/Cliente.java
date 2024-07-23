@@ -36,6 +36,9 @@ public class Cliente {
     private boolean activo;
 
     @Column(nullable = false)
+    private boolean eliminado;
+
+    @Column(nullable = false)
     private Date fechaCreacion;
 
     @OneToMany(mappedBy = "cliente")
