@@ -1,8 +1,11 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
+import org.facturacion.facturacion.domain.Cliente;
 import org.facturacion.facturacion.dto.cliente.ClienteDTO;
+import org.facturacion.facturacion.dto.cliente.CrearClienteDTO;
 import org.facturacion.facturacion.services.specification.ClienteService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -29,8 +32,8 @@ public class ClienteController {
     }
 
     @PostMapping("/crear")
-    public void crearCliente(@RequestBody ClienteDTO clienteDTO){
-        clienteService.crearCliente(clienteDTO);
+    public ResponseEntity<ClienteDTO> crearCliente(@RequestBody CrearClienteDTO crearClienteDTO){
+        return ResponseEntity.ok(clienteService.crearCliente(crearClienteDTO));
     }
 
     @PutMapping("/actualizar")

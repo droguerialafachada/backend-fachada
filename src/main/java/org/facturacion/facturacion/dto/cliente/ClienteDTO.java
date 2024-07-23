@@ -1,6 +1,15 @@
 package org.facturacion.facturacion.dto.cliente;
 
-public record ClienteDTO(
+import org.facturacion.facturacion.domain.Cliente;
 
+import java.util.Date;
+
+public record ClienteDTO(
+       String cedula,
+       String direccion,
+       String correo,
+       boolean activo,
+       Date fechaCreacion
 ) {
+
 }
