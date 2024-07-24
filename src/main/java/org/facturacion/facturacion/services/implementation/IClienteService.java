@@ -9,7 +9,6 @@ import org.facturacion.facturacion.exceptions.cliente.ClienteExisteException;
 import org.facturacion.facturacion.repositories.ClienteRepository;
 import org.facturacion.facturacion.services.specification.ClienteService;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 import java.util.Optional;

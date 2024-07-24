@@ -1,4 +1,4 @@
-package org.facturacion.facturacion.handlers.UsuarioHandler;
+package org.facturacion.facturacion.handlers.usuarioHandler;
 
 import org.facturacion.facturacion.dto.validationError.ValidationError;
 import org.facturacion.facturacion.exceptions.usuario.InformacionIncorrectaException;
