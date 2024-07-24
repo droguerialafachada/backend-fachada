@@ -1,9 +1,6 @@
 package org.facturacion.facturacion.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,4 +34,10 @@ public class Producto {
 
     @Column(nullable = false)
     private boolean eliminado;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_impuesto_id")
+    private TipoImpuesto impuesto;
+
+
 }

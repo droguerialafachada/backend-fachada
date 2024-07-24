@@ -14,14 +14,13 @@ public class DetalleFactura {
     private Integer id;
 
     @Column(nullable = false, precision = 2)
-    private double iva;
+    private Integer cantidad;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private TipoImpuesto impuesto;
+    @Column(nullable = false, precision = 4)
+    private Double precio;
 
     @OneToOne
-    private Producto productoList;
+    private Producto producto;
 
     @ManyToOne
     @JoinColumn(name = "factura_id")

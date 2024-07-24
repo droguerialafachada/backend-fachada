@@ -1,13 +1,11 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
-import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.dto.detalleFactura.DetFacturaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
 import org.facturacion.facturacion.services.specification.ProductoService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -47,13 +45,17 @@ public class ProductoController {
 
     @PutMapping("/actualizar")
     public ResponseEntity<ProductoDTO> actualizarProducto(@RequestBody ActualizarProductoDTO producto) {
-        System.out.println("producto = " + producto);
         return ResponseEntity.ok(this.productoService.actualizarProducto(producto));
     }
 
     @DeleteMapping("/eliminar/{codigo}")
     public ResponseEntity<Boolean> eliminarProducto(@PathVariable String codigo) {
         return ResponseEntity.ok(this.productoService.eliminarProducto(codigo));
+    }
+
+    @GetMapping("/tipos-impuestos")
+    public ResponseEntity<List<String>> getTiposImpuestos() {
+        return ResponseEntity.ok(this.productoService.getTiposImpuestos());
     }
 
 

@@ -3,11 +3,13 @@ package org.facturacion.facturacion.services.implementation;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.domain.Producto;
+import org.facturacion.facturacion.domain.TipoImpuesto;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
 import org.facturacion.facturacion.exceptions.producto.*;
 import org.facturacion.facturacion.repositories.ProductoRepository;
+import org.facturacion.facturacion.repositories.TipoImpuestoRepository;
 import org.facturacion.facturacion.services.specification.ProductoService;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -19,6 +21,7 @@ import java.util.Optional;
 public class IProductoService implements ProductoService {
 
     private final ProductoRepository productoRepository;
+    private final TipoImpuestoRepository tipoImpuestoRepository;
 
     public List<ProductoDTO> listarProducto() {
         return productoRepository.findAllByEliminadoIsFalse().stream().map(ProductoDTO::fromEntity).toList();
@@ -46,7 +49,18 @@ public class IProductoService implements ProductoService {
             throw new ProductoNombreException("El nombre del producto no puede ser vacio");
         }
 
+        if(productoDTO.impuesto() == null || productoDTO.impuesto().isEmpty()){
+            throw new ProductoImpuestoException("El impuesto no debe estar vacio");
+        }
+
+        if(tipoImpuestoRepository.findByNombre(productoDTO.impuesto()) == null){
+            throw  new ProductoImpuestoException("El tipo de impuesto no se ha encontrado");
+        }
+
+
         Producto producto = productoDTO.toEntity();
+        TipoImpuesto impuesto = tipoImpuestoRepository.findByNombre(productoDTO.impuesto());
+        producto.setImpuesto(impuesto);
 
         return ProductoDTO.fromEntity(this.productoRepository.save(producto));
 
@@ -90,6 +104,11 @@ public class IProductoService implements ProductoService {
     }
 
     public void verificarSiExiteElCodProducto(String cod_producto) {
+    }
+
+    @Override
+    public List<String> getTiposImpuestos() {
+        return tipoImpuestoRepository.findAll().stream().map(TipoImpuesto::getNombre).toList();
     }
 
 }

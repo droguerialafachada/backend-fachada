@@ -7,7 +7,8 @@ public record CrearProductoDTO(
         String nombre,
         Double precio,
         Integer cantidad,
-        boolean activo
+        boolean activo,
+        String impuesto
 ) {
 
     public Producto toEntity() {
@@ -19,6 +20,7 @@ public record CrearProductoDTO(
         producto.setActivo(activo);
         producto.setEliminado(false);
         producto.setFechaCreacion(new java.util.Date());
+
         return producto;
     }
 }
