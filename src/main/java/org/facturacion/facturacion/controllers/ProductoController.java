@@ -29,8 +29,8 @@ public class ProductoController {
     }
 
     @GetMapping("/verificar-cod-producto/{cod_producto}")
-    public void verificarSiExiteElCodProducto(@PathVariable String cod_producto) {
-
+    public ResponseEntity<Boolean> verificarSiExiteElCodProducto(@PathVariable String cod_producto) {
+        return ResponseEntity.ok(this.productoService.verificarSiExiteElCodProducto(cod_producto));
     }
 
     @PostMapping("/disminuir-stock")
@@ -58,5 +58,13 @@ public class ProductoController {
         return ResponseEntity.ok(this.productoService.getTiposImpuestos());
     }
 
+    @GetMapping("/verificar-cantidad/{cantidad}/{id}")
+    public ResponseEntity<Boolean> verificarCantidad(@PathVariable Integer cantidad, @PathVariable String id){
+        return ResponseEntity.ok(this.productoService.verificarCantidad(cantidad, id));
+    }
 
+    @GetMapping("/verificar-activo/{id}")
+    public ResponseEntity<Boolean> verificarActivo(@PathVariable String id){
+        return ResponseEntity.ok(this.productoService.isActivo(id));
+    }
 }

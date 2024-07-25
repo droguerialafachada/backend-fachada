@@ -7,7 +7,7 @@ public record CrearProductoDTO(
         String nombre,
         Double precio,
         Integer cantidad,
-        boolean activo,
+        String activo,
         String impuesto
 ) {
 
@@ -17,7 +17,7 @@ public record CrearProductoDTO(
         producto.setNombre(nombre);
         producto.setPrecio(precio);
         producto.setStock(cantidad);
-        producto.setActivo(activo);
+        producto.setActivo(activo.equals("1"));
         producto.setEliminado(false);
         producto.setFechaCreacion(new java.util.Date());
 

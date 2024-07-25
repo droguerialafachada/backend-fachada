@@ -8,7 +8,7 @@ import java.util.List;
 public interface ProductoService {
     List<ProductoDTO> listarProducto();
 
-    void obtenerProductoPorId(Integer id);
+    ProductoDTO obtenerProductoPorId(String id);
 
     ProductoDTO crearProducto(CrearProductoDTO productoDTO);
 
@@ -16,7 +16,11 @@ public interface ProductoService {
 
     Boolean eliminarProducto(String id);
 
-    void verificarSiExiteElCodProducto(String cod_producto);
+    Boolean verificarSiExiteElCodProducto(String cod_producto);
 
     List<String> getTiposImpuestos();
+
+    Boolean verificarCantidad(Integer cantidad, String id);
+
+    Boolean isActivo(String id);
 }

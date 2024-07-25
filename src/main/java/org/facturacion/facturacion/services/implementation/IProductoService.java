@@ -1,6 +1,5 @@
 package org.facturacion.facturacion.services.implementation;
 
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.domain.TipoImpuesto;
@@ -27,7 +26,15 @@ public class IProductoService implements ProductoService {
         return productoRepository.findAllByEliminadoIsFalse().stream().map(ProductoDTO::fromEntity).toList();
     }
 
-    public void obtenerProductoPorId(Integer id) {
+    public ProductoDTO obtenerProductoPorId(String id) {
+
+        Optional<Producto> productoOptional = this.productoRepository.findById(id);
+
+        if(productoOptional.isEmpty()) throw new ProductoNoEncontradoException("No se ha encontrado el producto con el id "+ id);
+        Producto producto = productoOptional.get();
+
+        return ProductoDTO.fromEntity(producto);
+
     }
 
     @Override
@@ -103,12 +110,27 @@ public class IProductoService implements ProductoService {
         return true;
     }
 
-    public void verificarSiExiteElCodProducto(String cod_producto) {
+    public Boolean verificarSiExiteElCodProducto(String cod_producto) {
+        return this.productoRepository.findById(cod_producto).isPresent();
+
     }
 
     @Override
     public List<String> getTiposImpuestos() {
         return tipoImpuestoRepository.findAll().stream().map(TipoImpuesto::getNombre).toList();
+    }
+
+    @Override
+    public Boolean verificarCantidad(Integer cantidad, String id) {
+        Optional<Producto> producto = this.productoRepository.findById(id);
+
+        return producto.filter(value -> value.getStock() >= cantidad).isPresent();
+
+    }
+
+    @Override
+    public Boolean isActivo(String id) {
+        return this.obtenerProductoPorId(id).activo();
     }
 
 }

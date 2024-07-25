@@ -23,9 +23,9 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.listarClientes());
     }
 
-    @GetMapping("/{id}")
-    public void  obtenerClienteId(@PathVariable Integer id){
-        clienteService.obtenerClientePorId(id);
+    @GetMapping("/{cedula}")
+    public ResponseEntity<ClienteDTO> obtenerClienteCedula(@PathVariable String cedula){
+        return ResponseEntity.ok(clienteService.obtenerClientePorCedula(cedula));
     }
 
     @GetMapping("/verificar-cliente/{cedula}")
@@ -47,4 +47,16 @@ public class ClienteController {
     public ResponseEntity<Boolean> eliminarCliente(@PathVariable Integer id){
         return ResponseEntity.ok(clienteService.eliminarCliente(id));
     }
+
+    @GetMapping("/verificar-eliminado/{cedula}")
+    public ResponseEntity<Boolean> verificarEliminado(@PathVariable String cedula){
+        return ResponseEntity.ok(clienteService.verificarEliminado(cedula));
+    }
+
+
+    @GetMapping("/recuperar-cliente/{cedula}")
+    public void recuperarCliente(@PathVariable String cedula){
+        clienteService.recuperarCliente(cedula);
+    }
+
 }

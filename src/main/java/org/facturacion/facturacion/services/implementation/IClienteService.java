@@ -6,6 +6,7 @@ import org.facturacion.facturacion.dto.cliente.ActualizarClienteDTO;
 import org.facturacion.facturacion.dto.cliente.ClienteDTO;
 import org.facturacion.facturacion.dto.cliente.CrearClienteDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteExisteException;
+import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.repositories.ClienteRepository;
 import org.facturacion.facturacion.services.specification.ClienteService;
 import org.springframework.stereotype.Service;
@@ -29,8 +30,13 @@ public class IClienteService implements ClienteService {
     }
 
     @Override
-    public void obtenerClientePorId(Integer id) {
+    public ClienteDTO obtenerClientePorCedula(String id) {
+        Cliente cliente = clienteRepository.findByCedula(id);
 
+        if(cliente == null) throw  new ClienteNoExisteException("No existe un cliente con esa cedula");
+
+        return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(),
+                cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
     }
 
     @Override
@@ -76,5 +82,19 @@ public class IClienteService implements ClienteService {
         clienteRepository.save(clienteEliminado);
         return true;
 
+    }
+
+    @Override
+    public Boolean verificarEliminado(String cedula) {
+        Cliente cliente = this.clienteRepository.findByCedula(cedula);
+        if(cliente != null) return cliente.isEliminado();
+        return false;
+    }
+
+    @Override
+    public void recuperarCliente(String cedula) {
+        Cliente cliente = this.clienteRepository.findByCedula(cedula);
+        cliente.setEliminado(false);
+        this.clienteRepository.save(cliente);
     }
 }

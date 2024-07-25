@@ -10,7 +10,7 @@ public interface ClienteService {
 
     List<ClienteDTO> listarClientes();
 
-    void  obtenerClientePorId(Integer id);
+    ClienteDTO  obtenerClientePorCedula(String id);
 
     Boolean verificarSiExiteCliente(String cedula);
 
@@ -19,4 +19,8 @@ public interface ClienteService {
     ClienteDTO actualizarCliente(ActualizarClienteDTO clienteDTO, Integer id);
 
     Boolean eliminarCliente(Integer id);
+
+    Boolean verificarEliminado(String cedula);
+
+    void recuperarCliente(String cedula);
 }
