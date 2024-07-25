@@ -29,4 +29,9 @@ public class IUsuarioService implements UsuarioService {
         return new UsuarioDTO(user.getId());
     }
 
+    @Override
+    public Usuario findById(Integer usuario) {
+        return usuarioRepository.findById(usuario).get();
+    }
+
 }

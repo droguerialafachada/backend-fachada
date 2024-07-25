@@ -97,4 +97,9 @@ public class IClienteService implements ClienteService {
         cliente.setEliminado(false);
         this.clienteRepository.save(cliente);
     }
+
+    @Override
+    public Cliente findByCedula(Integer cliente) {
+        return clienteRepository.findByCedula(cliente+"");
+    }
 }

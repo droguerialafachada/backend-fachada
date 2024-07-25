@@ -53,7 +53,6 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.verificarEliminado(cedula));
     }
 
-
     @GetMapping("/recuperar-cliente/{cedula}")
     public void recuperarCliente(@PathVariable String cedula){
         clienteService.recuperarCliente(cedula);

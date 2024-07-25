@@ -67,4 +67,15 @@ public class ProductoController {
     public ResponseEntity<Boolean> verificarActivo(@PathVariable String id){
         return ResponseEntity.ok(this.productoService.isActivo(id));
     }
+
+    @GetMapping("/fue-eliminado/{id}")
+    public ResponseEntity<Boolean> fueEliminado(@PathVariable String id){
+        return ResponseEntity.ok(this.productoService.fueEliminado(id));
+    }
+
+    @GetMapping("/recuperar-producto/{id}")
+    public void recuperarProducto(@PathVariable String id){
+        this.productoService.recuperarProducto(id);
+    }
+
 }

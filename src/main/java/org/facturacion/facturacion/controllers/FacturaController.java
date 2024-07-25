@@ -1,12 +1,12 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
+import org.facturacion.facturacion.domain.Factura;
+import org.facturacion.facturacion.dto.factura.CrearFacturaDTO;
+import org.facturacion.facturacion.dto.factura.FacturaDTO;
 import org.facturacion.facturacion.services.specification.FacturaService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/factura")
@@ -18,7 +18,12 @@ public class FacturaController {
 
     @GetMapping("/siguiente-id")
     public ResponseEntity<Integer> obtenerSiguienteID(){
-        return ResponseEntity.ok(facturaService.obtenerSiguienteId());
+        return ResponseEntity.ok(this.facturaService.obtenerSiguienteId());
+    }
+
+    @PostMapping("/guardar")
+    public ResponseEntity<FacturaDTO> guardarFactura(@RequestBody CrearFacturaDTO facturaDTO){
+        return ResponseEntity.ok(this.facturaService.guardarFactura(facturaDTO));
     }
 
 }

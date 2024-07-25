@@ -133,4 +133,36 @@ public class IProductoService implements ProductoService {
         return this.obtenerProductoPorId(id).activo();
     }
 
+    @Override
+    public Boolean fueEliminado(String id) {
+
+        Optional<Producto> productoOptional = this.productoRepository.findById(id);
+
+        if(productoOptional.isPresent()){
+            Producto producto = productoOptional.get();
+            return producto.isEliminado();
+        }
+
+        return false;
+    }
+
+    @Override
+    public void recuperarProducto(String id) {
+        Optional<Producto> productoOptional = this.productoRepository.findById(id);
+        if(productoOptional.isPresent()){
+            Producto producto = productoOptional.get();
+            producto.setEliminado(false);
+            this.productoRepository.save(producto);
+        }
+    }
+
+    @Override
+    public Producto findById(String s) {
+
+        Optional<Producto> productoOptional = this.productoRepository.findById(s);
+        if(productoOptional.isEmpty()) throw new ProductoNoEncontradoException("No se ha encontrado el producto con el id "+ s);
+        return productoOptional.get();
+
+    }
+
 }

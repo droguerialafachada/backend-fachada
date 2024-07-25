@@ -4,7 +4,7 @@ import java.util.List;
 
 public record CrearFacturaDTO(
         List<DetalleFacturaDTO> listDetalleFactura,
-        Integer idUsuario,
-        Integer idCliente
+        Integer usuario,
+        Integer cliente
 ) {
 }

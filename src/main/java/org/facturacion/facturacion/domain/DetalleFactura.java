@@ -17,7 +17,7 @@ public class DetalleFactura {
     private Integer cantidad;
 
     @Column(nullable = false, precision = 4)
-    private Double precio;
+    private Double valor;
 
     @OneToOne
     private Producto producto;

@@ -1,5 +1,6 @@
 package org.facturacion.facturacion.services.specification;
 
+import org.facturacion.facturacion.domain.Cliente;
 import org.facturacion.facturacion.dto.cliente.ActualizarClienteDTO;
 import org.facturacion.facturacion.dto.cliente.ClienteDTO;
 import org.facturacion.facturacion.dto.cliente.CrearClienteDTO;
@@ -23,4 +24,6 @@ public interface ClienteService {
     Boolean verificarEliminado(String cedula);
 
     void recuperarCliente(String cedula);
+
+    Cliente findByCedula(Integer cliente);
 }
