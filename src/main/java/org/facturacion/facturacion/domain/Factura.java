@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -25,8 +26,8 @@ public class Factura {
     @Column(nullable = false, precision = 4)
     private Double total;
 
-    @OneToMany(mappedBy = "factura")
-    private List<DetalleFactura> detalleFacturaList;
+    @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<DetalleFactura> detalleFacturaList = new ArrayList<>();
 
     @ManyToOne
     private Usuario usuario;

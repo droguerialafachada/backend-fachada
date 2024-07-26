@@ -1,12 +1,14 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
-import org.facturacion.facturacion.domain.Factura;
+import org.facturacion.facturacion.dto.factura.FacturaItemDTO;
 import org.facturacion.facturacion.dto.factura.CrearFacturaDTO;
 import org.facturacion.facturacion.dto.factura.FacturaDTO;
 import org.facturacion.facturacion.services.specification.FacturaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/factura")
@@ -26,4 +28,8 @@ public class FacturaController {
         return ResponseEntity.ok(this.facturaService.guardarFactura(facturaDTO));
     }
 
+    @GetMapping("/obtener-facturas")
+    public ResponseEntity<List<FacturaItemDTO>> obtenerFacturas(){
+        return ResponseEntity.ok(this.facturaService.obtenerFacturas());
+    }
 }

@@ -19,10 +19,12 @@ public class DetalleFactura {
     @Column(nullable = false, precision = 4)
     private Double valor;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "producto_id", nullable = false)
     private Producto producto;
 
     @ManyToOne
-    @JoinColumn(name = "factura_id")
+    @JoinColumn(name = "factura_id", nullable = false)
     private Factura factura;
+
 }
