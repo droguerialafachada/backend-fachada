@@ -16,8 +16,7 @@ FROM eclipse-temurin:17-jdk-jammy
 # Copy JAR file from the build stage
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/app.jar
 
-# Expose the specified port
-EXPOSE ${PORT}
+
 
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
