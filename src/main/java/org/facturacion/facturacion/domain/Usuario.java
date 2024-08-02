@@ -21,14 +21,9 @@ public class Usuario {
     @Column(nullable = false)
     private String contrasenia;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "usuario_permisos", joinColumns = @JoinColumn(name = "usuario_id"))
-    @Enumerated(EnumType.STRING)
-    @Column(name = "permisos")
-    private List<Permisos> permisos;
+    @OneToMany(mappedBy = "id.usuarioId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<UsuarioPermisos> permisos;
 
     @OneToMany(mappedBy = "usuario")
     private List<Factura> facturaList;
-
-
 }

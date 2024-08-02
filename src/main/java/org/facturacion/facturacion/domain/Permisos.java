@@ -1,7 +1,7 @@
 package org.facturacion.facturacion.domain;
 
 public enum Permisos {
-
-    Permisos() {
-    }
+    ADMIN,
+    USER,
+    // Otros permisos...
 }
