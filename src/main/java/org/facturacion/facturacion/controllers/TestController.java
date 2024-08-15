@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @CrossOrigin(origins = "*")
 public class TestController {
 
-
     @GetMapping()
     public ResponseEntity<String> test() {
         return ResponseEntity.ok("Backend activo en "+ LocalDate.now());
