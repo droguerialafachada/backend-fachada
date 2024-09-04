@@ -22,7 +22,7 @@ public class BackupScheduler {
     private final DatabaseBackupService databaseBackupService;
     private final GithubUploadService githubUploadService;
 
-    @Scheduled(fixedRate = 120000)  // Cada 3 horas
+    @Scheduled(fixedRate = 10800000)  // Cada 3 horas
     public void backupAndUpload() {
         try {
             // Definir el directorio temporal
