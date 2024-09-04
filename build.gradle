@@ -34,6 +34,8 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     implementation 'org.springframework.security:spring-security-crypto:6.1.4'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.kohsuke:github-api:1.324'
+
 }
 
 tasks.named('test') {
