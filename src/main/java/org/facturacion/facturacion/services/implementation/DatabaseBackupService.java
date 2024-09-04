@@ -46,11 +46,14 @@ public class DatabaseBackupService {
         Files.createDirectories(path.getParent()); // Crear el directorio si no existe
 
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {
-            if (!rows.isEmpty()) {
-                String headers = String.join(",", rows.get(0).keySet());
-                writer.write(headers);
-                writer.newLine();
+            if (rows.isEmpty()) {
+                System.out.println("La tabla " + tableName + " está vacía, no se creará archivo.");
+                return;
             }
+
+            String headers = String.join(",", rows.get(0).keySet());
+            writer.write(headers);
+            writer.newLine();
 
             for (Map<String, Object> row : rows) {
                 String rowData = row.values().stream()

@@ -1,13 +1,12 @@
 package org.facturacion.facturacion.services.implementation;
-
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import org.kohsuke.github.GHContent;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,11 +33,24 @@ public class GithubUploadService {
                         String content = Files.readString(file);
                         String relativePath = dirPath.relativize(file).toString();
 
-                        repository.createContent()
-                                .path(relativePath)
-                                .content(content)
-                                .message(commitMessage)
-                                .commit();
+                        GHContent existingContent = null;
+                        try {
+                            existingContent = repository.getFileContent(relativePath);
+                        } catch (IOException e) {
+                            // El archivo no existe, por lo que será creado
+                        }
+
+                        if (existingContent != null) {
+                            // Actualizar archivo existente
+                            existingContent.update(content, commitMessage);
+                        } else {
+                            // Crear un nuevo archivo
+                            repository.createContent()
+                                    .path(relativePath)
+                                    .content(content)
+                                    .message(commitMessage)
+                                    .commit();
+                        }
                     } catch (IOException e) {
                         e.printStackTrace(); // Manejo de errores
                     }
