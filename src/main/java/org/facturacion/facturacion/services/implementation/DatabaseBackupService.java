@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
@@ -17,9 +18,13 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class DatabaseBackupService {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public void exportAllTablesToCsv(String directoryPath) throws IOException {
+        // Crear el directorio si no existe
+        Path dirPath = Paths.get(directoryPath);
+        Files.createDirectories(dirPath);
+
         List<String> tableNames = getTableNames();
 
         for (String tableName : tableNames) {
@@ -37,7 +42,10 @@ public class DatabaseBackupService {
 
         List<Map<String, Object>> rows = jdbcTemplate.queryForList(query);
 
-        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(filePath))) {
+        Path path = Paths.get(filePath);
+        Files.createDirectories(path.getParent()); // Crear el directorio si no existe
+
+        try (BufferedWriter writer = Files.newBufferedWriter(path)) {
             if (!rows.isEmpty()) {
                 String headers = String.join(",", rows.get(0).keySet());
                 writer.write(headers);
