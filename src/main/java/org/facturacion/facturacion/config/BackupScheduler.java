@@ -18,7 +18,7 @@ public class BackupScheduler {
 
     private GithubUploadService githubUploadService;
 
-    @Scheduled(fixedRate = 10800000)  // Cada 3 horas
+    @Scheduled(fixedRate = 120000)  // Cada 3 horas
     public void backupAndUpload() throws IOException {
         String directoryPath = "/backup/";
 
