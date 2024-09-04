@@ -20,7 +20,7 @@ public class BackupScheduler {
 
     @Scheduled(fixedRate = 120000)  // Cada 3 horas
     public void backupAndUpload() throws IOException {
-        String directoryPath = "resources/backup";
+        String directoryPath = "src/main/resources/backup";
 
         // Exportar todas las tablas
         databaseBackupService.exportAllTablesToCsv(directoryPath);
