@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: facturacion_db
+      MYSQL_USER: facturacion_user
+      MYSQL_PASSWORD: facturacion_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  facturacion:
+    image: facturacion-remates7a
+    container_name: facturacion
+    environment:
+      DATASOURCE_URL: jdbc:mysql://mysql:3306/facturacion_db
+      DATASOURCE_USERNAME: facturacion_user
+      DATASOURCE_PASSWORD: facturacion_password
+      API-URL: facturacion
+    depends_on:
+      - mysql
+    ports:
+      - "8086:8086"
+
+volumes:
+  mysql_data:
