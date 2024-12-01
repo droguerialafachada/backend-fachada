@@ -67,30 +67,49 @@ public class ProductoController {
     public ResponseEntity<Boolean> eliminarProducto(@PathVariable String codigo) {
         return ResponseEntity.ok(this.productoService.eliminarProducto(codigo));
     }
-
+    /**
+     * Este método se encarga de los tipos de impuestos disponibles.
+     * @return Lista de tipos de impuestos disponibles.
+     */
     @GetMapping("/tipos-impuestos")
     public ResponseEntity<List<String>> getTiposImpuestos() {
         return ResponseEntity.ok(this.productoService.getTiposImpuestos());
     }
-
+    /**
+     * Este método se encarga de verificar si un producto tiene suficiente cantidad en inventario.
+     * Para realizar una venta.
+     * @param cantidad Cantidad a verificar.
+     */
     @GetMapping("/verificar-cantidad/{cantidad}/{id}")
     public ResponseEntity<Boolean> verificarCantidad(@PathVariable Integer cantidad, @PathVariable String id){
         return ResponseEntity.ok(this.productoService.verificarCantidad(cantidad, id));
     }
-
+    /**
+     * Este método se encarga de obtener un producto por su código.
+     * @param codigo Código del producto a buscar.
+     * @return Producto encontrado.
+     */
     @GetMapping("/verificar-activo/{id}")
     public ResponseEntity<Boolean> verificarActivo(@PathVariable String id){
         return ResponseEntity.ok(this.productoService.isActivo(id));
     }
 
+    /**
+     * Este método se encarga de verificar si un producto fue eliminado.
+     * @param id Identificador del producto a verificar.
+     * @return True si el producto fue eliminado, false en caso contrario.
+     */
     @GetMapping("/fue-eliminado/{id}")
     public ResponseEntity<Boolean> fueEliminado(@PathVariable String id){
         return ResponseEntity.ok(this.productoService.fueEliminado(id));
     }
 
+    /**
+     * Este método se encarga de recuperar un producto eliminado dado su id.
+     * @param id Identificador del producto a recuperar.
+     */
     @GetMapping("/recuperar-producto/{id}")
     public void recuperarProducto(@PathVariable String id){
         this.productoService.recuperarProducto(id);
     }
-
 }
