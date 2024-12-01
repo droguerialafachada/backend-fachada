@@ -10,6 +10,8 @@ import org.facturacion.facturacion.services.specification.UsuarioService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @AllArgsConstructor
 public class IUsuarioService implements UsuarioService {
@@ -35,10 +37,15 @@ public class IUsuarioService implements UsuarioService {
         return new UsuarioDTO(user.getId());
     }
 
+    /**
+     * Este metodo busca un usuario por su id y lo retorna
+     * @param id El ID del usuario
+     * @return Usuario el usuario encontrado
+     */
     @Override
-    public Usuario findById(Integer usuario) {
-        // TODO: Agregar is present para verificar si el usuario existe
-        return usuarioRepository.findById(usuario).get();
+    public Usuario findById(Integer id) {
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(id);
+        return usuarioOptional.orElseThrow(() -> new UsuarioNoEncontradoException("El usuario no se ha encontrado"));
     }
 
 }

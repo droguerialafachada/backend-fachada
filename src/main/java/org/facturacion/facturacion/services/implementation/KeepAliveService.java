@@ -1,5 +1,6 @@
 package org.facturacion.facturacion.services.implementation;
 
+import lombok.extern.slf4j.Slf4j;
 import org.facturacion.facturacion.config.KeepAliveScheduler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * KeepAliveService implementation
  */
 @Service
+@Slf4j
 public class KeepAliveService {
 
     private final RestTemplate restTemplate;
@@ -35,10 +37,9 @@ public class KeepAliveService {
         try {
             // Realizamos la petición GET al propio backend
             ResponseEntity<String> response = restTemplate.getForEntity(selfUrl, String.class);
-            //TODO: Implementar un log para guardar la respuesta del servidor
-            System.out.println("Respuesta del servidor: " + response.getBody());
+            log.info("Respuesta del servidor: " + response.getBody());
         } catch (Exception e) {
-            System.err.println("Error al enviar la petición: " + e.getMessage());
+            log.error("Error al enviar la petición: " + e.getMessage());
         }
     }
 }

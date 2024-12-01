@@ -1,16 +1,21 @@
 package org.facturacion.facturacion.services.implementation;
 
 import lombok.AllArgsConstructor;
+import org.facturacion.facturacion.domain.EstadoVenta;
 import org.facturacion.facturacion.domain.Factura;
+import org.facturacion.facturacion.domain.FacturaElectronica;
 import org.facturacion.facturacion.domain.Venta;
+import org.facturacion.facturacion.dto.efactura.EFacturaDTO;
 import org.facturacion.facturacion.dto.factura.CrearFacturaDTO;
 import org.facturacion.facturacion.dto.factura.FacturaDTO;
+import org.facturacion.facturacion.exceptions.efactura.VentaCanceladaException;
 import org.facturacion.facturacion.exceptions.factura.FacturaNoExisteException;
 import org.facturacion.facturacion.repositories.FacturaRepository;
 import org.facturacion.facturacion.repositories.VentaRepository;
 import org.facturacion.facturacion.services.specification.FacturaService;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * FacturaService implementation
@@ -56,16 +61,16 @@ public class IFacturaService implements FacturaService {
     public FacturaDTO guardarFactura(CrearFacturaDTO facturaDTO) {
         Venta venta = ventaRepository.findById(facturaDTO.idVenta()).orElse(null);
         if(venta == null) throw new FacturaNoExisteException("La venta no existe");
-        //TODO: Validar que la venta no tenga una factura asociada
-        //TODO: Validar que la venta no este cancelada
-        //TODO: Crear un metodo en la entidad Venta que retorne la factura asociada
-        Factura facturaElectronica = new Factura();
-        facturaElectronica.setCliente(venta.getCliente());
-        facturaElectronica.setUsuario(venta.getUsuario());
-        facturaElectronica.setDetalleVentaList(venta.getDetalleVentaList());
-        facturaElectronica.setTotal(venta.getTotal());
-        //La fecha de la factura es la fecha de creación no la fecha de la venta
-        facturaElectronica.setFecha(new java.util.Date());
+
+        if(facturaRepository.existsById(venta.getId())){
+            Optional<Factura> factura = facturaRepository.findById(venta.getId());
+            if(factura.isPresent()) return FacturaDTO.fromEntity(factura.get());
+        }
+
+        if(venta.getEstado().equals(EstadoVenta.CANCELADA))
+            throw new VentaCanceladaException("La venta esta cancelada");
+        Factura facturaElectronica = FacturaDTO.toEntity(venta);
+
 
         return FacturaDTO.fromEntity(facturaRepository.save(facturaElectronica));
     }
