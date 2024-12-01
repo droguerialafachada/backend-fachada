@@ -37,7 +37,7 @@ public class ProductoController {
      */
     @GetMapping("/verificar-cod-producto/{codProducto}")
     public ResponseEntity<Boolean> verificarCodProducto(@PathVariable String codProducto) {
-        return ResponseEntity.ok(this.productoService.verificarSiExiteElCodProducto(codProducto));
+        return ResponseEntity.ok(this.productoService.verificarExisteElCodProducto(codProducto));
     }
     /**
      * Este método crea un nuevo producto. Dado un objeto CrearProductoDTO, se crea un nuevo producto

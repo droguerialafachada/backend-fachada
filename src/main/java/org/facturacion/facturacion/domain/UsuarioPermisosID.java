@@ -1,32 +1,19 @@
 package org.facturacion.facturacion.domain;
 
 import jakarta.persistence.Embeddable;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
+@Getter
+@Setter
 public class UsuarioPermisosID implements Serializable {
 
     private Integer usuarioId;
     private String permisos;
-
-    // Getters, Setters, hashCode, equals
-
-    public Integer getUsuarioId() {
-        return usuarioId;
-    }
-
-    public void setUsuarioId(Integer usuarioId) {
-        this.usuarioId = usuarioId;
-    }
-
-    public String getPermisos() {
-        return permisos;
-    }
-
-    public void setPermisos(String permisos) {
-        this.permisos = permisos;
-    }
 
     @Override
     public boolean equals(Object o) {

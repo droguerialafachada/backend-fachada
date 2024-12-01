@@ -17,6 +17,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * VentaService implementation
+ */
 @Service
 @AllArgsConstructor
 public class IVentaService implements VentaService {
@@ -28,11 +31,20 @@ public class IVentaService implements VentaService {
     private final IDetalleVentaService detalleFacturaService;
     private final Double IVA = 0.19;
 
+    /**
+     * Este metodo obtiene el siguiente id de la venta
+     * @return Integer Siguiente id de la venta
+     */
     @Override
     public Integer obtenerSiguienteId() {
         return ventaRepository.obtenerSiguienteId();
     }
 
+    /**
+     * Este metodo guarda una venta en la base de datos
+     * @param ventaDTO Venta a guardar
+     * @return VentaDTO Venta guardada
+     */
     @Override
     public VentaDTO guardarVenta(CrearVentaDTO ventaDTO) {
 
@@ -52,8 +64,12 @@ public class IVentaService implements VentaService {
 
         return VentaDTO.fromEntity(venta);
     }
-
+    /**
+     * Este metodo agregar los detalles de la venta
+     * @param venta Venta a la que se le agregaran los detalles
+     */
     private void agregarDetalleVenta(Venta venta, CrearVentaDTO ventaDTO){
+        //TODO: Se debe reducir la complejidad de este metodo
         ventaDTO.listDetalleVenta().forEach(detalle -> {
             DetalleVenta detalleVenta = DetalleVentaDTO.toEntity(detalle);
             Producto producto = productoService.findById(detalle.codigoProducto());
@@ -70,7 +86,11 @@ public class IVentaService implements VentaService {
         });
     }
 
-
+    /**
+     * Este metodo agrega el usuario a la venta
+     * @param venta Venta a la que se le agregara el usuario
+     * @param ventaDTO VentaDTO con la informacion del usuario
+     */
     private void agregarUsuarioVenta(Venta venta, CrearVentaDTO ventaDTO){
         Usuario usuario = this.usuarioService.findById(ventaDTO.usuario());
 
@@ -80,7 +100,11 @@ public class IVentaService implements VentaService {
         venta.setUsuario(usuario);
     }
 
-
+    /**
+     * Este metodo agrega el cliente a la venta
+     * @param venta Venta a la que se le agregara el cliente
+     * @param ventaDTO VentaDTO que contiene el ID del cliente
+     */
     private void agregarClienteVentas(Venta venta, CrearVentaDTO ventaDTO){
         Cliente cliente = this.clienteService.findByCedula(ventaDTO.cliente());
         if(cliente == null){
@@ -89,7 +113,10 @@ public class IVentaService implements VentaService {
         venta.setCliente(cliente);
     }
 
-
+    /**
+     * Este metodo obtiene una venta por su id
+     * @return VentaItemDTO Venta
+     */
     @Override
     public List<VentaItemDTO> obtenerVentas() {
         return ventaRepository.findAll().stream().map(VentaItemDTO::fromEntity).toList();

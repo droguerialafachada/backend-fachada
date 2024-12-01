@@ -13,7 +13,7 @@ public interface ClienteService {
 
     ClienteDTO  obtenerClientePorCedula(String id);
 
-    Boolean verificarSiExiteCliente(String cedula);
+    Boolean verificarExisteCliente(String cedula);
 
     ClienteDTO crearCliente(CrearClienteDTO crearClienteDTO);
 

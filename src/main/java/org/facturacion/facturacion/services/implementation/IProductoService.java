@@ -14,7 +14,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * ProductoService implementation
+ */
 @Service
 @AllArgsConstructor
 public class IProductoService implements ProductoService {
@@ -22,21 +24,36 @@ public class IProductoService implements ProductoService {
     private final ProductoRepository productoRepository;
     private final TipoImpuestoRepository tipoImpuestoRepository;
 
+    /**
+     * Este metodo obtiene todos los productos
+     * @return List<ProductoDTO> Lista de productos
+     */
     public List<ProductoDTO> listarProducto() {
         return productoRepository.findAllByEliminadoIsFalse().stream().map(ProductoDTO::fromEntity).toList();
     }
 
+    /**
+     * Este metodo obtiene un producto por su id
+     * @param id Id del producto
+     * @return ProductoDTO Producto
+     */
     public ProductoDTO obtenerProductoPorId(String id) {
 
         Optional<Producto> productoOptional = this.productoRepository.findById(id);
 
-        if(productoOptional.isEmpty()) throw new ProductoNoEncontradoException("No se ha encontrado el producto con el id "+ id);
+        if(productoOptional.isEmpty())
+            throw new ProductoNoEncontradoException("No se ha encontrado el producto con el id "+ id);
         Producto producto = productoOptional.get();
 
         return ProductoDTO.fromEntity(producto);
 
     }
 
+    /**
+     * Este metodo crea un producto
+     * @param productoDTO Producto a crear
+     * @return ProductoDTO Producto creado
+     */
     @Override
     public ProductoDTO crearProducto(CrearProductoDTO productoDTO) {
         //TODO: Se deberia cambiar los if por validaciones inyectadas
@@ -73,9 +90,14 @@ public class IProductoService implements ProductoService {
 
     }
 
+    /**
+     * Este metodo actualiza un producto
+     * @param productoDTO Producto a actualizar
+     * @return ProductoDTO Producto actualizado
+     */
     public ProductoDTO actualizarProducto(ActualizarProductoDTO productoDTO) {
         Optional<Producto> productoAct = this.productoRepository.findById(productoDTO.codigo());
-
+        //TODO: Se deberia cambiar los if por validaciones inyectadas
         if(productoAct.isEmpty()) throw new ProductoNoEncontradoException("El producto no se encuentra registrado");
 
         if(productoDTO.cantidad() < 0 ){
@@ -99,6 +121,11 @@ public class IProductoService implements ProductoService {
         return ProductoDTO.fromEntity(this.productoRepository.save(producto));
     }
 
+    /**
+     * Este metodo elimina un producto, solo cambia el estado a eliminado
+     * @param id Id del producto a eliminar
+     * @return Boolean Retorna un valor booleano
+     */
     @Override
     public Boolean eliminarProducto(String id) {
         Optional<Producto> producto = this.productoRepository.findById(id);
@@ -110,29 +137,52 @@ public class IProductoService implements ProductoService {
         return true;
     }
 
-    public Boolean verificarSiExiteElCodProducto(String cod_producto) {
-        return this.productoRepository.findById(cod_producto).isPresent();
-
+    /**
+     * Este metodo verifica si un producto existe por su codigo
+     * @param codProducto Codigo del producto
+     * @return Boolean Retorna un valor booleano
+     */
+    public Boolean verificarExisteElCodProducto(String codProducto) {
+        return this.productoRepository.findById(codProducto).isPresent();
     }
 
+    /**
+     * Este metodo obtiene los tipos de impuestos disponibles
+     * @return List<String> Lista de tipos de impuestos
+     */
     @Override
     public List<String> getTiposImpuestos() {
         return tipoImpuestoRepository.findAll().stream().map(TipoImpuesto::getNombre).toList();
     }
 
+    /**
+     * Este metodo verifica si la cantidad de un producto es suficiente para la venta
+     * @param cantidad Cantidad del producto
+     * @param id Id del producto
+     * @return Boolean Retorna un valor booleano
+     */
     @Override
     public Boolean verificarCantidad(Integer cantidad, String id) {
         Optional<Producto> producto = this.productoRepository.findById(id);
-
         return producto.filter(value -> value.getStock() >= cantidad).isPresent();
 
     }
 
+    /**
+     * Este metodo verifica si un producto está activo
+     * @param id Id del producto
+     * @return Boolean Retorna un valor booleano
+     */
     @Override
     public Boolean isActivo(String id) {
         return this.obtenerProductoPorId(id).activo();
     }
 
+    /**
+     * Este metodo verifica si un producto ha sido eliminado
+     * @param id Id del producto
+     * @return Boolean Retorna un valor booleano
+     */
     @Override
     public Boolean fueEliminado(String id) {
 
@@ -145,7 +195,10 @@ public class IProductoService implements ProductoService {
 
         return false;
     }
-
+    /**
+     * Este metodo recupera un producto eliminado
+     * @param id Id del producto
+     */
     @Override
     public void recuperarProducto(String id) {
         Optional<Producto> productoOptional = this.productoRepository.findById(id);
@@ -155,7 +208,11 @@ public class IProductoService implements ProductoService {
             this.productoRepository.save(producto);
         }
     }
-
+    /**
+     * Este metodo obtiene un producto por su id
+     * @param s Id del producto
+     * @return Producto el producto encontrado o lanza una excepcion
+     */
     @Override
     public Producto findById(String s) {
 

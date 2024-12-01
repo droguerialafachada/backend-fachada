@@ -49,7 +49,7 @@ public class ClienteController {
      */
     @GetMapping("/verificar-cliente/{cedula}")
     public ResponseEntity<Boolean> verificarSiExiteCliente(@PathVariable String cedula){
-        return ResponseEntity.ok(clienteService.verificarSiExiteCliente(cedula));
+        return ResponseEntity.ok(clienteService.verificarExisteCliente(cedula));
     }
 
     /**

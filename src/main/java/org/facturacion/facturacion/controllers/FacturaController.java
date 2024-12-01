@@ -24,16 +24,28 @@ import java.util.List;
 public class FacturaController {
     private final FacturaService facturaService;
 
+    /**
+     * Este método se encarga de listar todas las facturas registradas en la base de datos.
+     * @return Lista de facturas registradas.
+     */
     @GetMapping()
     public ResponseEntity<List<FacturaDTO>> obtenerFacturaElectronica(){
         return ResponseEntity.ok(this.facturaService.obtenerFacturas());
     }
-
+    /**
+     * Este método se encarga de obtener una factura por su id.
+     * @param id Id de la factura a buscar.
+     * @return Factura encontrada.
+     */
     @GetMapping("/{id}")
     public ResponseEntity<FacturaDTO> obtenerFacturaElectronicaPorId(@PathVariable Integer id){
         return ResponseEntity.ok(this.facturaService.obtenerFacturaPorId(id));
     }
-
+    /**
+     * Este método se encarga de guardar una factura.
+     * @param facturaDTO Datos de la factura a guardar.
+     * @return Factura guardada.
+     */
     @PostMapping("/guardar")
     public ResponseEntity<FacturaDTO> guardarFacturaElectronica(@RequestBody CrearFacturaDTO facturaDTO){
         return ResponseEntity.ok(this.facturaService.guardarFactura(facturaDTO));

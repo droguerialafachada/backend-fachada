@@ -12,6 +12,10 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase para inicializar la base de datos
+ * cuando se inicia la aplicación
+ */
 @AllArgsConstructor
 @Component
 public class Init implements CommandLineRunner {
@@ -19,12 +23,18 @@ public class Init implements CommandLineRunner {
     private final UsuarioRepository usuarioRepository;
     private final TipoImpuestoRepository tipoImpuestoRepository;
 
+    /**
+     * Este metodo se ejecuta al iniciar la aplicación
+     */
     @Override
     public void run(String... args) throws Exception {
         saveUser();
         saveTipoImpuesto();
     }
 
+    /**
+     * Este metodo guarda los tipos de impuestos en la base de datos
+     */
     private void saveTipoImpuesto() {
         tipoImpuestoRepository.deleteAll();
 
@@ -41,10 +51,14 @@ public class Init implements CommandLineRunner {
         tipoImpuestoRepository.saveAll(list);
     }
 
-
+    /**
+     * Este metodo guarda un usuario en la base de datos
+     * con contraseña encriptada
+     */
     private void saveUser() {
         usuarioRepository.deleteAll();
         Usuario usuario = new Usuario();
+        //TODO: Cambiar contraseña por una variable de entorno
         usuario.setContrasenia(new BCryptPasswordEncoder().encode("admin"));
         usuario.setNombre("admin@gmail.com");
         usuarioRepository.save(usuario);

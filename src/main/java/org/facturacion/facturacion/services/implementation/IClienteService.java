@@ -14,21 +14,40 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementacion de la interfaz ClienteService
+ * @see org.facturacion.facturacion.services.specification.ClienteService
+ * Clase que implementa los metodos de la interfaz ClienteService y se encarga de la logica de negocio
+ * de los clientes
+ */
 @Service
 @AllArgsConstructor
 public class IClienteService implements ClienteService {
 
     private final ClienteRepository clienteRepository;
 
+    /**
+     * Metodo que se encarga de listar todos los clientes
+     * iterando sobre la lista de clientes y creando un objeto de tipo ClienteDTO
+     * @return List<ClienteDTO> Retorna una lista de objetos de tipo ClienteDTO
+     */
     @Override
     public List<ClienteDTO> listarClientes() {
-
+        //TODO: Cambiar el creador de DTO por un metodo de la entidad
         return clienteRepository.findAllByEliminadoIsFalse().stream().map(
                 cliente ->
-                        new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"")
+                        new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(),
+                                cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(),
+                                cliente.getId()+"")
         ).toList();
     }
 
+    /**
+     * Metodo que se encarga de obtener un cliente por su cedula
+     * Si el cliente no existe se lanza una excepcion
+     * @param id Cedula del cliente
+     * @return ClienteDTO Retorna un objeto de tipo ClienteDTO
+     */
     @Override
     public ClienteDTO obtenerClientePorCedula(String id) {
         Cliente cliente = clienteRepository.findByCedula(id);
@@ -39,11 +58,22 @@ public class IClienteService implements ClienteService {
                 cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
     }
 
+    /**
+     * Metodo que se encarga de verificar si un cliente existe
+     * @param cedula Cedula del cliente
+     * @return Boolean Retorna un valor booleano
+     */
     @Override
-    public Boolean verificarSiExiteCliente(String cedula){
+    public Boolean verificarExisteCliente(String cedula){
         return clienteRepository.existsByCedula(cedula);
     }
 
+    /**
+     * Metodo que se encarga de crear un cliente y guardarlo en la base de datos
+     * Si el cliente ya existe se lanza una excepcion
+     * @param crearClienteDTO Objeto de tipo CrearClienteDTO
+     * @return ClienteDTO Retorna un objeto de tipo ClienteDTO
+     */
     @Override
     public ClienteDTO crearCliente(CrearClienteDTO crearClienteDTO) {
 
@@ -52,7 +82,8 @@ public class IClienteService implements ClienteService {
         }
         Cliente cliente = crearClienteDTO.toEntity();
         clienteRepository.save(cliente);
-        return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
+        return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(),
+                cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
 
     }
 
@@ -61,16 +92,24 @@ public class IClienteService implements ClienteService {
         Optional<Cliente> cliente = clienteRepository.findById(id);
 
         if(cliente.isEmpty()) throw new ClienteExisteException("El cliente con id "+id+" no existe");
-
+        //TODO: Cambiar el creador de DTO por un metodo de la entidad
         Cliente clienteActualizado = cliente.get();
         clienteActualizado.setNombre(clienteDTO.nombre());
         clienteActualizado.setDireccion(clienteDTO.direccion());
         clienteActualizado.setCorreo(clienteDTO.correo());
         clienteActualizado.setActivo(clienteDTO.activo());
         clienteRepository.save(clienteActualizado);
-        return new ClienteDTO(clienteActualizado.getCedula(), clienteActualizado.getDireccion(), clienteActualizado.getCorreo(), clienteActualizado.isActivo(), clienteActualizado.getFechaCreacion(), clienteActualizado.getNombre(), clienteActualizado.getId()+"");
+        return new ClienteDTO(clienteActualizado.getCedula(), clienteActualizado.getDireccion(),
+                clienteActualizado.getCorreo(), clienteActualizado.isActivo(), clienteActualizado.getFechaCreacion(),
+                clienteActualizado.getNombre(), clienteActualizado.getId()+"");
     }
 
+    /**
+     * Metodo que se encarga de eliminar un cliente
+     * Si no hay un cliente con el parametro id se lanza una excepcion
+     * @param id Id del cliente a eliminar
+     * @return Boolean Retorna un valor booleano
+     */
     @Override
     public Boolean eliminarCliente(Integer id) {
 
@@ -84,6 +123,11 @@ public class IClienteService implements ClienteService {
 
     }
 
+    /**
+     * Metodo que se encarga de verificar si un cliente ha sido eliminado
+     * @param cedula Cedula del cliente
+     * @return Boolean Retorna un valor booleano
+     */
     @Override
     public Boolean verificarEliminado(String cedula) {
         Cliente cliente = this.clienteRepository.findByCedula(cedula);
@@ -91,6 +135,10 @@ public class IClienteService implements ClienteService {
         return false;
     }
 
+    /**
+     * Metodo que se encarga de recuperar un cliente eliminado
+     * @param cedula Cedula del cliente
+     */
     @Override
     public void recuperarCliente(String cedula) {
         Cliente cliente = this.clienteRepository.findByCedula(cedula);
@@ -98,8 +146,13 @@ public class IClienteService implements ClienteService {
         this.clienteRepository.save(cliente);
     }
 
+    /**
+     * Metodo que se encarga de obtener un cliente por su cedula
+     * @param cedula Objeto cliente que tiene la cedula
+     * @return Cliente Retorna un objeto de tipo Cliente
+     */
     @Override
-    public Cliente findByCedula(Integer cliente) {
-        return clienteRepository.findByCedula(cliente+"");
+    public Cliente findByCedula(Integer cedula) {
+        return clienteRepository.findByCedula(cedula+"");
     }
 }

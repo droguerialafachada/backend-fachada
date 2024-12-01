@@ -17,7 +17,7 @@ public interface ProductoService {
 
     Boolean eliminarProducto(String id);
 
-    Boolean verificarSiExiteElCodProducto(String cod_producto);
+    Boolean verificarExisteElCodProducto(String codProducto);
 
     List<String> getTiposImpuestos();
 

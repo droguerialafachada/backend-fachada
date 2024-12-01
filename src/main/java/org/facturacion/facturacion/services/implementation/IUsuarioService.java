@@ -16,6 +16,12 @@ public class IUsuarioService implements UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
 
+    /**
+     * Este metodo realiza el login de un usuario
+     * @param usuario el nombre del usuario
+     * @param contrasena la contraseña del usuario
+     * @return UsuarioDTO el usuario logueado
+     */
     @Override
     public UsuarioDTO login(String usuario, String contrasena) {
 
@@ -31,6 +37,7 @@ public class IUsuarioService implements UsuarioService {
 
     @Override
     public Usuario findById(Integer usuario) {
+        // TODO: Agregar is present para verificar si el usuario existe
         return usuarioRepository.findById(usuario).get();
     }
 
