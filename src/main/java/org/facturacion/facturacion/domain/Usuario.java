@@ -25,5 +25,5 @@ public class Usuario {
     private List<UsuarioPermisos> permisos;
 
     @OneToMany(mappedBy = "usuario")
-    private List<Factura> facturaList;
+    private List<Venta> ventasList;
 }

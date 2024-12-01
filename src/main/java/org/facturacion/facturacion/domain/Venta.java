@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class Factura {
+public class Venta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +26,8 @@ public class Factura {
     @Column(nullable = false, precision = 4)
     private Double total;
 
-    @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<DetalleFactura> detalleFacturaList = new ArrayList<>();
+    @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<DetalleVenta> detalleVentaList = new ArrayList<>();
 
     @ManyToOne
     private Usuario usuario;

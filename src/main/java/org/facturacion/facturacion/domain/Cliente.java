@@ -42,5 +42,5 @@ public class Cliente {
     private Date fechaCreacion;
 
     @OneToMany(mappedBy = "cliente")
-    private List<Factura> facturaList;
+    private List<Venta> ventasList;
 }

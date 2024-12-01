@@ -20,7 +20,7 @@ public record CrearClienteDTO(
         String nombre
 ) {
 
-        public  Cliente ToEntity(){
+        public  Cliente toEntity(){
                 return new Cliente(null, cedula, nombre, direccion, correo, true,false, new Date(), null);
         }
 }

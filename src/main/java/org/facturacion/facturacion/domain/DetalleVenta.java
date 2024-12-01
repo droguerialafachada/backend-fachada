@@ -7,7 +7,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class DetalleFactura {
+public class DetalleVenta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class DetalleFactura {
     private Producto producto;
 
     @ManyToOne
-    @JoinColumn(name = "factura_id", nullable = false)
-    private Factura factura;
+    @JoinColumn(name = "venta_id", nullable = false)
+    private Venta venta;
 
 }

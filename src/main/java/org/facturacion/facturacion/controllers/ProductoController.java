@@ -1,7 +1,6 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
-import org.facturacion.facturacion.dto.detalleFactura.DetFacturaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
@@ -21,6 +20,7 @@ import java.util.List;
 public class ProductoController {
 
     private final ProductoService productoService;
+
     /**
      * Este método se encarga de listar todos los productos registrados en la base de datos.
      * @return Lista de productos registrados.
@@ -31,13 +31,13 @@ public class ProductoController {
     }
 
     /**
-     * Este método se encarga de verificar si un producto existe en la base de datos.
-     * @param cod_producto Código del producto a verificar.
+     * Este método se encarga de verificar si el código de un producto existe en la base de datos.
+     * @param codProducto Código del producto a verificar.
      * @return True si el producto existe, false en caso contrario.
      */
-    @GetMapping("/verificar-cod-producto/{cod_producto}")
-    public ResponseEntity<Boolean> verificarSiExiteElCodProducto(@PathVariable String cod_producto) {
-        return ResponseEntity.ok(this.productoService.verificarSiExiteElCodProducto(cod_producto));
+    @GetMapping("/verificar-cod-producto/{codProducto}")
+    public ResponseEntity<Boolean> verificarCodProducto(@PathVariable String codProducto) {
+        return ResponseEntity.ok(this.productoService.verificarSiExiteElCodProducto(codProducto));
     }
     /**
      * Este método crea un nuevo producto. Dado un objeto CrearProductoDTO, se crea un nuevo producto
@@ -85,9 +85,9 @@ public class ProductoController {
         return ResponseEntity.ok(this.productoService.verificarCantidad(cantidad, id));
     }
     /**
-     * Este método se encarga de obtener un producto por su código.
-     * @param codigo Código del producto a buscar.
-     * @return Producto encontrado.
+     * Este método se encarga de verificar si un producto está activo.
+     * @param id Identificador del producto a verificar.
+     * @return True si el producto está activo, false en caso contrario.
      */
     @GetMapping("/verificar-activo/{id}")
     public ResponseEntity<Boolean> verificarActivo(@PathVariable String id){

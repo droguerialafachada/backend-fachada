@@ -50,7 +50,7 @@ public class IClienteService implements ClienteService {
         if(clienteRepository.findByCedula(crearClienteDTO.cedula()) != null){
             throw new ClienteExisteException("El cliente con cedula "+crearClienteDTO.cedula()+" ya existe");
         }
-        Cliente cliente = crearClienteDTO.ToEntity();
+        Cliente cliente = crearClienteDTO.toEntity();
         clienteRepository.save(cliente);
         return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
 
