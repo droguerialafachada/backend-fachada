@@ -59,7 +59,7 @@ public class IProductoService implements ProductoService {
     @Override
     public ProductoDTO crearProducto(CrearProductoDTO productoDTO) {
 
-        productoValidationService.validate(productoDTO, CrearProductoDTO.class);
+        productoValidationService.validate(productoDTO);
         if(tipoImpuestoRepository.findByNombre(productoDTO.impuesto()) == null){
             throw  new ProductoImpuestoException("El tipo de impuesto no se ha encontrado");
         }
@@ -79,10 +79,10 @@ public class IProductoService implements ProductoService {
      */
     public ProductoDTO actualizarProducto(ActualizarProductoDTO productoDTO) {
         Optional<Producto> productoAct = this.productoRepository.findById(productoDTO.codigo());
-        //TODO: Se deberia cambiar los if por validaciones inyectadas
+
         if(productoAct.isEmpty()) throw new ProductoNoEncontradoException("El producto no se encuentra registrado");
 
-        productoValidationService.validate(productoDTO, ActualizarProductoDTO.class);
+        productoValidationService.validate(productoDTO);
 
         Producto producto = productoAct.get();
         producto.setNombre(productoDTO.nombre());
