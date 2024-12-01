@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.facturacion.facturacion.dto.cliente.ActualizarClienteDTO;
 
 import java.util.Date;
 import java.util.List;
@@ -43,4 +44,11 @@ public class Cliente {
 
     @OneToMany(mappedBy = "cliente")
     private List<Venta> ventasList;
+
+    public void actualizarCliente(ActualizarClienteDTO clienteDTO) {
+        this.setNombre(clienteDTO.nombre());
+        this.setDireccion(clienteDTO.direccion());
+        this.setCorreo(clienteDTO.correo());
+        this.setActivo(clienteDTO.activo());
+    }
 }

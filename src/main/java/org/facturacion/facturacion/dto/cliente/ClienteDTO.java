@@ -1,5 +1,7 @@
 package org.facturacion.facturacion.dto.cliente;
 
+import org.facturacion.facturacion.domain.Cliente;
+
 import java.util.Date;
 
 public record ClienteDTO(
@@ -11,5 +13,17 @@ public record ClienteDTO(
        String nombre,
        String id
 ) {
+
+    public static ClienteDTO fromEntity(Cliente cliente) {
+        return new ClienteDTO(
+                cliente.getCedula(),
+                cliente.getDireccion(),
+                cliente.getCorreo(),
+                cliente.isActivo(),
+                cliente.getFechaCreacion(),
+                cliente.getNombre(),
+                cliente.getId()+""
+        );
+    }
 
 }

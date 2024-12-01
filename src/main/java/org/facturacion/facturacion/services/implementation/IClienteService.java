@@ -33,13 +33,7 @@ public class IClienteService implements ClienteService {
      */
     @Override
     public List<ClienteDTO> listarClientes() {
-        //TODO: Cambiar el creador de DTO por un metodo de la entidad
-        return clienteRepository.findAllByEliminadoIsFalse().stream().map(
-                cliente ->
-                        new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(),
-                                cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(),
-                                cliente.getId()+"")
-        ).toList();
+        return clienteRepository.findAllByEliminadoIsFalse().stream().map(ClienteDTO::fromEntity).toList();
     }
 
     /**
@@ -51,11 +45,8 @@ public class IClienteService implements ClienteService {
     @Override
     public ClienteDTO obtenerClientePorCedula(String id) {
         Cliente cliente = clienteRepository.findByCedula(id);
-
         if(cliente == null) throw  new ClienteNoExisteException("No existe un cliente con esa cedula");
-
-        return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(), cliente.isActivo(),
-                cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
+        return ClienteDTO.fromEntity(cliente);
     }
 
     /**
@@ -82,26 +73,24 @@ public class IClienteService implements ClienteService {
         }
         Cliente cliente = crearClienteDTO.toEntity();
         clienteRepository.save(cliente);
-        return new ClienteDTO(cliente.getCedula(), cliente.getDireccion(), cliente.getCorreo(),
-                cliente.isActivo(), cliente.getFechaCreacion(), cliente.getNombre(), cliente.getId()+"");
+        return ClienteDTO.fromEntity(cliente);
 
     }
 
+    /**
+     * Metodo que se encarga de actualizar un cliente y guardarlo en la base de datos
+     * @param clienteDTO Objeto de tipo ActualizarClienteDTO
+     * @param id Id del cliente a actualizar
+     * @return ClienteDTO Retorna un objeto de tipo ClienteDTO
+     */
     @Override
     public ClienteDTO actualizarCliente(ActualizarClienteDTO clienteDTO, Integer id) {
         Optional<Cliente> cliente = clienteRepository.findById(id);
-
         if(cliente.isEmpty()) throw new ClienteExisteException("El cliente con id "+id+" no existe");
-        //TODO: Cambiar el creador de DTO por un metodo de la entidad
         Cliente clienteActualizado = cliente.get();
-        clienteActualizado.setNombre(clienteDTO.nombre());
-        clienteActualizado.setDireccion(clienteDTO.direccion());
-        clienteActualizado.setCorreo(clienteDTO.correo());
-        clienteActualizado.setActivo(clienteDTO.activo());
+        clienteActualizado.actualizarCliente(clienteDTO);
         clienteRepository.save(clienteActualizado);
-        return new ClienteDTO(clienteActualizado.getCedula(), clienteActualizado.getDireccion(),
-                clienteActualizado.getCorreo(), clienteActualizado.isActivo(), clienteActualizado.getFechaCreacion(),
-                clienteActualizado.getNombre(), clienteActualizado.getId()+"");
+        return ClienteDTO.fromEntity(clienteActualizado);
     }
 
     /**
@@ -115,7 +104,6 @@ public class IClienteService implements ClienteService {
 
         Optional<Cliente> cliente = clienteRepository.findById(id);
         if(cliente.isEmpty()) throw new ClienteExisteException("El cliente con id "+id+" no existe");
-
         Cliente clienteEliminado = cliente.get();
         clienteEliminado.setEliminado(true);
         clienteRepository.save(clienteEliminado);
