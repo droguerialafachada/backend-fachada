@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.Date;
 
+import static org.facturacion.facturacion.utils.Methods.buildError;
+
 @ControllerAdvice
 public class ClienteHandler {
 
@@ -23,7 +25,4 @@ public class ClienteHandler {
         return new ResponseEntity<>(buildError(e.getMessage(), "/clientes/"), HttpStatus.BAD_REQUEST);
     }
 
-    private ValidationError buildError(String mensaje, String path){
-        return new ValidationError(new Date(), mensaje, path);
-    }
 }

@@ -1,9 +1,9 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
-import org.facturacion.facturacion.dto.factura.VentaItemDTO;
-import org.facturacion.facturacion.dto.factura.CrearVentaDTO;
-import org.facturacion.facturacion.dto.factura.VentaDTO;
+import org.facturacion.facturacion.dto.venta.VentaItemDTO;
+import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
+import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.services.specification.VentaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package org.facturacion.facturacion.dto.detalleFactura;
+package org.facturacion.facturacion.dto.detalleVenta;
 
 import org.facturacion.facturacion.domain.DetalleVenta;
 

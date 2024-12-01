@@ -2,10 +2,10 @@ package org.facturacion.facturacion.services.implementation;
 
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.domain.*;
-import org.facturacion.facturacion.dto.factura.VentaItemDTO;
-import org.facturacion.facturacion.dto.factura.CrearVentaDTO;
-import org.facturacion.facturacion.dto.detalleFactura.DetalleVentaDTO;
-import org.facturacion.facturacion.dto.factura.VentaDTO;
+import org.facturacion.facturacion.dto.venta.VentaItemDTO;
+import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
+import org.facturacion.facturacion.dto.detalleVenta.DetalleVentaDTO;
+import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.exceptions.producto.ProductoCantidadException;
 import org.facturacion.facturacion.repositories.VentaRepository;
@@ -54,7 +54,7 @@ public class IVentaService implements VentaService {
     }
 
     private void agregarDetalleVenta(Venta venta, CrearVentaDTO ventaDTO){
-        ventaDTO.listDetalleFactura().forEach(detalle -> {
+        ventaDTO.listDetalleVenta().forEach(detalle -> {
             DetalleVenta detalleVenta = DetalleVentaDTO.toEntity(detalle);
             Producto producto = productoService.findById(detalle.codigoProducto());
 

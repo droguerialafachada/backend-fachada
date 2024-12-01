@@ -1,4 +1,4 @@
-package org.facturacion.facturacion.dto.factura;
+package org.facturacion.facturacion.dto.venta;
 
 import org.facturacion.facturacion.domain.Venta;
 
@@ -8,7 +8,7 @@ public record VentaItemDTO(
         String cedulaCliente,
         Date fechaHora,
         Double total,
-        Integer idFactura
+        Integer idVenta
 ) {
 
 

@@ -1,8 +1,8 @@
 package org.facturacion.facturacion.services.specification;
 
-import org.facturacion.facturacion.dto.factura.VentaItemDTO;
-import org.facturacion.facturacion.dto.factura.CrearVentaDTO;
-import org.facturacion.facturacion.dto.factura.VentaDTO;
+import org.facturacion.facturacion.dto.venta.VentaItemDTO;
+import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
+import org.facturacion.facturacion.dto.venta.VentaDTO;
 
 import java.util.List;
 
