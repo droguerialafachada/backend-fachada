@@ -34,4 +34,7 @@ public class Venta {
 
     @ManyToOne
     private Cliente cliente;
+
+    @Column(nullable = false)
+    private String estado;
 }

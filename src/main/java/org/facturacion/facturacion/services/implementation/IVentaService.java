@@ -57,6 +57,7 @@ public class IVentaService implements VentaService {
         agregarClienteVentas(venta, ventaDTO);
         agregarUsuarioVenta(venta, ventaDTO);
         venta.setFecha(new java.util.Date());
+        venta.setEstado(EstadoVenta.COMPLETADA);
 
         venta.setSubTotal(venta.getTotal() - venta.getTotal() * IVA);
         ventaRepository.save(venta);
