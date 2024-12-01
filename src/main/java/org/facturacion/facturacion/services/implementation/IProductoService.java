@@ -27,8 +27,10 @@ public class IProductoService implements ProductoService {
     private final TipoImpuestoRepository tipoImpuestoRepository;
     private final ProductoValidationService productoValidationService;
 
-
-
+    /**
+     * Lista todos los productos.
+     * @return Lista de productos.
+     */
     @Override
     public List<ProductoDTO> listarProducto() {
         return productoRepository.findAllByEliminadoIsFalse()
@@ -37,12 +39,22 @@ public class IProductoService implements ProductoService {
                 .toList();
     }
 
+    /**
+     * Obtiene un producto por su ID.
+     * @param id Id del producto.
+     * @return Producto encontrado.
+     */
     @Override
     public ProductoDTO obtenerProductoPorId(String id) {
         Producto producto = obtenerProducto(id);
         return ProductoDTO.fromEntity(producto);
     }
 
+    /**
+     * Crea un producto.
+     * @param productoDTO DTO con los datos del producto.
+     * @return Producto creado.
+     */
     @Override
     public ProductoDTO crearProducto(CrearProductoDTO productoDTO) {
         productoValidationService.validate(productoDTO);
@@ -51,6 +63,11 @@ public class IProductoService implements ProductoService {
         return ProductoDTO.fromEntity(productoRepository.save(producto));
     }
 
+    /**
+     * Actualiza un producto.
+     * @param productoDTO DTO con los datos del producto.
+     * @return Producto actualizado.
+     */
     @Override
     public ProductoDTO actualizarProducto(ActualizarProductoDTO productoDTO) {
         Producto producto = obtenerProducto(productoDTO.codigo());
@@ -59,6 +76,11 @@ public class IProductoService implements ProductoService {
         return ProductoDTO.fromEntity(productoRepository.save(producto));
     }
 
+    /**
+     * Elimina un producto (Cambia un estado) pero no lo elimina de la base de datos.
+     * @param id  Id del producto.
+     * @return Booleano que indica si se eliminó el producto.
+     */
     @Override
     public Boolean eliminarProducto(String id) {
         Producto producto = obtenerProducto(id);
@@ -67,11 +89,20 @@ public class IProductoService implements ProductoService {
         return true;
     }
 
+    /**
+     * Verifica si existe un producto por su código.
+     * @param codProducto Código del producto.
+     * @return Booleano que indica si existe el producto.
+     */
     @Override
     public Boolean verificarExisteElCodProducto(String codProducto) {
         return productoRepository.findById(codProducto).isPresent();
     }
 
+    /**
+     * Obtiene los tipos de impuestos.
+     * @return Lista de tipos de impuestos.
+     */
     @Override
     public List<String> getTiposImpuestos() {
         return tipoImpuestoRepository.findAll()
@@ -80,6 +111,12 @@ public class IProductoService implements ProductoService {
                 .toList();
     }
 
+    /**
+     * Verifica si la cantidad de un producto es suficiente para realizar una venta.
+     * @param cantidad Cantidad a verificar.
+     * @param id Id del producto.
+     * @return Booleano que indica si la cantidad es suficiente.
+     */
     @Override
     public Boolean verificarCantidad(Integer cantidad, String id) {
         return productoRepository.findById(id)
@@ -87,11 +124,21 @@ public class IProductoService implements ProductoService {
                 .orElse(false);
     }
 
+    /**
+     * Verifica si un producto está activo.
+     * @param id Id del producto.
+     * @return Booleano que indica si el producto está activo.
+     */
     @Override
     public Boolean isActivo(String id) {
         return obtenerProductoPorId(id).activo();
     }
 
+    /**
+     * Verifica si un producto fue eliminado.
+     * @param id Id del producto.
+     * @return Booleano que indica si el producto fue eliminado.
+     */
     @Override
     public Boolean fueEliminado(String id) {
         return productoRepository.findById(id)
@@ -99,6 +146,10 @@ public class IProductoService implements ProductoService {
                 .orElse(false);
     }
 
+    /**
+     * Recupera un producto eliminado.
+     * @param id Id del producto.
+     */
     @Override
     public void recuperarProducto(String id) {
         Producto producto = obtenerProducto(id);
@@ -106,6 +157,11 @@ public class IProductoService implements ProductoService {
         productoRepository.save(producto);
     }
 
+    /**
+     * Obtiene un producto por su ID.
+     * @param id ID del producto.
+     * @return Producto encontrado.
+     */
     @Override
     public Producto findById(String id) {
         return obtenerProducto(id);
@@ -122,8 +178,7 @@ public class IProductoService implements ProductoService {
     }
 
     /**
-     * Valida y obtiene un tipo de impuesto por su nombre.
-     *
+     * Válida y obtiene un tipo de impuesto por su nombre.
      * @param nombreImpuesto Nombre del tipo de impuesto.
      * @return Tipo de impuesto encontrado.
      */
@@ -135,7 +190,7 @@ public class IProductoService implements ProductoService {
     /**
      * Prepara un producto para ser creado.
      *
-     * @param dto      DTO con los datos del producto.
+     * @param dto DTO con los datos del producto.
      * @param impuesto Tipo de impuesto asociado.
      * @return Producto preparado.
      */
