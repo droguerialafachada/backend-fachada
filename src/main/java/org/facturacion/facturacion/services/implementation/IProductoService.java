@@ -64,7 +64,6 @@ public class IProductoService implements ProductoService {
             throw  new ProductoImpuestoException("El tipo de impuesto no se ha encontrado");
         }
 
-
         Producto producto = productoDTO.toEntity();
         TipoImpuesto impuesto = tipoImpuestoRepository.findByNombre(productoDTO.impuesto());
         producto.setImpuesto(impuesto);
@@ -83,17 +82,7 @@ public class IProductoService implements ProductoService {
         //TODO: Se deberia cambiar los if por validaciones inyectadas
         if(productoAct.isEmpty()) throw new ProductoNoEncontradoException("El producto no se encuentra registrado");
 
-        if(productoDTO.cantidad() < 0 ){
-            throw new ProductoCantidadException("La cantidad del producto no puede ser menor a 0");
-        }
-
-        if(productoDTO.precio() < 0 ){
-            throw new ProductoPrecioException("El precio del producto no puede ser menor a 0");
-        }
-
-        if(productoDTO.nombre() == null || productoDTO.nombre().isEmpty()){
-            throw new ProductoNombreException("El nombre del producto no puede ser vacio");
-        }
+        productoValidationService.validate(productoDTO, ActualizarProductoDTO.class);
 
         Producto producto = productoAct.get();
         producto.setNombre(productoDTO.nombre());

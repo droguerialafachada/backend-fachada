@@ -21,7 +21,7 @@ services:
       DATASOURCE_URL: jdbc:mysql://mysql:3306/facturacion_db
       DATASOURCE_USERNAME: facturacion_user
       DATASOURCE_PASSWORD: facturacion_password
-      API-URL: facturacion
+      API-URL: facturacion:8086
     depends_on:
       - mysql
     ports:
