@@ -7,23 +7,20 @@ import org.facturacion.facturacion.validators.producto.interfaces.ProductoValida
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductoNombreValidator implements ProductoValidator {
+public class ProductoNombreValidator implements ProductoValidator<Object> {
 
     @Override
     public void validate(Object dto) {
-
-        String nombre = (dto instanceof CrearProductoDTO crearProductoDTO)
-                ? crearProductoDTO.nombre()
-                : ((ActualizarProductoDTO) dto).nombre();
-
-        if(nombre == null || nombre.isEmpty()){
-            throw new ProductoNombreException("El nombre del producto no puede estar vacio");
+        String nombre = null;
+        if (dto instanceof CrearProductoDTO crearProductoDTO) {
+            nombre = crearProductoDTO.nombre();
+        } else if (dto instanceof ActualizarProductoDTO actualizarProductoDTO) {
+            nombre = actualizarProductoDTO.nombre();
         }
-    }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return CrearProductoDTO.class.isAssignableFrom(clazz) || ActualizarProductoDTO.class.isAssignableFrom(clazz);
+        if (nombre == null || nombre.isEmpty()) {
+            throw new ProductoNombreException("El nombre del producto no puede estar vacío");
+        }
     }
 
 }

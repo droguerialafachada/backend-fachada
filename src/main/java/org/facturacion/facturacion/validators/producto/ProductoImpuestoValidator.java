@@ -6,18 +6,20 @@ import org.facturacion.facturacion.validators.producto.interfaces.ProductoValida
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductoImpuestoValidator implements ProductoValidator {
+public class ProductoImpuestoValidator implements ProductoValidator<Object> {
 
     @Override
     public void validate(Object dto) {
-        String impuesto = ((CrearProductoDTO) dto).impuesto();
-        if(impuesto == null || impuesto.isEmpty()){
-            throw new ProductoImpuestoException("El impuesto del producto no puede estar vacio");
+
+        String impuesto = null;
+        if (dto instanceof CrearProductoDTO crearProductoDTO) {
+            impuesto = crearProductoDTO.impuesto();
+            if (impuesto == null || impuesto.isEmpty()) {
+                throw new ProductoImpuestoException("El impuesto del producto no puede estar vacío");
+            }
         }
+
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return CrearProductoDTO.class.isAssignableFrom(clazz);
-    }
+
 }

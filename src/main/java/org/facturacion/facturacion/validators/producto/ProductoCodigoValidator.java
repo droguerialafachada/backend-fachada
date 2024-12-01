@@ -7,23 +7,20 @@ import org.facturacion.facturacion.validators.producto.interfaces.ProductoValida
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductoCodigoValidator implements ProductoValidator {
+public class ProductoCodigoValidator implements ProductoValidator<Object> {
 
     @Override
     public void validate(Object dto) {
-
-        String codigo = (dto instanceof CrearProductoDTO crearProductoDTO)
-                ? crearProductoDTO.codigo()
-                : ((ActualizarProductoDTO) dto).codigo();
-
-        if(codigo == null || codigo.isEmpty()){
-            throw new ProductoCodigoException("El codigo del producto no puede estar vacio");
+        String codigo = null;
+        if (dto instanceof CrearProductoDTO crearProductoDTO) {
+            codigo = crearProductoDTO.codigo();
+        } else if (dto instanceof ActualizarProductoDTO actualizarProductoDTO) {
+            codigo = actualizarProductoDTO.codigo();
         }
-    }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return CrearProductoDTO.class.isAssignableFrom(clazz);
+        if (codigo == null || codigo.isEmpty()) {
+            throw new ProductoCodigoException("El código del producto no puede estar vacío");
+        }
     }
 
 }

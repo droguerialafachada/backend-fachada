@@ -7,20 +7,20 @@ import org.facturacion.facturacion.validators.producto.interfaces.ProductoValida
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductoPrecioValidator implements ProductoValidator {
+public class ProductoPrecioValidator implements ProductoValidator<Object> {
 
     @Override
     public void validate(Object dto) {
-        Double precio = (dto instanceof CrearProductoDTO crearProductoDTO)
-                ? crearProductoDTO.precio()
-                : ((ActualizarProductoDTO) dto).precio();
+        Double precio = null;
+        if (dto instanceof CrearProductoDTO crearProductoDTO) {
+            precio = crearProductoDTO.precio();
+        } else if (dto instanceof ActualizarProductoDTO actualizarProductoDTO) {
+            precio = actualizarProductoDTO.precio();
+        }
 
-        if(precio == null || precio<0){
-            throw new ProductoPrecioException("El precio del producto no puede estar vacio");
+        if (precio == null || precio < 0) {
+            throw new ProductoPrecioException("El precio del producto no puede ser negativo o nulo");
         }
     }
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return CrearProductoDTO.class.isAssignableFrom(clazz) || ActualizarProductoDTO.class.isAssignableFrom(clazz);
-    }
+
 }

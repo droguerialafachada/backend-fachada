@@ -1,6 +1,5 @@
 package org.facturacion.facturacion.validators.producto.interfaces;
 
-public interface ProductoValidator {
-    void validate(Object objectDTO);
-    boolean supports(Class<?> clazz);
+public interface ProductoValidator<T> {
+    void validate(T objectDTO);
 }
