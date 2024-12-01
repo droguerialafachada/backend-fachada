@@ -10,6 +10,7 @@ import org.facturacion.facturacion.exceptions.producto.*;
 import org.facturacion.facturacion.repositories.ProductoRepository;
 import org.facturacion.facturacion.repositories.TipoImpuestoRepository;
 import org.facturacion.facturacion.services.specification.ProductoService;
+import org.facturacion.facturacion.services.validations.ProductoValidationService;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +24,7 @@ public class IProductoService implements ProductoService {
 
     private final ProductoRepository productoRepository;
     private final TipoImpuestoRepository tipoImpuestoRepository;
+    private final ProductoValidationService productoValidationService;
 
     /**
      * Este metodo obtiene todos los productos
@@ -56,27 +58,8 @@ public class IProductoService implements ProductoService {
      */
     @Override
     public ProductoDTO crearProducto(CrearProductoDTO productoDTO) {
-        //TODO: Se deberia cambiar los if por validaciones inyectadas
-        if(productoDTO.codigo() == null || productoDTO.codigo().isEmpty()){
-            throw new ProductoCodigoException("El codigo del producto no puede ser vacio");
-        }
 
-        if(productoDTO.cantidad() < 0 ){
-            throw new ProductoCantidadException("La cantidad del producto no puede ser menor a 0");
-        }
-
-        if(productoDTO.precio() < 0 ){
-            throw new ProductoPrecioException("El precio del producto no puede ser menor a 0");
-        }
-
-        if(productoDTO.nombre() == null || productoDTO.nombre().isEmpty()){
-            throw new ProductoNombreException("El nombre del producto no puede ser vacio");
-        }
-
-        if(productoDTO.impuesto() == null || productoDTO.impuesto().isEmpty()){
-            throw new ProductoImpuestoException("El impuesto no debe estar vacio");
-        }
-
+        productoValidationService.validate(productoDTO, CrearProductoDTO.class);
         if(tipoImpuestoRepository.findByNombre(productoDTO.impuesto()) == null){
             throw  new ProductoImpuestoException("El tipo de impuesto no se ha encontrado");
         }
