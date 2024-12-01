@@ -9,7 +9,11 @@ import org.facturacion.facturacion.services.specification.ProductoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
+/**
+ * Esta clase es un controlador que expone los servicios relacionados con los productos
+ * de la aplicación. Se encarga de recibir las peticiones HTTP y delegar la lógica de negocio
+ * al servicio correspondiente.
+ */
 @RestController
 @RequestMapping("/productos")
 @CrossOrigin(origins = "*")
@@ -17,37 +21,48 @@ import java.util.List;
 public class ProductoController {
 
     private final ProductoService productoService;
-
+    /**
+     * Este método se encarga de listar todos los productos registrados en la base de datos.
+     * @return Lista de productos registrados.
+     */
     @GetMapping
     public ResponseEntity<List<ProductoDTO>> listarProducto() {
         return ResponseEntity.ok(this.productoService.listarProducto());
     }
 
-    @GetMapping("/{id}")
-    public void obtenerProductoPorId(@PathVariable Integer id) {
-
-    }
-
+    /**
+     * Este método se encarga de verificar si un producto existe en la base de datos.
+     * @param cod_producto Código del producto a verificar.
+     * @return True si el producto existe, false en caso contrario.
+     */
     @GetMapping("/verificar-cod-producto/{cod_producto}")
     public ResponseEntity<Boolean> verificarSiExiteElCodProducto(@PathVariable String cod_producto) {
         return ResponseEntity.ok(this.productoService.verificarSiExiteElCodProducto(cod_producto));
     }
-
-    @PostMapping("/disminuir-stock")
-    public void disminuirStock(@RequestBody List<DetFacturaDTO> detallesFacturaDTO) {
-
-    }
-
+    /**
+     * Este método crea un nuevo producto. Dado un objeto CrearProductoDTO, se crea un nuevo producto
+     * en la base de datos.
+     * @param producto Datos del producto a crear.
+     */
     @PostMapping("/guardar")
     public ResponseEntity<ProductoDTO> crearProducto(@RequestBody CrearProductoDTO producto) {
         return ResponseEntity.ok(this.productoService.crearProducto(producto));
     }
-
+    /**
+     * Este método se encarga de actualizar un producto. Dado un objeto ActualizarProductoDTO, se actualiza
+     * un producto en la base de datos.
+     * @param producto Datos del producto a actualizar.
+     */
     @PutMapping("/actualizar")
     public ResponseEntity<ProductoDTO> actualizarProducto(@RequestBody ActualizarProductoDTO producto) {
         return ResponseEntity.ok(this.productoService.actualizarProducto(producto));
     }
-
+    /**
+     * Este método se encarga de eliminar un producto. Dado un código de producto, se elimina el producto
+     * de la base de datos.
+     * @param codigo Código del producto a eliminar.
+     * @return True si el producto fue eliminado, false en caso contrario.
+     */
     @DeleteMapping("/eliminar/{codigo}")
     public ResponseEntity<Boolean> eliminarProducto(@PathVariable String codigo) {
         return ResponseEntity.ok(this.productoService.eliminarProducto(codigo));
