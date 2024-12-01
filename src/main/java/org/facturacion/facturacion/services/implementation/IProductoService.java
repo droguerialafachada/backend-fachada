@@ -94,16 +94,14 @@ public class IProductoService implements ProductoService {
     }
 
     /**
-     * Este metodo elimina un producto, solo cambia el estado a eliminado
+     * Este metodo elimina un producto, solo cambia el estado ha eliminado
      * @param id Id del producto a eliminar
      * @return Boolean Retorna un valor booleano
      */
     @Override
     public Boolean eliminarProducto(String id) {
         Optional<Producto> producto = this.productoRepository.findById(id);
-
         if(producto.isEmpty()) throw new ProductoNoEncontradoException("El producto no se encuentra registrado");
-
         producto.get().setEliminado(true);
         this.productoRepository.save(producto.get());
         return true;
