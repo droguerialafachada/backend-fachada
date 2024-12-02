@@ -7,6 +7,6 @@ import java.util.List;
 public record CrearVentaDTO(
         List<DetalleVentaDTO> listDetalleVenta,
         Integer usuario,
-        Integer cliente
+        String cliente
 ) {
 }

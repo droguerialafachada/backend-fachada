@@ -149,5 +149,10 @@ public class IVentaService implements VentaService {
         return true;
     }
 
+    @Override
+    public List<VentaDTO> obtenerVentasCompletadas() {
+       return ventaRepository.findAllByEstado(EstadoVenta.COMPLETADA).stream().map(VentaDTO::fromEntity).toList();
+    }
+
 
 }

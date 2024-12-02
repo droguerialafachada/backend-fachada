@@ -25,6 +25,6 @@ public interface ClienteService {
 
     void recuperarCliente(String cedula);
 
-    Cliente findByCedula(Integer cliente);
+    Cliente findByCedula(String cliente);
 
 }

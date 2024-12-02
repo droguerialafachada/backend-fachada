@@ -15,4 +15,6 @@ public interface VentaService {
     List<VentaItemDTO> obtenerVentas();
 
     Boolean cancelarVenta(Integer id);
+
+    List<VentaDTO> obtenerVentasCompletadas();
 }

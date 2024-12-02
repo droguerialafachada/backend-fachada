@@ -57,8 +57,17 @@ public class VentaController {
      * @param id ID de la venta a obtener.
      * @return Un booleano que indica si la venta fue cancelada.
      */
-    @PutMapping("/cancelar/{id}")
+    @DeleteMapping("/cancelar/{id}")
     public ResponseEntity<Boolean> cancelarVenta(@PathVariable Integer id){
         return ResponseEntity.ok(this.ventaService.cancelarVenta(id));
+    }
+
+    /**
+     * Este método se encarga de obtener las ventas completadas.
+     * @return Lista de ventas completadas.
+     */
+    @GetMapping("/obtener-ventas-completadas")
+    public ResponseEntity<List<VentaDTO>> obtenerVentasCompletadas(){
+        return ResponseEntity.ok(this.ventaService.obtenerVentasCompletadas());
     }
 }

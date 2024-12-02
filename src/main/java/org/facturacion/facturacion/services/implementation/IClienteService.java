@@ -140,7 +140,5 @@ public class IClienteService implements ClienteService {
      * @return Cliente Retorna un objeto de tipo Cliente
      */
     @Override
-    public Cliente findByCedula(Integer cedula) {
-        return clienteRepository.findByCedula(cedula+"");
-    }
+    public Cliente findByCedula(String cedula) {return clienteRepository.findByCedula(cedula);}
 }
