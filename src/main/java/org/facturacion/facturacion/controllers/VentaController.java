@@ -50,4 +50,15 @@ public class VentaController {
     public ResponseEntity<List<VentaItemDTO>> obtenerVentas(){
         return ResponseEntity.ok(this.ventaService.obtenerVentas());
     }
+
+    /**
+     * Este método se encarga de cancelar una venta por su ID.
+     * Cancelar una venta implica cambiar su estado a CANCELADA.
+     * @param id ID de la venta a obtener.
+     * @return Un booleano que indica si la venta fue cancelada.
+     */
+    @PutMapping("/cancelar/{id}")
+    public ResponseEntity<Boolean> cancelarVenta(@PathVariable Integer id){
+        return ResponseEntity.ok(this.ventaService.cancelarVenta(id));
+    }
 }

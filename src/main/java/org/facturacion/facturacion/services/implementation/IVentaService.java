@@ -8,6 +8,8 @@ import org.facturacion.facturacion.dto.detalleVenta.DetalleVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.exceptions.producto.ProductoCantidadException;
+import org.facturacion.facturacion.exceptions.venta.VentaCanceladaException;
+import org.facturacion.facturacion.exceptions.venta.VentaNoExisteException;
 import org.facturacion.facturacion.repositories.VentaRepository;
 import org.facturacion.facturacion.services.specification.ClienteService;
 import org.facturacion.facturacion.services.specification.VentaService;
@@ -70,7 +72,6 @@ public class IVentaService implements VentaService {
      * @param venta Venta a la que se le agregaran los detalles
      */
     private void agregarDetalleVenta(Venta venta, CrearVentaDTO ventaDTO){
-        //TODO: Se debe reducir la complejidad de este metodo
         ventaDTO.listDetalleVenta().forEach(detalle -> {
             DetalleVenta detalleVenta = DetalleVentaDTO.toEntity(detalle);
             Producto producto = productoService.findById(detalle.codigoProducto());
@@ -94,10 +95,7 @@ public class IVentaService implements VentaService {
      */
     private void agregarUsuarioVenta(Venta venta, CrearVentaDTO ventaDTO){
         Usuario usuario = this.usuarioService.findById(ventaDTO.usuario());
-
-        if(usuario == null){
-            throw new ClienteNoExisteException("No se ha encontrado el usuario con el id "+ ventaDTO.usuario());
-        }
+        if(usuario == null) throw new ClienteNoExisteException("No se ha encontrado el usuario con el id "+ ventaDTO.usuario());
         venta.setUsuario(usuario);
     }
 
@@ -121,6 +119,34 @@ public class IVentaService implements VentaService {
     @Override
     public List<VentaItemDTO> obtenerVentas() {
         return ventaRepository.findAll().stream().map(VentaItemDTO::fromEntity).toList();
+    }
+
+    /**
+     * Este metodo cancela una venta por su id
+     * Para cancelar una venta implica que se debe devolver la cantidad de productos a la tienda
+     * y cambiar el estado de la venta a CANCELADA
+     * @param id Id de la venta
+     * @return Boolean True si se cancelo la venta, False si no
+     */
+    @Override
+    public Boolean cancelarVenta(Integer id) {
+
+        Venta venta = ventaRepository.findById(id).orElse(null);
+        if(venta == null) throw new VentaNoExisteException("No se ha encontrado la venta con el id "+ id);
+
+        if(venta.getEstado().equals(EstadoVenta.CANCELADA)) {
+            throw new VentaCanceladaException("La venta ya ha sido cancelada");
+        }
+
+        venta.getDetalleVentaList().forEach(detalle -> {
+            Producto producto = detalle.getProducto();
+            producto.setStock(producto.getStock() + detalle.getCantidad());
+            productoService.guardar(producto);
+        });
+
+        venta.setEstado(EstadoVenta.CANCELADA);
+        ventaRepository.save(venta);
+        return true;
     }
 
 

@@ -168,6 +168,15 @@ public class IProductoService implements ProductoService {
     }
 
     /**
+     * Este método guarda un objeto de la Entidad Producto.
+     * @param producto Producto a guardar.
+     */
+    @Override
+    public void guardar(Producto producto) {
+        productoRepository.save(producto);
+    }
+
+    /**
      * Obtiene un producto por su ID o lanza una excepción si no se encuentra.
      * @param id ID del producto.
      * @return Producto encontrado.

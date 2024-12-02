@@ -13,4 +13,6 @@ public interface VentaService {
     VentaDTO guardarVenta(CrearVentaDTO facturaDTO);
 
     List<VentaItemDTO> obtenerVentas();
+
+    Boolean cancelarVenta(Integer id);
 }

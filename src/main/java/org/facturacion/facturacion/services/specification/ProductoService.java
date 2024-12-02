@@ -30,4 +30,6 @@ public interface ProductoService {
     void recuperarProducto(String id);
 
     Producto findById(String s);
+
+    void guardar(Producto producto);
 }
