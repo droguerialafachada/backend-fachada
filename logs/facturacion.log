@@ -653,3 +653,605 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'facturacion_db.venta' doesn'
 2024-12-04T10:04:02.873-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
 2024-12-04T10:04:05.856-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
 2024-12-04T10:04:08.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:11.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:14.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:17.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:20.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:23.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:26.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:29.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:32.883-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:35.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:38.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:41.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:44.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:47.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:50.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:53.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:56.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:04:59.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:02.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:05.857-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:08.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:11.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:14.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:17.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:20.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:23.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:26.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:29.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:32.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:35.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:38.856-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:41.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:44.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:47.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:50.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:53.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:56.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:05:59.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:02.869-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:05.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:08.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:11.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:14.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:17.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:20.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:23.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:26.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:29.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:32.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:35.857-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:38.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:41.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:44.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:47.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:50.857-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:53.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:56.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:06:59.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:02.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:05.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:08.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:11.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:14.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:17.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:20.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:23.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:26.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:29.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:32.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:35.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:38.857-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:41.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:44.857-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:47.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:50.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:53.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:56.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:07:59.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:02.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:05.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:08.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:11.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:14.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:17.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:20.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:23.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:26.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:29.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:32.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:35.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:38.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:41.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:44.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:47.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:50.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:53.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:56.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:08:59.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:02.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:05.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:08.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:11.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:14.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:17.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:20.857-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:23.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:26.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:29.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:32.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:35.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:38.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:41.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:44.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:47.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:50.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:53.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:56.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:09:59.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:02.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:05.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:08.858-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:11.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:14.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:17.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:20.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:23.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:26.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:29.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:32.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:35.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:38.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:41.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:44.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:47.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:50.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:53.871-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:56.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:10:59.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:02.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:05.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:08.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:11.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:14.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:17.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:20.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:23.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:26.870-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:29.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:32.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:35.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:38.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:41.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:44.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:47.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:50.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:53.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:56.870-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:11:59.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:02.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:05.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:08.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:11.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:14.869-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:17.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:20.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:23.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:26.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:29.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:32.869-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:35.869-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:38.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:41.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:44.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:47.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:50.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:53.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:56.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:12:59.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:02.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:05.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:08.882-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:11.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:14.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:17.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:20.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:23.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:26.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:29.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:32.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:35.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:38.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:41.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:44.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:47.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:50.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:53.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:56.871-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:13:59.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:02.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:05.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:08.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:11.868-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:14.870-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:17.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:20.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:23.870-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:26.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:29.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:32.883-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:35.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:38.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:41.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:44.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:47.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:50.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:53.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:56.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:14:59.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:02.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:05.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:08.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:11.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:14.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:17.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:20.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:23.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:26.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:29.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:32.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:35.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:38.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:41.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:44.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:47.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:50.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:53.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:56.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:15:59.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:02.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:05.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:08.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:11.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:14.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:17.859-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:20.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:23.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:26.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:29.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:32.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:35.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:38.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:41.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:44.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:47.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:50.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:53.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:56.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:16:59.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:02.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:05.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:08.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:11.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:14.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:17.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:20.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:23.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:26.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:29.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:32.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:35.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:38.872-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:41.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:44.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:47.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:50.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:53.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:56.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:17:59.860-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:02.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:05.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:08.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:11.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:14.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:17.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:20.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:23.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:26.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:29.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:32.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:35.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:38.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:41.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:44.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:47.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:50.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:53.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:56.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:18:59.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:02.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:05.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:08.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:11.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:14.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:17.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:20.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:23.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:26.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:29.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:32.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:35.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:38.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:41.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:44.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:47.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:50.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:53.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:56.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:19:59.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:02.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:05.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:08.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:11.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:14.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:17.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:20.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:23.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:26.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:29.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:32.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:35.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:38.869-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:41.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:44.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:47.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:50.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:53.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:56.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:20:59.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:02.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:05.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:08.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:11.862-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:14.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:17.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:20.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:23.864-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:26.863-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:29.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:32.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:35.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:38.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:41.861-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:44.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:47.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:50.866-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:53.865-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:56.867-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:21:59.872-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:02.875-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:05.878-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:08.881-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:11.880-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:14.883-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:17.886-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:20.885-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:23.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:26.889-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:29.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:32.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:35.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:38.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:41.889-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:44.888-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:47.890-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:50.890-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:53.888-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:56.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:22:59.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:02.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:05.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:08.890-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:11.897-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:14.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:17.897-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:20.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:23.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:26.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:29.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:32.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:35.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:38.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:41.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:44.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:47.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:50.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:53.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:56.896-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:23:59.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:02.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:05.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:08.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:11.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:14.890-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:17.899-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:20.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:23.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:26.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:29.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:32.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:35.890-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:38.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:41.896-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:44.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:47.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:50.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:53.890-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:56.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:24:59.896-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:02.899-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:05.906-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:08.897-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:11.937-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:14.898-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:17.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:20.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:23.896-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:26.896-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:29.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:32.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:35.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:38.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:41.890-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:41.958-05:00  INFO 58629 --- [facturacion] [http-nio-8086-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xd20x010x000x060xce0x030x030x090x830xda5{Y0xe60xaf0x04[0x0b0xf70xf10x0a0x840xceI20xdf0x9d0x9dT0x9a0xf4{0x0f*0xef0xf20x0e0x060xba ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-12-04T10:25:44.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:47.903-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:50.893-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:53.897-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:56.896-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:25:59.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:02.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:05.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:08.899-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:11.934-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:14.894-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:17.892-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:20.897-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:23.891-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:26.895-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:29.896-05:00 ERROR 58629 --- [facturacion] [scheduling-1] o.f.f.s.implementation.KeepAliveService  : Error al enviar la petición: Illegal character in scheme name at index 0: %22localhost:
+2024-12-04T10:26:30.747-05:00  INFO 58629 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04T10:26:30.795-05:00  INFO 58629 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-04T10:26:30.945-05:00  INFO 58629 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-04T10:26:35.802-05:00  INFO 61837 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 61837 (/Users/aariaz/Desktop/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/facturacion)
+2024-12-04T10:26:35.803-05:00  INFO 61837 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-04T10:26:35.821-05:00  INFO 61837 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-04T10:26:35.821-05:00  INFO 61837 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-04T10:26:36.187-05:00  INFO 61837 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-04T10:26:36.218-05:00  INFO 61837 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 8 JPA repository interfaces.
+2024-12-04T10:26:36.457-05:00  INFO 61837 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2024-12-04T10:26:36.463-05:00  INFO 61837 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-04T10:26:36.463-05:00  INFO 61837 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-12-04T10:26:36.481-05:00  INFO 61837 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-04T10:26:36.481-05:00  INFO 61837 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 659 ms
+2024-12-04T10:26:36.544-05:00  INFO 61837 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-04T10:26:36.577-05:00  INFO 61837 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-12-04T10:26:36.591-05:00  INFO 61837 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-04T10:26:36.742-05:00  INFO 61837 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-04T10:26:36.756-05:00  INFO 61837 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-04T10:26:36.941-05:00  INFO 61837 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29822a3d
+2024-12-04T10:26:36.942-05:00  INFO 61837 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-04T10:26:36.970-05:00  WARN 61837 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-04T10:26:36.971-05:00  WARN 61837 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-04T10:26:37.415-05:00  INFO 61837 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-04T10:26:37.780-05:00  INFO 61837 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04T10:26:37.951-05:00  INFO 61837 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-04T10:26:38.189-05:00  WARN 61837 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-04T10:26:38.376-05:00  INFO 61837 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-04T10:26:38.397-05:00  INFO 61837 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2024-12-04T10:26:38.404-05:00  INFO 61837 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.742 seconds (process running for 3.077)
+2024-12-04T10:26:47.642-05:00  INFO 61837 --- [facturacion] [http-nio-8086-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xd20x010x000x060xce0x030x030xfcA0x850x8f0xd20xc20x1e0xd70x850xef0xb90xb80xbe0x070xed0xc60xbc0x0b0x0d,0xb40xadN0xc10xf00xbc0xd70x950x860xe10x080xaf ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-12-04T10:28:23.695-05:00  INFO 61837 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04T10:28:23.717-05:00  INFO 61837 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-04T10:28:23.764-05:00  INFO 61837 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-04T10:28:27.796-05:00  INFO 61944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 61944 (/Users/aariaz/Desktop/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/facturacion)
+2024-12-04T10:28:27.797-05:00  INFO 61944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-04T10:28:27.819-05:00  INFO 61944 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-04T10:28:27.819-05:00  INFO 61944 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-04T10:28:28.148-05:00  INFO 61944 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-04T10:28:28.173-05:00  INFO 61944 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 8 JPA repository interfaces.
+2024-12-04T10:28:28.405-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2024-12-04T10:28:28.410-05:00  INFO 61944 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-04T10:28:28.410-05:00  INFO 61944 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-12-04T10:28:28.427-05:00  INFO 61944 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-04T10:28:28.427-05:00  INFO 61944 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 608 ms
+2024-12-04T10:28:28.489-05:00  INFO 61944 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-04T10:28:28.514-05:00  INFO 61944 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-12-04T10:28:28.528-05:00  INFO 61944 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-04T10:28:28.779-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-04T10:28:28.802-05:00  INFO 61944 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-04T10:28:28.960-05:00  INFO 61944 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3001f103
+2024-12-04T10:28:28.960-05:00  INFO 61944 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-04T10:28:28.982-05:00  WARN 61944 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-04T10:28:28.982-05:00  WARN 61944 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-04T10:28:29.450-05:00  INFO 61944 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-04T10:28:29.838-05:00  INFO 61944 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04T10:28:30.009-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-04T10:28:30.245-05:00  WARN 61944 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-04T10:28:30.438-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-04T10:28:30.459-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2024-12-04T10:28:30.467-05:00  INFO 61944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.84 seconds (process running for 3.246)
+2024-12-04T10:28:34.725-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x070x120x010x000x070x0e0x030x030xc80xf20xb90xff~0xb5R0xfe0x980x18,0x8d0xc60xb50x11j0xd20x9c0xfc0xa20xd00xa90xfb0xa30x0bC0xc30xa2M0xbe0x8dG ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-12-04T10:28:55.143-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-04T10:28:55.144-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-04T10:28:55.148-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-12-04T10:28:55.622-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 183 ms
+2024-12-04T10:30:01.117-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-7] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xf20x010x000x060xee0x030x030xb20x8dz0xb20x830xa80x8f0x13%0xd1~50x180x020xf00xcd0xcc0x9a0x020x7f0x9dD0xb80xa10xd10xd0$y0xf20xa10xe80x89 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-12-04T10:33:11.502-05:00  INFO 61944 --- [facturacion] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 93 class path changes (0 additions, 0 deletions, 93 modifications)
+2024-12-04T10:33:11.555-05:00  INFO 61944 --- [facturacion] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04T10:33:11.560-05:00  INFO 61944 --- [facturacion] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-04T10:33:11.600-05:00  INFO 61944 --- [facturacion] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-04T10:33:11.681-05:00  INFO 61944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 61944 (/Users/aariaz/Desktop/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/facturacion)
+2024-12-04T10:33:11.681-05:00  INFO 61944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-04T10:33:11.849-05:00  INFO 61944 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-04T10:33:11.862-05:00  INFO 61944 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 8 JPA repository interfaces.
+2024-12-04T10:33:11.945-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2024-12-04T10:33:11.945-05:00  INFO 61944 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-04T10:33:11.945-05:00  INFO 61944 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-12-04T10:33:11.950-05:00  INFO 61944 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-04T10:33:11.951-05:00  INFO 61944 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 269 ms
+2024-12-04T10:33:11.969-05:00  INFO 61944 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-04T10:33:11.971-05:00  INFO 61944 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-04T10:33:11.976-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-04T10:33:11.976-05:00  INFO 61944 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-12-04T10:33:12.010-05:00  INFO 61944 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6539b905
+2024-12-04T10:33:12.011-05:00  INFO 61944 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-12-04T10:33:12.011-05:00  WARN 61944 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-04T10:33:12.011-05:00  WARN 61944 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-12-04T10:33:12.073-05:00  INFO 61944 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-04T10:33:12.556-05:00  INFO 61944 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-04T10:33:12.644-05:00  WARN 61944 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-04T10:33:12.723-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-04T10:33:12.731-05:00  INFO 61944 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2024-12-04T10:33:12.736-05:00  INFO 61944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 1.068 seconds (process running for 285.512)
+2024-12-04T10:33:12.845-05:00  INFO 61944 --- [facturacion] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-04T10:33:15.891-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-04T10:33:15.893-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-04T10:33:15.899-05:00  INFO 61944 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms

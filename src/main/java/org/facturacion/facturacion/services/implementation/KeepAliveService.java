@@ -37,9 +37,9 @@ public class KeepAliveService {
         try {
             // Realizamos la petición GET al propio backend
             ResponseEntity<String> response = restTemplate.getForEntity(selfUrl, String.class);
-            log.info("Respuesta del servidor: " + response.getBody());
+           // log.info("Respuesta del servidor: " + response.getBody());
         } catch (Exception e) {
-            log.error("Error al enviar la petición: " + e.getMessage());
+            //log.error("Error al enviar la petición: " + e.getMessage());
         }
     }
 }
