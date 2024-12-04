@@ -2,6 +2,7 @@ package org.facturacion.facturacion.dto.factura;
 
 import org.facturacion.facturacion.domain.Factura;
 import org.facturacion.facturacion.domain.Venta;
+import org.facturacion.facturacion.utils.Constants;
 
 public record FacturaDTO(
         Integer id,
@@ -21,13 +22,14 @@ public record FacturaDTO(
     }
 
     public static Factura toEntity(Venta venta) {
-        Factura facturaElectronica = new Factura();
-        facturaElectronica.setCliente(venta.getCliente());
-        facturaElectronica.setUsuario(venta.getUsuario());
-        facturaElectronica.setDetalleVentaList(venta.getDetalleVentaList());
-        facturaElectronica.setTotal(venta.getTotal());
+        Factura factura = new Factura();
+        factura.setCliente(venta.getCliente());
+        factura.setUsuario(venta.getUsuario());
+        factura.setDetalleVentaList(venta.getDetalleVentaList());
+        factura.setTotal(venta.getTotal());
         //La fecha de la factura es la fecha de creación no la fecha de la venta
-        facturaElectronica.setFecha(new java.util.Date());
-        return facturaElectronica;
+        factura.setFecha(new java.util.Date());
+        factura.setEstado(Constants.ESTADO_FACTURA_GENERADA);
+        return factura;
     }
 }
