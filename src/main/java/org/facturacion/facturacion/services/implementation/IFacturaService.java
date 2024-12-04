@@ -3,9 +3,7 @@ package org.facturacion.facturacion.services.implementation;
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.domain.EstadoVenta;
 import org.facturacion.facturacion.domain.Factura;
-import org.facturacion.facturacion.domain.FacturaElectronica;
 import org.facturacion.facturacion.domain.Venta;
-import org.facturacion.facturacion.dto.efactura.EFacturaDTO;
 import org.facturacion.facturacion.dto.factura.CrearFacturaDTO;
 import org.facturacion.facturacion.dto.factura.FacturaDTO;
 import org.facturacion.facturacion.exceptions.efactura.VentaCanceladaException;
@@ -70,7 +68,6 @@ public class IFacturaService implements FacturaService {
         if(venta.getEstado().equals(EstadoVenta.CANCELADA))
             throw new VentaCanceladaException("La venta esta cancelada");
         Factura facturaElectronica = FacturaDTO.toEntity(venta);
-
 
         return FacturaDTO.fromEntity(facturaRepository.save(facturaElectronica));
     }
