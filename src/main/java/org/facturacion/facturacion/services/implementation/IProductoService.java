@@ -130,9 +130,7 @@ public class IProductoService implements ProductoService {
      * @return Booleano que indica si el producto está activo.
      */
     @Override
-    public Boolean isActivo(String id) {
-        return obtenerProductoPorId(id).activo();
-    }
+    public Boolean isActivo(String id) {return obtenerProductoPorId(id).activo();}
 
     /**
      * Verifica si un producto fue eliminado.

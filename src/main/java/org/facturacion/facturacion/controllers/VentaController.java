@@ -1,6 +1,7 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
+import org.facturacion.facturacion.dto.venta.FullVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaItemDTO;
 import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaDTO;
@@ -69,5 +70,15 @@ public class VentaController {
     @GetMapping("/obtener-ventas-completadas")
     public ResponseEntity<List<VentaDTO>> obtenerVentasCompletadas(){
         return ResponseEntity.ok(this.ventaService.obtenerVentasCompletadas());
+    }
+
+    /**
+     * Este método se encarga de obtener una venta por su ID.
+     * @param id ID de la venta a obtener.
+     * @return Venta obtenida.
+     */
+    @GetMapping("/{id}")
+    public ResponseEntity<FullVentaDTO> obtenerVentaPorId(@PathVariable Integer id){
+        return ResponseEntity.ok(this.ventaService.obtenerVentaPorId(id));
     }
 }

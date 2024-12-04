@@ -29,7 +29,7 @@ public class FacturaController {
      * @return Lista de facturas registradas.
      */
     @GetMapping()
-    public ResponseEntity<List<FacturaDTO>> obtenerFacturaElectronica(){
+    public ResponseEntity<List<FacturaDTO>> obtenerFactura(){
         return ResponseEntity.ok(this.facturaService.obtenerFacturas());
     }
     /**
@@ -38,7 +38,7 @@ public class FacturaController {
      * @return Factura encontrada.
      */
     @GetMapping("/{id}")
-    public ResponseEntity<FacturaDTO> obtenerFacturaElectronicaPorId(@PathVariable Integer id){
+    public ResponseEntity<FacturaDTO> obtenerFacturaPorId(@PathVariable Integer id){
         return ResponseEntity.ok(this.facturaService.obtenerFacturaPorId(id));
     }
     /**
@@ -47,7 +47,7 @@ public class FacturaController {
      * @return Factura guardada.
      */
     @PostMapping("/guardar")
-    public ResponseEntity<FacturaDTO> guardarFacturaElectronica(@RequestBody CrearFacturaDTO facturaDTO){
+    public ResponseEntity<FacturaDTO> guardarFactura(@RequestBody CrearFacturaDTO facturaDTO){
         return ResponseEntity.ok(this.facturaService.guardarFactura(facturaDTO));
     }
 }

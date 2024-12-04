@@ -2,6 +2,7 @@ package org.facturacion.facturacion.services.implementation;
 
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.domain.*;
+import org.facturacion.facturacion.dto.venta.FullVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaItemDTO;
 import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
 import org.facturacion.facturacion.dto.detalleVenta.DetalleVentaDTO;
@@ -149,9 +150,25 @@ public class IVentaService implements VentaService {
         return true;
     }
 
+    /**
+     * Este metodo obtiene las ventas en estado COMPLETADA
+     * @return List<VentaDTO> Lista de ventas completadas
+     */
     @Override
     public List<VentaDTO> obtenerVentasCompletadas() {
        return ventaRepository.findAllByEstado(EstadoVenta.COMPLETADA).stream().map(VentaDTO::fromEntity).toList();
+    }
+
+    /**
+     * Este metodo obtiene una venta con toda la información dado su id
+     * @param id Id de la venta
+     * @return FullVentaDTO
+     */
+    @Override
+    public FullVentaDTO obtenerVentaPorId(Integer id) {
+        Venta venta = ventaRepository.findById(id).orElse(null);
+        if(venta == null) throw new VentaNoExisteException("No se ha encontrado la venta con el id "+ id);
+        return FullVentaDTO.fromEntity(venta);
     }
 
 

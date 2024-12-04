@@ -1,5 +1,6 @@
 package org.facturacion.facturacion.services.specification;
 
+import org.facturacion.facturacion.dto.venta.FullVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaItemDTO;
 import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaDTO;
@@ -17,4 +18,6 @@ public interface VentaService {
     Boolean cancelarVenta(Integer id);
 
     List<VentaDTO> obtenerVentasCompletadas();
+
+    FullVentaDTO obtenerVentaPorId(Integer id);
 }
