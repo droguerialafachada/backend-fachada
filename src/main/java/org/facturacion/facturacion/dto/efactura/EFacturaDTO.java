@@ -1,8 +1,6 @@
 package org.facturacion.facturacion.dto.efactura;
 
-
 import org.facturacion.facturacion.domain.FacturaElectronica;
-import org.facturacion.facturacion.dto.venta.VentaDTO;
 
 public record EFacturaDTO(
         Integer id,

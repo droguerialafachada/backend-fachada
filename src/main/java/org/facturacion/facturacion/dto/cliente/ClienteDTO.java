@@ -11,7 +11,7 @@ public record ClienteDTO(
        boolean activo,
        Date fechaCreacion,
        String nombre,
-       String id
+       Integer id
 ) {
 
     public static ClienteDTO fromEntity(Cliente cliente) {
@@ -22,7 +22,7 @@ public record ClienteDTO(
                 cliente.isActivo(),
                 cliente.getFechaCreacion(),
                 cliente.getNombre(),
-                cliente.getId()+""
+                cliente.getId()
         );
     }
 

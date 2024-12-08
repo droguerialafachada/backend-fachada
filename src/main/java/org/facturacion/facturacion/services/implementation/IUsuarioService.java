@@ -3,6 +3,7 @@ package org.facturacion.facturacion.services.implementation;
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.domain.Usuario;
 import org.facturacion.facturacion.dto.usuario.UsuarioDTO;
+import org.facturacion.facturacion.dto.usuario.UsuarioLoginDTO;
 import org.facturacion.facturacion.exceptions.usuario.InformacionIncorrectaException;
 import org.facturacion.facturacion.exceptions.usuario.UsuarioNoEncontradoException;
 import org.facturacion.facturacion.repositories.UsuarioRepository;
@@ -19,20 +20,19 @@ public class IUsuarioService implements UsuarioService {
     private final UsuarioRepository usuarioRepository;
 
     /**
-     * Este metodo realiza el login de un usuario
-     * @param usuario el nombre del usuario
-     * @param contrasena la contraseña del usuario
-     * @return UsuarioDTO el usuario logueado
+     * Este metodo se encarga de hacer el login de un usuario en la aplicación
+     * @param usuario El usuario que se quiere loguear
+     * @return UsuarioDTO El usuario logueado
      */
     @Override
-    public UsuarioDTO login(String usuario, String contrasena) {
+    public UsuarioDTO login(UsuarioLoginDTO usuario) {
 
-        if(usuario == null || contrasena == null) throw new InformacionIncorrectaException("Hay campos vacíos en el login");
-        Usuario user = usuarioRepository.findByNombre(usuario);
+        if(usuario.usuario() == null || usuario.contrasena() == null) throw new InformacionIncorrectaException("Hay campos vacíos en el login");
+        Usuario user = usuarioRepository.findByNombre(usuario.usuario());
         if(user == null) throw new UsuarioNoEncontradoException("El usuario no se ha encontrado");
         
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        if(!passwordEncoder.matches(contrasena, user.getContrasenia()) ) throw new InformacionIncorrectaException("La contraseña es incorrecta");
+        if(!passwordEncoder.matches(usuario.contrasena(), user.getContrasenia()) ) throw new InformacionIncorrectaException("La contraseña es incorrecta");
         
         return new UsuarioDTO(user.getId());
     }

@@ -2,6 +2,7 @@ package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.dto.usuario.UsuarioDTO;
+import org.facturacion.facturacion.dto.usuario.UsuarioLoginDTO;
 import org.facturacion.facturacion.services.specification.UsuarioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,16 +21,15 @@ public class UsuarioController {
     private final UsuarioService usuarioService;
 
     /**
-     * Este método se encarga de realizar el login de un usuario.
-     * @param username Nombre de usuario.
-     *                 Ejemplo: "admin"
-     * @param password Contraseña del usuario.
-     *                 Ejemplo: "admin"
-     * @return Usuario logueado.
+     * Este método recibe una petición POST en la ruta /login y se encarga de realizar
+     * el login de un usuario. Recibe un objeto UsuarioLoginDTO con el nombre de usuario
+     * y la contraseña. Retorna un objeto UsuarioDTO con el ID del usuario logueado.
+     * @param usuario el objeto UsuarioLoginDTO con el nombre de usuario y la contraseña
+     * @return UsuarioDTO el objeto UsuarioDTO con el ID del usuario logueado
      */
-    @GetMapping("/login")
-    public ResponseEntity<UsuarioDTO> login(@RequestParam() String username, @RequestParam() String password) {
-        return ResponseEntity.ok(usuarioService.login(username, password));
+    @PostMapping("/login")
+    public ResponseEntity<UsuarioDTO> login(@RequestBody UsuarioLoginDTO usuario) {
+        return ResponseEntity.ok(usuarioService.login(usuario));
     }
 
 }
