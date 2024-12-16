@@ -9,7 +9,9 @@ public record FullVentaDTO(
         Integer id,
         String fecha,
         Double total,
-        String cliente,
+        String nombreCliente,
+        String cedulaCliente,
+        String direccionCliente,
         String usuario,
         List<FullDetalleDTO> detalleVentaList
 ) {
@@ -19,6 +21,8 @@ public record FullVentaDTO(
                 venta.getFecha().toString(),
                 venta.getTotal(),
                 venta.getCliente().getNombre(),
+                venta.getCliente().getCedula(),
+                venta.getCliente().getDireccion(),
                 venta.getUsuario().getNombre(),
                 FullDetalleDTO.fromEntityList(venta.getDetalleVentaList())
         );
