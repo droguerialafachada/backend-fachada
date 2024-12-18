@@ -30,6 +30,7 @@ public record FacturaDTO(
         //La fecha de la factura es la fecha de creación no la fecha de la venta
         factura.setFecha(new java.util.Date());
         factura.setEstado(Constants.ESTADO_FACTURA_GENERADA);
+        factura.setSubTotal(venta.getSubTotal());
         return factura;
     }
 }
