@@ -37,4 +37,10 @@ public class Venta {
 
     @Column(nullable = false)
     private String estado;
+
+    @OneToOne(mappedBy = "venta")
+    private Factura factura;
+
+    @OneToOne(mappedBy = "venta")
+    private FacturaElectronica facturaElectronica;
 }

@@ -1,7 +1,22 @@
 package org.facturacion.facturacion.domain;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Date;
 
 @Entity
-public class FacturaElectronica extends Venta{
+@Getter
+@Setter
+public class FacturaElectronica{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    private Date fecha;
+
+    @OneToOne
+    private Venta venta;
 }

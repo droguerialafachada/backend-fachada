@@ -67,8 +67,11 @@ public class IFacturaElectronicaService implements FacturaElectronicaService {
 
             if(venta.getEstado().equals(EstadoVenta.CANCELADA))
                 throw new VentaCanceladaException("La venta esta cancelada");
+            FacturaElectronica facturaElectronica = facturaElectronicaDTO.toEntity();
+            venta.setFacturaElectronica(facturaElectronica);
+            facturaElectronica.setVenta(venta);
 
-            return EFacturaDTO.fromEntity(facturaElectronicaRepository.save(facturaElectronicaDTO.toEntity(venta)));
+            return EFacturaDTO.fromEntity(facturaElectronicaRepository.save(facturaElectronica));
         }
 
 }

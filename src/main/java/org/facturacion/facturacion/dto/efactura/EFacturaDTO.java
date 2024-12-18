@@ -13,9 +13,9 @@ public record EFacturaDTO(
         return new EFacturaDTO(
                 eFactura.getId(),
                 eFactura.getFecha().toString(),
-                eFactura.getTotal(),
-                eFactura.getCliente().getNombre(),
-                eFactura.getUsuario().getNombre()
+                eFactura.getVenta().getTotal(),
+                eFactura.getVenta().getCliente().getNombre(),
+                eFactura.getVenta().getUsuario().getNombre()
         );
     }
 }
