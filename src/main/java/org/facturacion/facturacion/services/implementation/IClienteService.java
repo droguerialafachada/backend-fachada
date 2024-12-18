@@ -9,6 +9,9 @@ import org.facturacion.facturacion.exceptions.cliente.ClienteExisteException;
 import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.repositories.ClienteRepository;
 import org.facturacion.facturacion.services.specification.ClienteService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,8 +35,9 @@ public class IClienteService implements ClienteService {
      * @return List<ClienteDTO> Retorna una lista de objetos de tipo ClienteDTO
      */
     @Override
-    public List<ClienteDTO> listarClientes() {
-        return clienteRepository.findAllByEliminadoIsFalse().stream().map(ClienteDTO::fromEntity).toList();
+    public Page<ClienteDTO> listarClientes(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return clienteRepository.findAllByEliminadoIsFalse(pageable).map(ClienteDTO::fromEntity);
     }
 
     /**

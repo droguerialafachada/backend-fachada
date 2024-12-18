@@ -6,6 +6,7 @@ import org.facturacion.facturacion.dto.venta.VentaItemDTO;
 import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.services.specification.VentaService;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -68,8 +69,9 @@ public class VentaController {
      * @return Lista de ventas completadas.
      */
     @GetMapping("/obtener-ventas-completadas")
-    public ResponseEntity<List<VentaDTO>> obtenerVentasCompletadas(){
-        return ResponseEntity.ok(this.ventaService.obtenerVentasCompletadas());
+    public ResponseEntity<Page<VentaDTO>> obtenerVentasCompletadas(@RequestParam(defaultValue = "0") int page,
+                                                                   @RequestParam(defaultValue = "10") int size){
+        return ResponseEntity.ok(this.ventaService.obtenerVentasCompletadas(page, size));
     }
 
     /**

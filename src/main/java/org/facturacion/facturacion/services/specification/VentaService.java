@@ -4,6 +4,7 @@ import org.facturacion.facturacion.dto.venta.FullVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaItemDTO;
 import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaDTO;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public interface VentaService {
 
     Boolean cancelarVenta(Integer id);
 
-    List<VentaDTO> obtenerVentasCompletadas();
+    Page<VentaDTO> obtenerVentasCompletadas(int page, int size);
 
     FullVentaDTO obtenerVentaPorId(Integer id);
 }

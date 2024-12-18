@@ -16,6 +16,9 @@ import org.facturacion.facturacion.services.specification.ClienteService;
 import org.facturacion.facturacion.services.specification.VentaService;
 import org.facturacion.facturacion.services.specification.ProductoService;
 import org.facturacion.facturacion.services.specification.UsuarioService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -157,8 +160,9 @@ public class IVentaService implements VentaService {
      * @return List<VentaDTO> Lista de ventas completadas
      */
     @Override
-    public List<VentaDTO> obtenerVentasCompletadas() {
-       return ventaRepository.findAllByEstado(EstadoVenta.COMPLETADA).stream().map(VentaDTO::fromEntity).toList();
+    public Page<VentaDTO> obtenerVentasCompletadas(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+       return ventaRepository.findAllByEstado(EstadoVenta.COMPLETADA, pageable).map(VentaDTO::fromEntity);
     }
 
     /**

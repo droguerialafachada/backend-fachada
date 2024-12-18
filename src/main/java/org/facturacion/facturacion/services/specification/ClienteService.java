@@ -4,12 +4,13 @@ import org.facturacion.facturacion.domain.Cliente;
 import org.facturacion.facturacion.dto.cliente.ActualizarClienteDTO;
 import org.facturacion.facturacion.dto.cliente.ClienteDTO;
 import org.facturacion.facturacion.dto.cliente.CrearClienteDTO;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
 public interface ClienteService {
 
-    List<ClienteDTO> listarClientes();
+    Page<ClienteDTO> listarClientes(int page, int size);
 
     ClienteDTO  obtenerClientePorCedula(String id);
 

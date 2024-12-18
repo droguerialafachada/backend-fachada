@@ -5,6 +5,7 @@ import org.facturacion.facturacion.dto.cliente.ActualizarClienteDTO;
 import org.facturacion.facturacion.dto.cliente.ClienteDTO;
 import org.facturacion.facturacion.dto.cliente.CrearClienteDTO;
 import org.facturacion.facturacion.services.specification.ClienteService;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,8 +29,11 @@ public class ClienteController {
      * @return Lista de clientes registrados.
      */
     @GetMapping
-    public ResponseEntity<List<ClienteDTO>>  listarClientes(){
-        return ResponseEntity.ok(clienteService.listarClientes());
+    public ResponseEntity<Page<ClienteDTO>> listarClientes(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size
+    ){
+        return ResponseEntity.ok(clienteService.listarClientes(page, size));
     }
 
     /**
