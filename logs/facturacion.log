@@ -248,3 +248,6 @@ java.lang.NullPointerException: Cannot invoke "org.facturacion.facturacion.domai
 2024-12-18T14:10:13.729-05:00  WARN 81059 --- [facturacion] [http-nio-8086-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException: No existe un cliente con esa cedula]
 2024-12-18T14:10:13.906-05:00  WARN 81059 --- [facturacion] [http-nio-8086-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException: No existe un cliente con esa cedula]
 2024-12-18T14:10:14.146-05:00  WARN 81059 --- [facturacion] [http-nio-8086-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException: No existe un cliente con esa cedula]
+2024-12-18T14:15:31.896-05:00  INFO 81059 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-18T14:15:31.942-05:00  INFO 81059 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-18T14:15:31.993-05:00  INFO 81059 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

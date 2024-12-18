@@ -16,6 +16,10 @@ RUN ./gradlew clean bootJar
 # Use another stage for the final image
 FROM eclipse-temurin:17-jdk-jammy
 
+# Set timezone (e.g., to "America/New_York")
+ENV TZ=America/Bogota
+
+
 # Copy JAR file from the build stage
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/app.jar
 
