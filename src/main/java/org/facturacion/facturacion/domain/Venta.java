@@ -36,6 +36,12 @@ public class Venta {
     private Cliente cliente;
 
     @Column(nullable = false)
+    private Double dineroRecibido;
+
+    @Column(nullable = false)
+    private Double cambio;
+
+    @Column(nullable = false)
     private String estado;
 
     @OneToOne(mappedBy = "venta")

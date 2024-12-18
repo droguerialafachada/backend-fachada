@@ -14,6 +14,8 @@ public record FullVentaDTO(
         String direccionCliente,
         String correoCliente,
         String usuario,
+        Double dineroRecibido,
+        Double cambio,
         List<FullDetalleDTO> detalleVentaList
 ) {
     public static FullVentaDTO fromEntity(Venta venta) {
@@ -26,6 +28,8 @@ public record FullVentaDTO(
                 venta.getCliente().getDireccion(),
                 venta.getCliente().getCorreo(),
                 venta.getUsuario().getNombre(),
+                venta.getDineroRecibido(),
+                venta.getCambio(),
                 FullDetalleDTO.fromEntityList(venta.getDetalleVentaList())
         );
     }
