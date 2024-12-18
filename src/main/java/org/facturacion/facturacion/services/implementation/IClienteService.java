@@ -41,7 +41,7 @@ public class IClienteService implements ClienteService {
     }
 
     /**
-     * Metodo que se encarga de obtener un cliente por su cedula
+     * Metodo que se encarga de obtener un cliente por su cedulaa
      * Si el cliente no existe se lanza una excepcion
      * @param id Cedula del cliente
      * @return ClienteDTO Retorna un objeto de tipo ClienteDTO
