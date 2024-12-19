@@ -20,7 +20,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Implementación del servicio de productos.
@@ -201,12 +200,12 @@ public class IProductoService implements ProductoService {
 
     /**
      * Obtiene un producto por su ID o lanza una excepción si no se encuentra.
-     * @param id ID del producto.
+     * @param codigo codigo del producto.
      * @return Producto encontrado.
      */
-    private Producto obtenerProducto(String id) {
-        return productoRepository.findById(id)
-                .orElseThrow(() -> new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + id));
+    private Producto obtenerProducto(String codigo) {
+        return productoRepository.findByCodigo(codigo)
+                .orElseThrow(() -> new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo));
     }
 
     /**
