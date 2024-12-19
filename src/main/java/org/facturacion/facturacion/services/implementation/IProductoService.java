@@ -19,8 +19,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Implementación del servicio de productos.
@@ -121,7 +121,7 @@ public class IProductoService implements ProductoService {
      */
     @Override
     public Boolean verificarExisteElCodProducto(String codProducto) {
-        return productoRepository.findById(codProducto).isPresent();
+        return productoRepository.findByCodigo(codProducto).isPresent();
     }
 
     /**
@@ -243,6 +243,19 @@ public class IProductoService implements ProductoService {
         producto.setStock(productoDTO.cantidad());
         producto.setPrecio(productoDTO.precio());
         producto.setActivo(productoDTO.activo());
+    }
+
+    /**
+     * Este método devuelve un producto por su código.
+     * @param codigo Código del producto.
+     * @return Producto encontrado.
+     */
+    @Override
+    public ProductoDTO findByCodigo(String codigo) {
+        Optional<Producto> optProducto = productoRepository.findByCodigo(codigo);
+        if(optProducto.isEmpty()) throw new ProductoNoEncontradoException("No existe un producto con ese código");
+        Producto producto = productoRepository.findByCodigo(codigo).get();
+        return ProductoDTO.fromEntity(producto);
     }
 
 }

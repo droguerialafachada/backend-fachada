@@ -40,7 +40,7 @@ public class ClienteController {
      * Este método se encarga de obtener todos los clientes registrados en la base de datos.
      * sin paginación.
      */
-    @GetMapping()
+    @GetMapping("/todos")
     public ResponseEntity<List<ClienteDTO>> listarClientes(){
         return ResponseEntity.ok(clienteService.listarClientes());
     }

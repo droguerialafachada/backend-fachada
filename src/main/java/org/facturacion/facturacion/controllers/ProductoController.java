@@ -38,7 +38,7 @@ public class ProductoController {
      * sin paginación.
      * @return Lista de productos registrados.
      */
-    @GetMapping
+    @GetMapping("/todos")
     public ResponseEntity<List<ProductoDTO>> listarProducto(){
         return ResponseEntity.ok(this.productoService.listarProducto());
     }
@@ -132,5 +132,10 @@ public class ProductoController {
     @GetMapping("/verificar-cambios")
     public ResponseEntity<Boolean> verificarCambios(){
         return ResponseEntity.ok(this.productoService.verificarCambios());
+    }
+
+    @GetMapping("/obtener-producto/{codigo}")
+    public ResponseEntity<ProductoDTO> obtenerProductoPorId(@PathVariable String codigo){
+        return ResponseEntity.ok(this.productoService.findByCodigo(codigo));
     }
 }

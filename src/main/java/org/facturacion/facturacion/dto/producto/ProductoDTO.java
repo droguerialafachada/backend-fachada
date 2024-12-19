@@ -16,7 +16,7 @@ public record ProductoDTO(
     public static ProductoDTO fromEntity(Producto producto) {
 
         return new ProductoDTO(
-                producto.getId(),
+                producto.getCodigo(),
                 producto.getNombre(),
                 producto.getPrecio(),
                 producto.getStock(),

@@ -38,4 +38,7 @@ public interface ProductoService {
     List<ProductoDTO> listarProducto();
 
     Boolean verificarCambios();
+
+    ProductoDTO findByCodigo(String codigo);
+
 }

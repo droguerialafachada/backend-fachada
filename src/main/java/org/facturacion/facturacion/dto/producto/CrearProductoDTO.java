@@ -13,7 +13,7 @@ public record CrearProductoDTO(
 
     public Producto toEntity() {
         Producto producto = new Producto();
-        producto.setId(codigo);
+        producto.setCodigo(codigo);
         producto.setNombre(nombre);
         producto.setPrecio(precio);
         producto.setStock(cantidad);

@@ -15,7 +15,11 @@ public class Producto {
 
     @Id
     @Column(unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
+    @Column(unique = true, nullable = false)
+    private String codigo;
 
     @Column(length = 200, nullable = false)
     private String nombre;
