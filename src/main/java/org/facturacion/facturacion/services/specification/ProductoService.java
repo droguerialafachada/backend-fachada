@@ -34,4 +34,8 @@ public interface ProductoService {
     Producto findById(String s);
 
     void guardar(Producto producto);
+
+    List<ProductoDTO> listarProducto();
+
+    Boolean verificarCambios();
 }

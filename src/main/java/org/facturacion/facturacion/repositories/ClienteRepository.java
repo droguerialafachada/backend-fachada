@@ -12,4 +12,5 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
     Cliente findByCedula(String cedula);
     Boolean existsByCedula(String cedula);
     Page<Cliente> findAllByEliminadoIsFalse(Pageable pageable);
+    List<Cliente> findAllByEliminadoIsFalse();
 }

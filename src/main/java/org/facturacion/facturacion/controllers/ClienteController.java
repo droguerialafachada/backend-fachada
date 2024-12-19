@@ -37,6 +37,15 @@ public class ClienteController {
     }
 
     /**
+     * Este método se encarga de obtener todos los clientes registrados en la base de datos.
+     * sin paginación.
+     */
+    @GetMapping()
+    public ResponseEntity<List<ClienteDTO>> listarClientes(){
+        return ResponseEntity.ok(clienteService.listarClientes());
+    }
+
+    /**
      * Este método se encarga de obtener un cliente por su cédula.
      * @param cedula Cédula del cliente a buscar.
      * @return Cliente encontrado.
@@ -106,4 +115,12 @@ public class ClienteController {
         clienteService.recuperarCliente(cedula);
     }
 
+    /**
+     * Este método se encarga de verificar si hubo cambios en la entidad Cliente.
+     * @return True si hubo cambios, false en caso contrario.
+     */
+    @GetMapping("/verificar-cambios")
+    public ResponseEntity<Boolean> verificarCambios(){
+        return ResponseEntity.ok(clienteService.hayCambiosCliente());
+    }
 }

@@ -12,6 +12,8 @@ public interface ClienteService {
 
     Page<ClienteDTO> listarClientes(int page, int size);
 
+    List<ClienteDTO> listarClientes();
+
     ClienteDTO  obtenerClientePorCedula(String id);
 
     Boolean verificarExisteCliente(String cedula);
@@ -28,4 +30,5 @@ public interface ClienteService {
 
     Cliente findByCedula(String cliente);
 
+    Boolean hayCambiosCliente();
 }

@@ -1,6 +1,8 @@
 package org.facturacion.facturacion.services.implementation;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import org.facturacion.facturacion.domain.Cliente;
 import org.facturacion.facturacion.dto.cliente.ActualizarClienteDTO;
 import org.facturacion.facturacion.dto.cliente.ClienteDTO;
@@ -12,6 +14,7 @@ import org.facturacion.facturacion.services.specification.ClienteService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +31,9 @@ import java.util.Optional;
 public class IClienteService implements ClienteService {
 
     private final ClienteRepository clienteRepository;
+    @Getter
+    @Setter
+    private static boolean hayCambiosCliente = false;
 
     /**
      * Metodo que se encarga de listar todos los clientes
@@ -36,9 +42,21 @@ public class IClienteService implements ClienteService {
      */
     @Override
     public Page<ClienteDTO> listarClientes(int page, int size) {
-        Pageable pageable = PageRequest.of(page, size);
+        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "fechaCreacion"));
         return clienteRepository.findAllByEliminadoIsFalse(pageable).map(ClienteDTO::fromEntity);
     }
+
+    /**
+     * Metodo que se encarga de listar todos los clientes
+     * iterando sobre la lista de clientes y creando un objeto de tipo ClienteDTO
+     */
+    @Override
+    public List<ClienteDTO> listarClientes() {
+        IClienteService.setHayCambiosCliente(false);
+        return clienteRepository.findAllByEliminadoIsFalse().stream().map(ClienteDTO::fromEntity).toList();
+    }
+
+
 
     /**
      * Metodo que se encarga de obtener un cliente por su cedula
@@ -77,6 +95,7 @@ public class IClienteService implements ClienteService {
         }
         Cliente cliente = crearClienteDTO.toEntity();
         clienteRepository.save(cliente);
+        IClienteService.setHayCambiosCliente(true);
         return ClienteDTO.fromEntity(cliente);
 
     }
@@ -94,6 +113,7 @@ public class IClienteService implements ClienteService {
         Cliente clienteActualizado = cliente.get();
         clienteActualizado.actualizarCliente(clienteDTO);
         clienteRepository.save(clienteActualizado);
+        IClienteService.setHayCambiosCliente(true);
         return ClienteDTO.fromEntity(clienteActualizado);
     }
 
@@ -110,6 +130,7 @@ public class IClienteService implements ClienteService {
         if(cliente.isEmpty()) throw new ClienteExisteException("El cliente con id "+id+" no existe");
         Cliente clienteEliminado = cliente.get();
         clienteEliminado.setEliminado(true);
+        IClienteService.setHayCambiosCliente(true);
         clienteRepository.save(clienteEliminado);
         return true;
 
@@ -145,4 +166,11 @@ public class IClienteService implements ClienteService {
      */
     @Override
     public Cliente findByCedula(String cedula) {return clienteRepository.findByCedula(cedula);}
+
+    @Override
+    public Boolean hayCambiosCliente() {
+       return IClienteService.hayCambiosCliente;
+    }
+
+
 }

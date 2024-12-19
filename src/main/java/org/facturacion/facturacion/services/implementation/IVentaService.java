@@ -19,6 +19,7 @@ import org.facturacion.facturacion.services.specification.UsuarioService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -161,7 +162,7 @@ public class IVentaService implements VentaService {
      */
     @Override
     public Page<VentaDTO> obtenerVentasCompletadas(int page, int size) {
-        Pageable pageable = PageRequest.of(page, size);
+        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "fecha"));
        return ventaRepository.findAllByEstado(EstadoVenta.COMPLETADA, pageable).map(VentaDTO::fromEntity);
     }
 

@@ -34,6 +34,15 @@ public class ProductoController {
     }
 
     /**
+     * Este método se encarga de obtener todos los productos registrados en la base de datos.
+     * sin paginación.
+     * @return Lista de productos registrados.
+     */
+    @GetMapping
+    public ResponseEntity<List<ProductoDTO>> listarProducto(){
+        return ResponseEntity.ok(this.productoService.listarProducto());
+    }
+    /**
      * Este método se encarga de verificar si el código de un producto existe en la base de datos.
      * @param codProducto Código del producto a verificar.
      * @return True si el producto existe, false en caso contrario.
@@ -114,5 +123,14 @@ public class ProductoController {
     @GetMapping("/recuperar-producto/{id}")
     public void recuperarProducto(@PathVariable String id){
         this.productoService.recuperarProducto(id);
+    }
+
+    /**
+     * Este método se encarga verificar si se han agregado, eliminado o actualizado productos.
+     * @return True si se han realizado cambios, false en caso contrario.
+     */
+    @GetMapping("/verificar-cambios")
+    public ResponseEntity<Boolean> verificarCambios(){
+        return ResponseEntity.ok(this.productoService.verificarCambios());
     }
 }

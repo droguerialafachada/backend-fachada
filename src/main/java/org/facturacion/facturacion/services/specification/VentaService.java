@@ -21,4 +21,5 @@ public interface VentaService {
     Page<VentaDTO> obtenerVentasCompletadas(int page, int size);
 
     FullVentaDTO obtenerVentaPorId(Integer id);
+
 }

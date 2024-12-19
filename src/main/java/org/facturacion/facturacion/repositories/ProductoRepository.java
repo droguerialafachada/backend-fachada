@@ -11,5 +11,6 @@ import java.util.List;
 public interface ProductoRepository extends JpaRepository<Producto, String> {
 
     Page<Producto> findAllByEliminadoIsFalse(Pageable pageable);
+    List<Producto> findAllByEliminadoIsFalse();
 
 }
