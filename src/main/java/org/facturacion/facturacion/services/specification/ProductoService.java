@@ -39,6 +39,6 @@ public interface ProductoService {
 
     Boolean verificarCambios();
 
-    ProductoDTO findByCodigo(String codigo);
+    Producto findByCodigo(String codigo);
 
 }

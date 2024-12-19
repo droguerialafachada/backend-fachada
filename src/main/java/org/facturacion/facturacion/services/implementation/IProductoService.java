@@ -139,12 +139,12 @@ public class IProductoService implements ProductoService {
     /**
      * Verifica si la cantidad de un producto es suficiente para realizar una venta.
      * @param cantidad Cantidad a verificar.
-     * @param id Id del producto.
+     * @param codigo Código del producto.
      * @return Booleano que indica si la cantidad es suficiente.
      */
     @Override
-    public Boolean verificarCantidad(Integer cantidad, String id) {
-        return productoRepository.findById(id)
+    public Boolean verificarCantidad(Integer cantidad, String codigo) {
+        return productoRepository.findByCodigo(codigo)
                 .map(producto -> producto.getStock() >= cantidad)
                 .orElse(false);
     }
@@ -251,11 +251,9 @@ public class IProductoService implements ProductoService {
      * @return Producto encontrado.
      */
     @Override
-    public ProductoDTO findByCodigo(String codigo) {
-        Optional<Producto> optProducto = productoRepository.findByCodigo(codigo);
-        if(optProducto.isEmpty()) throw new ProductoNoEncontradoException("No existe un producto con ese código");
-        Producto producto = productoRepository.findByCodigo(codigo).get();
-        return ProductoDTO.fromEntity(producto);
+    public Producto findByCodigo(String codigo) {
+        return productoRepository.findByCodigo(codigo)
+                .orElseThrow(() -> new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo));
     }
 
 }

@@ -65,7 +65,7 @@ public class IVentaService implements VentaService {
         agregarUsuarioVenta(venta, ventaDTO);
         venta.setFecha(new java.util.Date());
         venta.setEstado(EstadoVenta.COMPLETADA);
-        venta.setDineroRecibido(ventaDTO.dineroRecibido());
+        venta.setDineroRecibido(ventaDTO.cambio()+venta.getTotal());
         venta.setCambio(ventaDTO.cambio());
 
         venta.setSubTotal(venta.getTotal() - venta.getTotal() * IVA);
@@ -81,7 +81,7 @@ public class IVentaService implements VentaService {
     private void agregarDetalleVenta(Venta venta, CrearVentaDTO ventaDTO){
         ventaDTO.listDetalleVenta().forEach(detalle -> {
             DetalleVenta detalleVenta = DetalleVentaDTO.toEntity(detalle);
-            Producto producto = productoService.findById(detalle.codigoProducto());
+            Producto producto = productoService.findByCodigo(detalle.codigoProducto());
 
             if(producto.getStock() < detalle.cantidad()){
                 throw new ProductoCantidadException("No hay suficiente cantidad del producto "+ producto.getNombre()+ "para la factura");

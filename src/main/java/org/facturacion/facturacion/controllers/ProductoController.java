@@ -136,6 +136,6 @@ public class ProductoController {
 
     @GetMapping("/obtener-producto/{codigo}")
     public ResponseEntity<ProductoDTO> obtenerProductoPorId(@PathVariable String codigo){
-        return ResponseEntity.ok(this.productoService.findByCodigo(codigo));
+        return ResponseEntity.ok(ProductoDTO.fromEntity(this.productoService.findByCodigo(codigo)));
     }
 }
