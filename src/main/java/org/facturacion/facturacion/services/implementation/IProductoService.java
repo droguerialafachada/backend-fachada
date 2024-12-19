@@ -42,7 +42,7 @@ public class IProductoService implements ProductoService {
     @Override
     public Page<ProductoDTO> listarProducto(int page, int size) {
         Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "fechaCreacion"));
-        return productoRepository.findAllByEliminadoIsFalse(pageable).map(ProductoDTO::fromEntity);
+        return productoRepository.findAllByEliminadoIsFalseAndActivoTrue(pageable).map(ProductoDTO::fromEntity);
     }
 
     /**
@@ -52,7 +52,7 @@ public class IProductoService implements ProductoService {
     @Override
     public List<ProductoDTO> listarProducto() {
         IProductoService.setHayCambiosProducto(false);
-        return productoRepository.findAllByEliminadoIsFalse().stream().map(ProductoDTO::fromEntity).toList();
+        return productoRepository.findAllByEliminadoIsFalseAndActivoTrue().stream().map(ProductoDTO::fromEntity).toList();
     }
 
     @Override
