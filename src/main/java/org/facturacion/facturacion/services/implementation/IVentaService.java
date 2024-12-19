@@ -84,7 +84,7 @@ public class IVentaService implements VentaService {
             Producto producto = productoService.findByCodigo(detalle.codigoProducto());
 
             if(producto.getStock() < detalle.cantidad()){
-                throw new ProductoCantidadException("No hay suficiente cantidad del producto "+ producto.getNombre()+ "para la factura");
+                throw new ProductoCantidadException("No hay suficiente cantidad del producto "+ producto.getNombre()+ " para la factura");
             }else producto.setStock(producto.getStock() - detalle.cantidad());
 
             detalleVenta.setValor(producto.getPrecio() * detalle.cantidad());
