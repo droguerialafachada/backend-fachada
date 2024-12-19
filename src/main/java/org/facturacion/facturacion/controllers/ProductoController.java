@@ -5,6 +5,7 @@ import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
 import org.facturacion.facturacion.services.specification.ProductoService;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -26,8 +27,10 @@ public class ProductoController {
      * @return Lista de productos registrados.
      */
     @GetMapping
-    public ResponseEntity<List<ProductoDTO>> listarProducto() {
-        return ResponseEntity.ok(this.productoService.listarProducto());
+    public ResponseEntity<Page<ProductoDTO>> listarProducto(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size){
+        return ResponseEntity.ok(this.productoService.listarProducto(page, size));
     }
 
     /**

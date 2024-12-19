@@ -4,10 +4,12 @@ import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
+import org.springframework.data.domain.Page;
+
 import java.util.List;
 
 public interface ProductoService {
-    List<ProductoDTO> listarProducto();
+    Page<ProductoDTO> listarProducto(int page, int size);
 
     ProductoDTO obtenerProductoPorId(String id);
 

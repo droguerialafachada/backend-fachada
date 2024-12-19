@@ -12,6 +12,9 @@ import org.facturacion.facturacion.repositories.TipoImpuestoRepository;
 import org.facturacion.facturacion.services.specification.ProductoService;
 import org.facturacion.facturacion.services.validations.ProductoValidationService;
 import org.facturacion.facturacion.utils.Constants;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,11 +35,9 @@ public class IProductoService implements ProductoService {
      * @return Lista de productos.
      */
     @Override
-    public List<ProductoDTO> listarProducto() {
-        return productoRepository.findAllByEliminadoIsFalse()
-                .stream()
-                .map(ProductoDTO::fromEntity)
-                .toList();
+    public Page<ProductoDTO> listarProducto(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return productoRepository.findAllByEliminadoIsFalse(pageable).map(ProductoDTO::fromEntity);
     }
 
     /**
