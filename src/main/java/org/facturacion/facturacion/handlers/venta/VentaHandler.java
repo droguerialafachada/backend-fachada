@@ -2,6 +2,7 @@ package org.facturacion.facturacion.handlers.venta;
 
 import org.facturacion.facturacion.dto.validationError.ValidationError;
 import org.facturacion.facturacion.exceptions.venta.VentaCanceladaException;
+import org.facturacion.facturacion.exceptions.venta.VentaDescuentoNegativo;
 import org.facturacion.facturacion.exceptions.venta.VentaNoExisteException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,11 @@ public class VentaHandler {
 
     @ExceptionHandler(VentaCanceladaException.class)
     public ResponseEntity<ValidationError> handleVentaCanceladaException(VentaCanceladaException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(VentaDescuentoNegativo.class)
+    public ResponseEntity<ValidationError> handleVentaDescuentoNegativoException(VentaDescuentoNegativo e){
         return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
     }
 }

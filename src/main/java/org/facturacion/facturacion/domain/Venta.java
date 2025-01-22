@@ -26,6 +26,9 @@ public class Venta {
     @Column(nullable = false, precision = 4)
     private Double total;
 
+    @Column(nullable = false, precision = 4)
+    private Double descuento;
+
     @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DetalleVenta> detalleVentaList = new ArrayList<>();
 

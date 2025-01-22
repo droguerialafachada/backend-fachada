@@ -10,6 +10,7 @@ import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.exceptions.producto.ProductoCantidadException;
 import org.facturacion.facturacion.exceptions.venta.VentaCanceladaException;
+import org.facturacion.facturacion.exceptions.venta.VentaDescuentoNegativo;
 import org.facturacion.facturacion.exceptions.venta.VentaNoExisteException;
 import org.facturacion.facturacion.repositories.VentaRepository;
 import org.facturacion.facturacion.services.specification.ClienteService;
@@ -69,6 +70,13 @@ public class IVentaService implements VentaService {
         venta.setCambio(ventaDTO.cambio());
 
         venta.setSubTotal(venta.getTotal() - venta.getTotal() * IVA);
+
+        if(ventaDTO.descuento() < 0 )
+            throw new VentaDescuentoNegativo("El descuento de la venta no puede ser negativo");
+
+        venta.setTotal(venta.getTotal()-ventaDTO.descuento());
+        venta.setDescuento(ventaDTO.descuento());
+
         ventaRepository.save(venta);
         venta.getDetalleVentaList().forEach(this.detalleFacturaService::save);
 

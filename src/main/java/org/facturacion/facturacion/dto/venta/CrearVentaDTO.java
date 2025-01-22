@@ -9,6 +9,7 @@ public record CrearVentaDTO(
         Integer usuario,
         String cliente,
         Double dineroRecibido,
-        Double cambio
+        Double cambio,
+        Double descuento
 ) {
 }
