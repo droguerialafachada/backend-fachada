@@ -66,14 +66,14 @@ public class IVentaService implements VentaService {
         agregarUsuarioVenta(venta, ventaDTO);
         venta.setFecha(new java.util.Date());
         venta.setEstado(EstadoVenta.COMPLETADA);
-        venta.setDineroRecibido(ventaDTO.cambio()+venta.getTotal()-ventaDTO.descuento());
+        venta.setDineroRecibido(ventaDTO.cambio()+venta.getTotal());
         venta.setCambio(ventaDTO.cambio());
 
         venta.setSubTotal(venta.getTotal() - venta.getTotal() * IVA);
 
         if(ventaDTO.descuento() < 0 )
             throw new VentaDescuentoNegativo("El descuento de la venta no puede ser negativo");
-
+        venta.setDineroRecibido(venta.getDineroRecibido()-ventaDTO.descuento());
         venta.setTotal(venta.getTotal()-ventaDTO.descuento());
         venta.setDescuento(ventaDTO.descuento());
 
