@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface TipoImpuestoRepository extends JpaRepository<TipoImpuesto, Long> {
 
     Optional<TipoImpuesto> findByNombre(String nombre);
+
+    boolean existsByNombre(String impuesto);
 }

@@ -3,21 +3,21 @@ package org.facturacion.facturacion.dto.formaVenta;
 import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 
-public record FormaVentaDTO(
+public record CrearFormaVentaDTO(
         String nombre,
         Double precio,
         Integer cantidad
 ) {
 
-    public static FormaVentaDTO fromEntity(FormaVenta formaVenta) {
-        return new FormaVentaDTO(
+    public static CrearFormaVentaDTO fromEntity(FormaVenta formaVenta) {
+        return new CrearFormaVentaDTO(
                 formaVenta.getNombre(),
                 formaVenta.getPrecio(),
                 formaVenta.getCantidad()
         );
     }
 
-    public static FormaVenta toEntity( FormaVentaDTO formaVentaDTO, Producto producto) {
+    public static FormaVenta toEntity(CrearFormaVentaDTO formaVentaDTO, Producto producto) {
         FormaVenta formaVenta = new FormaVenta();
         formaVenta.setNombre(formaVentaDTO.nombre());
         formaVenta.setPrecio(formaVentaDTO.precio());

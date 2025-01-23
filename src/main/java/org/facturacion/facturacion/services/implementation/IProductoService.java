@@ -3,6 +3,7 @@ package org.facturacion.facturacion.services.implementation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.domain.TipoImpuesto;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
@@ -12,8 +13,10 @@ import org.facturacion.facturacion.exceptions.producto.*;
 import org.facturacion.facturacion.repositories.ProductoRepository;
 import org.facturacion.facturacion.repositories.TipoImpuestoRepository;
 import org.facturacion.facturacion.services.specification.ProductoService;
+import org.facturacion.facturacion.services.validations.FormaVentaValidationService;
 import org.facturacion.facturacion.services.validations.ProductoValidationService;
 import org.facturacion.facturacion.utils.Constants;
+import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -31,6 +34,8 @@ public class IProductoService implements ProductoService {
     private final ProductoRepository productoRepository;
     private final TipoImpuestoRepository tipoImpuestoRepository;
     private final ProductoValidationService productoValidationService;
+    private final FormaVentaValidationService formaVentaValidationService;
+
     @Getter
     @Setter
     private static  boolean hayCambiosProducto = false;
@@ -79,6 +84,7 @@ public class IProductoService implements ProductoService {
     @Override
     public ProductoDTO crearProducto(CrearProductoDTO productoDTO) {
         productoValidationService.validate(productoDTO);
+        productoDTO.formasVenta().forEach(formaVentaValidationService::validate);
         TipoImpuesto impuesto = validarImpuesto(productoDTO.impuesto());
         Producto producto = prepararProductoParaCrear(productoDTO, impuesto);
         IProductoService.setHayCambiosProducto(true);

@@ -1,7 +1,7 @@
 package org.facturacion.facturacion.dto.producto;
 
 import org.facturacion.facturacion.domain.Producto;
-import org.facturacion.facturacion.dto.formaVenta.FormaVentaDTO;
+import org.facturacion.facturacion.dto.formaVenta.CrearFormaVentaDTO;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public record CrearProductoDTO(
         String nombre,
         String activo,
         String impuesto,
-        List<FormaVentaDTO> formasVenta
+        List<CrearFormaVentaDTO> formasVenta
 ) {
 
     public Producto toEntity() {
@@ -20,7 +20,7 @@ public record CrearProductoDTO(
         producto.setActivo(activo.equals("1"));
         producto.setEliminado(false);
         producto.setFechaCreacion(new java.util.Date());
-        producto.setFormaVentas(formasVenta.stream().map(fv -> FormaVentaDTO.toEntity(fv, producto)).toList());
+        producto.setFormaVentas(formasVenta.stream().map(fv -> CrearFormaVentaDTO.toEntity(fv, producto)).toList());
         return producto;
     }
 }
