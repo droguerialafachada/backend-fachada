@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,9 +29,6 @@ public class Producto {
     private Double precio;
 
     @Column(nullable = false)
-    private Integer stock;
-
-    @Column(nullable = false)
     private Boolean activo;
 
     @Column(nullable = false)
@@ -43,5 +41,7 @@ public class Producto {
     @JoinColumn(name = "tipo_impuesto_id")
     private TipoImpuesto impuesto;
 
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<FormaVenta> formaVentas;
 
 }

@@ -24,6 +24,10 @@ public class DetalleVenta {
     private Producto producto;
 
     @ManyToOne
+    @JoinColumn(name = "forma_venta_id", nullable = false)
+    private FormaVenta formaVenta;
+
+    @ManyToOne
     @JoinColumn(name = "venta_id", nullable = false)
     private Venta venta;
 
