@@ -59,7 +59,7 @@ public class Init implements CommandLineRunner {
      * con contraseña encriptada
      */
     private void saveUser() {
-        if(usuarioRepository.findByNombre("admin@gmail.com") != null){
+        if(usuarioRepository.findByNombre("admin@gmail.com") == null){
             Usuario usuario = new Usuario();
             usuario.setContrasenia(new BCryptPasswordEncoder().encode("admin"));
             usuario.setNombre("admin@gmail.com");
