@@ -56,9 +56,7 @@ public class Init implements CommandLineRunner {
      * con contraseña encriptada
      */
     private void saveUser() {
-        usuarioRepository.deleteAll();
         Usuario usuario = new Usuario();
-        //TODO: Cambiar contraseña por una variable de entorno
         usuario.setContrasenia(new BCryptPasswordEncoder().encode("admin"));
         usuario.setNombre("admin@gmail.com");
         usuarioRepository.save(usuario);
