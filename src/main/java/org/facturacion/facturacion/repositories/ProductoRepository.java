@@ -13,6 +13,6 @@ public interface ProductoRepository extends JpaRepository<Producto, String> {
 
     Page<Producto> findAllByEliminadoIsFalseAndActivoTrue(Pageable pageable);
     List<Producto> findAllByEliminadoIsFalseAndActivoTrue();
-
     Optional<Producto> findByCodigo(String codigo);
+    boolean existsByCodigo(String codigo);
 }

@@ -25,9 +25,6 @@ public class Producto {
     @Column(length = 200, nullable = false)
     private String nombre;
 
-    @Column(precision = 4, nullable = false)
-    private Double precio;
-
     @Column(nullable = false)
     private Boolean activo;
 

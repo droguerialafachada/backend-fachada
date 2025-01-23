@@ -142,10 +142,12 @@ public class IProductoService implements ProductoService {
      * @return Booleano que indica si la cantidad es suficiente.
      */
     @Override
+    //TODO: Se debe permitir que se envíe la forma de venta del producto.
     public Boolean verificarCantidad(Integer cantidad, String codigo) {
-        return productoRepository.findByCodigo(codigo)
+        /*return productoRepository.findByCodigo(codigo)
                 .map(producto -> producto.getStock() >= cantidad)
-                .orElse(false);
+                .orElse(false);*/
+        return true;
     }
 
     /**
@@ -237,10 +239,12 @@ public class IProductoService implements ProductoService {
      * @param producto    Producto a actualizar.
      * @param productoDTO DTO con los nuevos datos del producto.
      */
+    //TODO: Se debe permitir que se envíe la forma de venta del producto
+    //Para actualizar la cantidad y el precio de venta.
     private void actualizarDatosProducto(Producto producto, ActualizarProductoDTO productoDTO) {
         producto.setNombre(productoDTO.nombre());
-        producto.setStock(productoDTO.cantidad());
-        producto.setPrecio(productoDTO.precio());
+        //producto.setStock(productoDTO.cantidad());
+        //producto.setPrecio(productoDTO.precio());
         producto.setActivo(productoDTO.activo());
     }
 

@@ -91,11 +91,13 @@ public class IVentaService implements VentaService {
             DetalleVenta detalleVenta = DetalleVentaDTO.toEntity(detalle);
             Producto producto = productoService.findByCodigo(detalle.codigoProducto());
 
-            if(producto.getStock() < detalle.cantidad()){
+            //TODO: Se debe permitir que se envíe la forma de venta del producto
+            //para verificar el stock y el precio de venta.
+            /*if(producto.getStock() < detalle.cantidad()){
                 throw new ProductoCantidadException("No hay suficiente cantidad del producto "+ producto.getNombre()+ " para la factura");
             }else producto.setStock(producto.getStock() - detalle.cantidad());
 
-            detalleVenta.setValor(producto.getPrecio() * detalle.cantidad());
+            detalleVenta.setValor(producto.getPrecio() * detalle.cantidad());*/
 
             detalleVenta.setProducto(producto);
             detalleVenta.setVenta(venta);
@@ -153,11 +155,13 @@ public class IVentaService implements VentaService {
             throw new VentaCanceladaException("La venta ya ha sido cancelada");
         }
 
-        venta.getDetalleVentaList().forEach(detalle -> {
+        //TODO: Se debe agregar a la forma de venta la cantidad de productos que se vendieron.
+        //Una vez se cancele la venta se debe devolver la cantidad de productos a la tienda.
+        /*venta.getDetalleVentaList().forEach(detalle -> {
             Producto producto = detalle.getProducto();
             producto.setStock(producto.getStock() + detalle.getCantidad());
             productoService.guardar(producto);
-        });
+        });*/
 
         venta.setEstado(EstadoVenta.CANCELADA);
         ventaRepository.save(venta);

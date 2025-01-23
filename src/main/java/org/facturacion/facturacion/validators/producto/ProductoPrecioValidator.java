@@ -9,9 +9,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductoPrecioValidator implements ProductoValidator<Object> {
 
+    /**
+     * TODO: Validar el precio de cada forma de venta
+     * @param dto
+     */
     @Override
     public void validate(Object dto) {
-        Double precio = null;
+        /*Double precio = null;
         if (dto instanceof CrearProductoDTO crearProductoDTO) {
             precio = crearProductoDTO.precio();
         } else if (dto instanceof ActualizarProductoDTO actualizarProductoDTO) {
@@ -20,7 +24,7 @@ public class ProductoPrecioValidator implements ProductoValidator<Object> {
 
         if (precio == null || precio < 0) {
             throw new ProductoPrecioException("El precio del producto no puede ser negativo o nulo");
-        }
+        }*/
     }
 
 }
