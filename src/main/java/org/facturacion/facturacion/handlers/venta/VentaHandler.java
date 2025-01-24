@@ -1,9 +1,7 @@
 package org.facturacion.facturacion.handlers.venta;
 
 import org.facturacion.facturacion.dto.validationError.ValidationError;
-import org.facturacion.facturacion.exceptions.venta.VentaCanceladaException;
-import org.facturacion.facturacion.exceptions.venta.VentaDescuentoNegativo;
-import org.facturacion.facturacion.exceptions.venta.VentaNoExisteException;
+import org.facturacion.facturacion.exceptions.venta.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -27,8 +25,33 @@ public class VentaHandler {
         return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(VentaDescuentoNegativo.class)
-    public ResponseEntity<ValidationError> handleVentaDescuentoNegativoException(VentaDescuentoNegativo e){
+    @ExceptionHandler(VentaDescuentoNegativoException.class)
+    public ResponseEntity<ValidationError> handleVentaDescuentoNegativoException(VentaDescuentoNegativoException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(VentaCambioNegativoException.class)
+    public ResponseEntity<ValidationError> handleVentaCambioNegativoException(VentaCambioNegativoException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(VentaDineroNegativoException.class)
+    public ResponseEntity<ValidationError> handleVentaDineroNegativoException(VentaDineroNegativoException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(VentaDineroNullException.class)
+    public ResponseEntity<ValidationError> handleVentaDineroNullException(VentaDineroNullException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(VentaCambioNullException.class)
+    public ResponseEntity<ValidationError> handleVentaCambioNullException(VentaCambioNullException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(VentaDescuentoNullException.class)
+    public ResponseEntity<ValidationError> handleVentaDescuentoNullException(VentaDescuentoNullException e){
         return new ResponseEntity<>(buildError(e.getMessage(), "/venta"), HttpStatus.BAD_REQUEST);
     }
 }

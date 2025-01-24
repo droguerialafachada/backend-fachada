@@ -293,5 +293,14 @@ public class IProductoService implements ProductoService {
         return FullProductoDTO.fromEntity(producto);
     }
 
+    @Override
+    public FormaVenta findFormaVentaByProductoAndId(Producto producto, Integer integer) {
+        if(producto == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO);
+        return producto.getFormaVentas().stream()
+                .filter(fv -> Objects.equals(fv.getId(), Long.parseLong(integer+"")))
+                .findFirst()
+                .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
+    }
+
 
 }

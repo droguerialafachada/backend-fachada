@@ -1,5 +1,6 @@
 package org.facturacion.facturacion.services.specification;
 
+import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
@@ -46,4 +47,6 @@ public interface ProductoService {
     FullProductoDTO actualizarFormaVenta(String codigo, ActualizarFormaVentaDTO formaVentaDTO);
 
     FullProductoDTO obtenerProductoCompletoPorCodigo(String codigo);
+
+    FormaVenta findFormaVentaByProductoAndId(Producto producto, Integer integer);
 }

@@ -3,6 +3,8 @@ package org.facturacion.facturacion.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.facturacion.facturacion.dto.detalleVenta.DetalleVentaDTO;
+import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
 
 @Entity
 @Getter
@@ -31,4 +33,15 @@ public class DetalleVenta {
     @JoinColumn(name = "venta_id", nullable = false)
     private Venta venta;
 
+
+    public void setValues(DetalleVentaDTO detalle, Producto producto, Venta venta,
+                          FormaVenta formaVenta){
+
+        this.valor = detalle.cantidad() * formaVenta.getPrecio();
+        this.cantidad = detalle.cantidad();
+        this.producto = producto;
+        this.formaVenta = formaVenta;
+        this.venta = venta;
+
+    }
 }

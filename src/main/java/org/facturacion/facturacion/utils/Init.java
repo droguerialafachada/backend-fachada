@@ -36,19 +36,22 @@ public class Init implements CommandLineRunner {
      * Este metodo guarda los tipos de impuestos en la base de datos
      */
     private void saveTipoImpuesto() {
-        tipoImpuestoRepository.deleteAll();
-
         List<TipoImpuesto> list = new ArrayList<>();
-        TipoImpuesto tipoImpuesto = new TipoImpuesto();
-        tipoImpuesto.setNombre("IVA");
-        tipoImpuesto.setPorcentaje(0.19);
-        list.add(tipoImpuesto);
 
-        TipoImpuesto tipoImpuesto2 = new TipoImpuesto();
-        tipoImpuesto2.setNombre("Excento de IVA");
-        tipoImpuesto2.setPorcentaje(0.0);
-        list.add(tipoImpuesto2);
-        tipoImpuestoRepository.saveAll(list);
+        if(tipoImpuestoRepository.findByNombre("IVA").isEmpty()){
+            TipoImpuesto tipoImpuesto = new TipoImpuesto();
+            tipoImpuesto.setNombre("IVA");
+            tipoImpuesto.setPorcentaje(0.19);
+            list.add(tipoImpuesto);
+        }
+        if(tipoImpuestoRepository.findByNombre("Excento de IVA").isEmpty()){
+            TipoImpuesto tipoImpuesto2 = new TipoImpuesto();
+            tipoImpuesto2.setNombre("Excento de IVA");
+            tipoImpuesto2.setPorcentaje(0.0);
+            list.add(tipoImpuesto2);
+        }
+
+        if(!list.isEmpty()) tipoImpuestoRepository.saveAll(list);
     }
 
     /**
@@ -56,11 +59,11 @@ public class Init implements CommandLineRunner {
      * con contraseña encriptada
      */
     private void saveUser() {
-        usuarioRepository.deleteAll();
-        Usuario usuario = new Usuario();
-        //TODO: Cambiar contraseña por una variable de entorno
-        usuario.setContrasenia(new BCryptPasswordEncoder().encode("admin"));
-        usuario.setNombre("admin@gmail.com");
-        usuarioRepository.save(usuario);
+        if(usuarioRepository.findByNombre("admin@gmail.com") == null){
+            Usuario usuario = new Usuario();
+            usuario.setContrasenia(new BCryptPasswordEncoder().encode("admin"));
+            usuario.setNombre("admin@gmail.com");
+            usuarioRepository.save(usuario);
+        }
     }
 }

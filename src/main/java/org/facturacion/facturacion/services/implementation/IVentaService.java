@@ -5,12 +5,10 @@ import org.facturacion.facturacion.domain.*;
 import org.facturacion.facturacion.dto.venta.FullVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaItemDTO;
 import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
-import org.facturacion.facturacion.dto.detalleVenta.DetalleVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.exceptions.producto.ProductoCantidadException;
 import org.facturacion.facturacion.exceptions.venta.VentaCanceladaException;
-import org.facturacion.facturacion.exceptions.venta.VentaDescuentoNegativo;
 import org.facturacion.facturacion.exceptions.venta.VentaNoExisteException;
 import org.facturacion.facturacion.repositories.VentaRepository;
 import org.facturacion.facturacion.services.specification.ClienteService;
@@ -64,18 +62,7 @@ public class IVentaService implements VentaService {
 
         agregarClienteVentas(venta, ventaDTO);
         agregarUsuarioVenta(venta, ventaDTO);
-        venta.setFecha(new java.util.Date());
-        venta.setEstado(EstadoVenta.COMPLETADA);
-        venta.setDineroRecibido(ventaDTO.cambio()+venta.getTotal()-venta.getDescuento());
-        venta.setCambio(ventaDTO.cambio());
-
-        venta.setSubTotal(venta.getTotal() - venta.getTotal() * IVA);
-
-        if(ventaDTO.descuento() < 0 )
-            throw new VentaDescuentoNegativo("El descuento de la venta no puede ser negativo");
-
-        venta.setTotal(venta.getTotal()-ventaDTO.descuento());
-        venta.setDescuento(ventaDTO.descuento());
+        venta.setValues(EstadoVenta.COMPLETADA, ventaDTO, IVA);
 
         ventaRepository.save(venta);
         venta.getDetalleVentaList().forEach(this.detalleFacturaService::save);
@@ -88,19 +75,18 @@ public class IVentaService implements VentaService {
      */
     private void agregarDetalleVenta(Venta venta, CrearVentaDTO ventaDTO){
         ventaDTO.listDetalleVenta().forEach(detalle -> {
-            DetalleVenta detalleVenta = DetalleVentaDTO.toEntity(detalle);
+
+            DetalleVenta detalleVenta = new DetalleVenta();
             Producto producto = productoService.findByCodigo(detalle.codigoProducto());
+            FormaVenta formaVenta = productoService.findFormaVentaByProductoAndId(producto, detalle.formaVenta());
 
-            //TODO: Se debe permitir que se envíe la forma de venta del producto
-            //para verificar el stock y el precio de venta.
-            /*if(producto.getStock() < detalle.cantidad()){
-                throw new ProductoCantidadException("No hay suficiente cantidad del producto "+ producto.getNombre()+ " para la factura");
-            }else producto.setStock(producto.getStock() - detalle.cantidad());
+            if(!productoService.verificarCantidad(detalle.cantidad(), detalle.codigoProducto(), detalle.formaVenta())){
+                String mensaje = "No hay suficiente cantidad del producto "+ producto.getNombre()+ " para la venta";
+                throw new ProductoCantidadException(mensaje);
+            }
 
-            detalleVenta.setValor(producto.getPrecio() * detalle.cantidad());*/
-
-            detalleVenta.setProducto(producto);
-            detalleVenta.setVenta(venta);
+            formaVenta.setCantidad(formaVenta.getCantidad() - detalle.cantidad());
+            detalleVenta.setValues(detalle, producto, venta, formaVenta);
             venta.getDetalleVentaList().add(detalleVenta);
         });
     }
