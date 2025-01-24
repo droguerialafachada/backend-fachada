@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 
 import java.util.Date;
 import java.util.List;
@@ -44,4 +45,13 @@ public class Producto {
     @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FormaVenta> formaVentas;
 
+    /**
+     * Actualiza los datos de un producto existente.
+     * @param productoDTO DTO con los nuevos datos del producto.
+     */
+    public void actualizar(ActualizarProductoDTO productoDTO) {
+        this.nombre = productoDTO.nombre();
+        this.activo = productoDTO.activo();
+        this.precioCompra = productoDTO.precioCompra();
+    }
 }

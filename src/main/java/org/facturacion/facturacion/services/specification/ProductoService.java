@@ -1,8 +1,10 @@
 package org.facturacion.facturacion.services.specification;
 
 import org.facturacion.facturacion.domain.Producto;
+import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
+import org.facturacion.facturacion.dto.producto.FullProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
 import org.springframework.data.domain.Page;
 
@@ -41,4 +43,7 @@ public interface ProductoService {
 
     Producto findByCodigo(String codigo);
 
+    FullProductoDTO actualizarFormaVenta(String codigo, ActualizarFormaVentaDTO formaVentaDTO);
+
+    FullProductoDTO obtenerProductoCompletoPorCodigo(String codigo);
 }

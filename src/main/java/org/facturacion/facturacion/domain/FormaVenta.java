@@ -3,6 +3,7 @@ package org.facturacion.facturacion.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
 
 @Entity
 @Getter
@@ -25,4 +26,18 @@ public class FormaVenta {
 
     @Column(nullable = false)
     private Integer cantidad;
+
+    @Column(nullable = false)
+    private Boolean activo;
+
+    /**
+     * Actualiza los datos de una forma de venta existente.
+     * @param formaVentaDTO DTO con los nuevos datos de la forma de venta.
+     */
+    public void actualizarFormaVenta(ActualizarFormaVentaDTO formaVentaDTO) {
+        this.nombre = formaVentaDTO.nombre();
+        this.precio = formaVentaDTO.precio();
+        this.cantidad = formaVentaDTO.cantidad();
+        this.activo = true;
+    }
 }

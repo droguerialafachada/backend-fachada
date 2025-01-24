@@ -1,8 +1,11 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
+import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
+import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaRequest;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
+import org.facturacion.facturacion.dto.producto.FullProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
 import org.facturacion.facturacion.services.specification.ProductoService;
 import org.springframework.data.domain.Page;
@@ -74,11 +77,10 @@ public class ProductoController {
      * Este método se encarga de actualizar la forma
      * de venta de un producto. Dado un código de producto y un id de forma de venta, se actualiza
      */
-    /*@PutMapping("/actualizar-forma-venta")
-    public ResponseEntity<ProductoDTO> actualizarFormaVenta(@RequestBody String codigo,
-                                                            @RequestBody ActualizarFormaVentaDTO formaVentaDTO) {
-        return ResponseEntity.ok(new ProductoDTO(this.productoService.actualizarFormaVenta(codigo, formaVentaDTO)));
-    }*/
+    @PutMapping("/actualizar-forma-venta")
+    public ResponseEntity<FullProductoDTO> actualizarFormaVenta(@RequestBody ActualizarFormaVentaRequest request) {
+        return ResponseEntity.ok(this.productoService.actualizarFormaVenta(request.codigo(), request.formaVentaDTO()));
+    }
 
 
     /**
@@ -146,8 +148,23 @@ public class ProductoController {
         return ResponseEntity.ok(this.productoService.verificarCambios());
     }
 
+    /**
+     * Este método se encarga de obtener un producto por su código.
+     * @param codigo Código del producto a obtener.
+     * @return Producto.
+     */
     @GetMapping("/obtener-producto/{codigo}")
     public ResponseEntity<ProductoDTO> obtenerProductoPorId(@PathVariable String codigo){
         return ResponseEntity.ok(ProductoDTO.fromEntity(this.productoService.findByCodigo(codigo)));
+    }
+
+    /**
+     * Este método se encarga de obtener un producto completo la forma de venta por su código.
+     * @param codigo Código del producto a obtener.
+     * @return Producto completo.
+     */
+    @GetMapping("/obtener-producto-completo/{codigo}")
+    public ResponseEntity<FullProductoDTO> obtenerProductoCompletoPorCodigo(@PathVariable String codigo){
+        return ResponseEntity.ok(this.productoService.obtenerProductoCompletoPorCodigo(codigo));
     }
 }

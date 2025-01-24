@@ -1,5 +1,6 @@
 package org.facturacion.facturacion.validators.formaVenta;
 
+import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
 import org.facturacion.facturacion.dto.formaVenta.CrearFormaVentaDTO;
 import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaNombreException;
 import org.facturacion.facturacion.validators.formaVenta.interfaces.FormaVentaValidator;
@@ -13,9 +14,9 @@ public class FormaVentaNombreValidator implements FormaVentaValidator<Object> {
         String nombre = null;
         if (dto instanceof CrearFormaVentaDTO crearFormaVentaDTO) {
             nombre = crearFormaVentaDTO.nombre();
-        } /*else if (dto instanceof ActualizarFormaVentaDTO actualizarFormaVentaDTO) {
-            nombre = actualizarFormaVentaDTO.getNombre();
-        }*/
+        } else if (dto instanceof ActualizarFormaVentaDTO actualizarFormaVentaDTO) {
+            nombre = actualizarFormaVentaDTO.nombre();
+        }
 
         if (nombre == null || nombre.isBlank()) {
             throw new FormaVentaNombreException("El nombre de la forma de venta no puede estar vacío");

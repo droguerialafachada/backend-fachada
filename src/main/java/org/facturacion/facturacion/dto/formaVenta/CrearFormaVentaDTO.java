@@ -6,14 +6,16 @@ import org.facturacion.facturacion.domain.Producto;
 public record CrearFormaVentaDTO(
         String nombre,
         Double precio,
-        Integer cantidad
+        Integer cantidad,
+        Boolean activo
 ) {
 
     public static CrearFormaVentaDTO fromEntity(FormaVenta formaVenta) {
         return new CrearFormaVentaDTO(
                 formaVenta.getNombre(),
                 formaVenta.getPrecio(),
-                formaVenta.getCantidad()
+                formaVenta.getCantidad(),
+                formaVenta.getActivo()
         );
     }
 
@@ -22,6 +24,7 @@ public record CrearFormaVentaDTO(
         formaVenta.setNombre(formaVentaDTO.nombre());
         formaVenta.setPrecio(formaVentaDTO.precio());
         formaVenta.setCantidad(formaVentaDTO.cantidad());
+        formaVenta.setActivo(formaVentaDTO.activo());
         formaVenta.setProducto(producto);
         return formaVenta;
     }

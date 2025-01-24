@@ -6,10 +6,13 @@ import lombok.Setter;
 import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.domain.TipoImpuesto;
+import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
+import org.facturacion.facturacion.dto.producto.FullProductoDTO;
 import org.facturacion.facturacion.dto.producto.ProductoDTO;
 import org.facturacion.facturacion.exceptions.producto.*;
+import org.facturacion.facturacion.repositories.FormaVentaRepository;
 import org.facturacion.facturacion.repositories.ProductoRepository;
 import org.facturacion.facturacion.repositories.TipoImpuestoRepository;
 import org.facturacion.facturacion.services.specification.ProductoService;
@@ -23,6 +26,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Implementación del servicio de productos.
@@ -35,6 +39,7 @@ public class IProductoService implements ProductoService {
     private final TipoImpuestoRepository tipoImpuestoRepository;
     private final ProductoValidationService productoValidationService;
     private final FormaVentaValidationService formaVentaValidationService;
+    private final FormaVentaRepository formaVentaRepository;
 
     @Getter
     @Setter
@@ -83,6 +88,14 @@ public class IProductoService implements ProductoService {
      */
     @Override
     public ProductoDTO crearProducto(CrearProductoDTO productoDTO) {
+
+        if(productoDTO == null) throw new ProductoException("El producto no puede estar vacío");
+        if(productoDTO.formasVenta() == null)
+            throw new ProductoFormaVentaException("La forma de venta no puede estar vacía");
+        
+        if(productoDTO.formasVenta().isEmpty())
+            throw new ProductoFormaVentaException("El producto debe tener al menos una forma de venta");
+
         productoValidationService.validate(productoDTO);
         productoDTO.formasVenta().forEach(formaVentaValidationService::validate);
         TipoImpuesto impuesto = validarImpuesto(productoDTO.impuesto());
@@ -100,7 +113,7 @@ public class IProductoService implements ProductoService {
     public ProductoDTO actualizarProducto(ActualizarProductoDTO productoDTO) {
         Producto producto = obtenerProducto(productoDTO.codigo());
         productoValidationService.validate(productoDTO);
-        actualizarDatosProducto(producto, productoDTO);
+        producto.actualizar(productoDTO);
         IProductoService.setHayCambiosProducto(true);
         return ProductoDTO.fromEntity(productoRepository.save(producto));
     }
@@ -240,18 +253,6 @@ public class IProductoService implements ProductoService {
     }
 
     /**
-     * Actualiza los datos de un producto existente.
-     *
-     * @param producto    Producto a actualizar.
-     * @param productoDTO DTO con los nuevos datos del producto.
-     */
-    private void actualizarDatosProducto(Producto producto, ActualizarProductoDTO productoDTO) {
-        producto.setNombre(productoDTO.nombre());
-        producto.setActivo(productoDTO.activo());
-        producto.setPrecioCompra(productoDTO.precioCompra());
-    }
-
-    /**
      * Este método devuelve un producto por su código.
      * @param codigo Código del producto.
      * @return Producto encontrado.
@@ -261,5 +262,35 @@ public class IProductoService implements ProductoService {
         return productoRepository.findByCodigo(codigo)
                 .orElseThrow(() -> new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo));
     }
+
+    @Override
+    public FullProductoDTO actualizarFormaVenta(String codigo, ActualizarFormaVentaDTO formaVentaDTO) {
+
+        if(formaVentaDTO == null) throw new ProductoFormaVentaException("La forma de venta no puede estar vacía");
+
+        Producto producto = findByCodigo(codigo);
+        if(producto == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
+
+        FormaVenta formaVenta = producto.getFormaVentas().stream()
+                .filter(fv -> Objects.equals(fv.getId(), formaVentaDTO.id()))
+                .findFirst()
+                .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
+
+        formaVentaValidationService.validate(formaVentaDTO);
+        formaVenta.actualizarFormaVenta(formaVentaDTO);
+        formaVentaRepository.save(formaVenta);
+
+        return obtenerProductoCompletoPorCodigo(codigo);
+    }
+
+    @Override
+    public FullProductoDTO obtenerProductoCompletoPorCodigo(String codigo) {
+
+        if(codigo == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
+        if (productoRepository.findByCodigo(codigo).isEmpty()) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
+        Producto producto = productoRepository.findByCodigo(codigo).get();
+        return FullProductoDTO.fromEntity(producto);
+    }
+
 
 }

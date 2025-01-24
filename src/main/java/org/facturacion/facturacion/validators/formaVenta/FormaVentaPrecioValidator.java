@@ -1,5 +1,6 @@
 package org.facturacion.facturacion.validators.formaVenta;
 
+import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
 import org.facturacion.facturacion.dto.formaVenta.CrearFormaVentaDTO;
 import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaPrecioException;
 import org.facturacion.facturacion.validators.formaVenta.interfaces.FormaVentaValidator;
@@ -13,9 +14,9 @@ public class FormaVentaPrecioValidator implements FormaVentaValidator<Object> {
         Double precio = null;
         if (dto instanceof CrearFormaVentaDTO crearFormaVentaDTO) {
             precio = crearFormaVentaDTO.precio();
-        } /*else if (dto instanceof ActualizarFormaVentaDTO actualizarFormaVentaDTO) {
-            precio = actualizarFormaVentaDTO.getPrecio();
-        }*/
+        } else if (dto instanceof ActualizarFormaVentaDTO actualizarFormaVentaDTO) {
+            precio = actualizarFormaVentaDTO.precio();
+        }
 
         if (precio == null) {
             throw new FormaVentaPrecioException("El precio de la forma de venta no puede estar vacío");

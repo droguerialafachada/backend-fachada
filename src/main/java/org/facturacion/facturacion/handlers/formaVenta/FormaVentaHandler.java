@@ -1,6 +1,8 @@
 package org.facturacion.facturacion.handlers.formaVenta;
 
 import org.facturacion.facturacion.dto.validationError.ValidationError;
+import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaActivoException;
+import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaCantidadInvalidaException;
 import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaNombreException;
 import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaPrecioException;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,16 @@ public class FormaVentaHandler {
 
     @ExceptionHandler(FormaVentaPrecioException.class)
     public ResponseEntity<ValidationError> handleFormaVentaPrecioException(FormaVentaPrecioException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/productos"), org.springframework.http.HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(FormaVentaActivoException.class)
+    public ResponseEntity<ValidationError> handleFormaVentaActivoException(FormaVentaActivoException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/productos"), org.springframework.http.HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(FormaVentaCantidadInvalidaException.class)
+    public ResponseEntity<ValidationError> handleFormaVentaCantidadInvalidaException(FormaVentaCantidadInvalidaException e){
         return new ResponseEntity<>(buildError(e.getMessage(), "/productos"), org.springframework.http.HttpStatus.BAD_REQUEST);
     }
 }
