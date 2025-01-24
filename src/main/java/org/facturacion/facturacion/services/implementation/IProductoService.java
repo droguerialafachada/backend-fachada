@@ -92,7 +92,7 @@ public class IProductoService implements ProductoService {
         if(productoDTO == null) throw new ProductoException("El producto no puede estar vacío");
         if(productoDTO.formasVenta() == null)
             throw new ProductoFormaVentaException("La forma de venta no puede estar vacía");
-        
+
         if(productoDTO.formasVenta().isEmpty())
             throw new ProductoFormaVentaException("El producto debe tener al menos una forma de venta");
 
@@ -161,12 +161,13 @@ public class IProductoService implements ProductoService {
      * @return Booleano que indica si la cantidad es suficiente.
      */
     @Override
-    //TODO: Se debe permitir que se envíe la forma de venta del producto.
-    public Boolean verificarCantidad(Integer cantidad, String codigo) {
-        /*return productoRepository.findByCodigo(codigo)
-                .map(producto -> producto.getStock() >= cantidad)
-                .orElse(false);*/
-        return true;
+    public Boolean verificarCantidad(Integer cantidad, String codigo, Integer idFormaVenta) {
+        Producto producto = obtenerProducto(codigo);
+        FormaVenta formaVenta = producto.getFormaVentas().stream()
+                .filter(fv -> Objects.equals(fv.getId(), Long.parseLong(idFormaVenta+"")))
+                .findFirst()
+                .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
+        return formaVenta.getCantidad() >= cantidad;
     }
 
     /**

@@ -25,7 +25,7 @@ public interface ProductoService {
 
     List<String> getTiposImpuestos();
 
-    Boolean verificarCantidad(Integer cantidad, String id);
+    Boolean verificarCantidad(Integer cantidad, String id, Integer idFormaVenta);
 
     Boolean isActivo(String id);
 
