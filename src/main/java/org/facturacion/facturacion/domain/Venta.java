@@ -55,31 +55,14 @@ public class Venta {
     @OneToOne(mappedBy = "venta")
     private FacturaElectronica facturaElectronica;
 
-    public void setValues(String completada, CrearVentaDTO ventaDTO, Double IVA) {
+    public void setValues(String completada,  Double IVA) {
         this.fecha = new Date();
         this.estado = completada;
         this.subTotal = this.total - this.total * IVA;
-        if(ventaDTO.descuento() == null)
-            throw new VentaDescuentoNullException("El descuento de la venta no puede ser nulo");
-        if(ventaDTO.descuento() < 0 )
-            throw new VentaDescuentoNegativoException("El descuento de la venta no puede ser negativo");
-        this.descuento = ventaDTO.descuento();
-        if(ventaDTO.cambio() == null) throw new VentaCambioNullException("El cambio de la venta no puede ser nulo");
-        if(ventaDTO.cambio() < 0) throw new VentaCambioNegativoException("El cambio de la venta no puede ser negativo");
-        if(ventaDTO.dineroRecibido() == null)
-            throw new VentaDineroNullException("El dinero recibido no puede ser nulo");
-        if(ventaDTO.dineroRecibido() < total - descuento)
-            throw new VentaCambioNegativoException("El dinero recibido no puede ser menor al total menos el descuento");
-        if(ventaDTO.dineroRecibido() < 0)
-            throw new VentaCambioNegativoException("El dinero recibido no puede ser negativo");
+    }
+
+    public void calcularValores(CrearVentaDTO ventaDTO){
         this.dineroRecibido = ventaDTO.dineroRecibido();
         this.total = this.total - ventaDTO.descuento();
-        if(this.dineroRecibido > this.total - this.descuento){
-            this.cambio = this.dineroRecibido - this.total ;
-            System.out.println("cambio = " + cambio);
-            if(!this.cambio.equals(ventaDTO.cambio()))
-                throw new VentaCambioNegativoException("El cambio de la venta no es correcto");
-        }
-
     }
 }

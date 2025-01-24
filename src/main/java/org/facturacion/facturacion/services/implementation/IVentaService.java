@@ -8,8 +8,7 @@ import org.facturacion.facturacion.dto.venta.CrearVentaDTO;
 import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.exceptions.producto.ProductoCantidadException;
-import org.facturacion.facturacion.exceptions.venta.VentaCanceladaException;
-import org.facturacion.facturacion.exceptions.venta.VentaNoExisteException;
+import org.facturacion.facturacion.exceptions.venta.*;
 import org.facturacion.facturacion.repositories.VentaRepository;
 import org.facturacion.facturacion.services.specification.ClienteService;
 import org.facturacion.facturacion.services.specification.VentaService;
@@ -62,7 +61,25 @@ public class IVentaService implements VentaService {
 
         agregarClienteVentas(venta, ventaDTO);
         agregarUsuarioVenta(venta, ventaDTO);
-        venta.setValues(EstadoVenta.COMPLETADA, ventaDTO, IVA);
+        venta.setValues(EstadoVenta.COMPLETADA, IVA);
+        if(ventaDTO.descuento() == null)
+            throw new VentaDescuentoNullException("El descuento de la venta no puede ser nulo");
+        if(ventaDTO.descuento() < 0 )
+            throw new VentaDescuentoNegativoException("El descuento de la venta no puede ser negativo");
+        venta.setDescuento(ventaDTO.descuento());
+        if(ventaDTO.cambio() == null) throw new VentaCambioNullException("El cambio de la venta no puede ser nulo");
+        if(ventaDTO.cambio() < 0) throw new VentaCambioNegativoException("El cambio de la venta no puede ser negativo");
+        if(ventaDTO.dineroRecibido() == null)  throw new VentaDineroNullException("El dinero recibido no puede ser nulo");
+        if(ventaDTO.dineroRecibido() < venta.getTotal() - venta.getDescuento())
+            throw new VentaCambioNegativoException("El dinero recibido no puede ser menor al total menos el descuento");
+        if(ventaDTO.dineroRecibido() < 0)
+            throw new VentaCambioNegativoException("El dinero recibido no puede ser negativo");
+        venta.calcularValores(ventaDTO);
+        if(venta.getDineroRecibido() > venta.getTotal() - venta.getDescuento()){
+            venta.setCambio(venta.getDineroRecibido() - venta.getTotal());
+            if(!venta.getCambio().equals(ventaDTO.cambio()))
+                throw new VentaCambioNegativoException("El cambio de la venta no es correcto");
+        }
 
         ventaRepository.save(venta);
         venta.getDetalleVentaList().forEach(this.detalleFacturaService::save);
