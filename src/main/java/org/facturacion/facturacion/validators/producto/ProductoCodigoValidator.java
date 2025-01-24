@@ -19,16 +19,15 @@ public class ProductoCodigoValidator implements ProductoValidator<Object> {
         String codigo = null;
         if (dto instanceof CrearProductoDTO crearProductoDTO) {
             codigo = crearProductoDTO.codigo();
+            if (productoRepository.existsByCodigo(codigo)) {
+                throw new ProductoCodigoException("El código del producto ya existe");
+            }
         } else if (dto instanceof ActualizarProductoDTO actualizarProductoDTO) {
             codigo = actualizarProductoDTO.codigo();
         }
 
         if (codigo == null || codigo.isEmpty()) {
             throw new ProductoCodigoException("El código del producto no puede estar vacío");
-        }
-
-        if (productoRepository.existsByCodigo(codigo)) {
-            throw new ProductoCodigoException("El código del producto ya existe");
         }
 
     }

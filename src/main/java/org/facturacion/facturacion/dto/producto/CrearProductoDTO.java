@@ -10,6 +10,7 @@ public record CrearProductoDTO(
         String nombre,
         String activo,
         String impuesto,
+        Double precioCompra,
         List<CrearFormaVentaDTO> formasVenta
 ) {
 
@@ -20,6 +21,7 @@ public record CrearProductoDTO(
         producto.setActivo(activo.equals("1"));
         producto.setEliminado(false);
         producto.setFechaCreacion(new java.util.Date());
+        producto.setPrecioCompra(precioCompra);
         producto.setFormaVentas(formasVenta.stream().map(fv -> CrearFormaVentaDTO.toEntity(fv, producto)).toList());
         return producto;
     }

@@ -69,6 +69,18 @@ public class ProductoController {
     public ResponseEntity<ProductoDTO> actualizarProducto(@RequestBody ActualizarProductoDTO producto) {
         return ResponseEntity.ok(this.productoService.actualizarProducto(producto));
     }
+
+    /**
+     * Este método se encarga de actualizar la forma
+     * de venta de un producto. Dado un código de producto y un id de forma de venta, se actualiza
+     */
+    /*@PutMapping("/actualizar-forma-venta")
+    public ResponseEntity<ProductoDTO> actualizarFormaVenta(@RequestBody String codigo,
+                                                            @RequestBody ActualizarFormaVentaDTO formaVentaDTO) {
+        return ResponseEntity.ok(new ProductoDTO(this.productoService.actualizarFormaVenta(codigo, formaVentaDTO)));
+    }*/
+
+
     /**
      * Este método se encarga de eliminar un producto. Dado un código de producto, se elimina el producto
      * de la base de datos.

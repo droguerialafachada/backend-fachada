@@ -245,13 +245,10 @@ public class IProductoService implements ProductoService {
      * @param producto    Producto a actualizar.
      * @param productoDTO DTO con los nuevos datos del producto.
      */
-    //TODO: Se debe permitir que se envíe la forma de venta del producto
-    //Para actualizar la cantidad y el precio de venta.
     private void actualizarDatosProducto(Producto producto, ActualizarProductoDTO productoDTO) {
         producto.setNombre(productoDTO.nombre());
-        //producto.setStock(productoDTO.cantidad());
-        //producto.setPrecio(productoDTO.precio());
         producto.setActivo(productoDTO.activo());
+        producto.setPrecioCompra(productoDTO.precioCompra());
     }
 
     /**

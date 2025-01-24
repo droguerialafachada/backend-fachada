@@ -72,5 +72,9 @@ public class ProductoHandler {
         return new ResponseEntity<>(buildError(e.getMessage(), "/productos/guardar"), HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(ProductoPrecioCompraException.class)
+    public ResponseEntity<ValidationError> handleProductoPrecioCompraException(ProductoPrecioCompraException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/productos/guardar"), HttpStatus.BAD_REQUEST);
+    }
 
 }

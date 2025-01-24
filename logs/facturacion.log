@@ -5663,3 +5663,485 @@ org.facturacion.facturacion.exceptions.formaVenta.FormaVentaPrecioException: El 
 2025-01-23T18:32:44.590-05:00  INFO 40639 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 2025-01-23T18:32:44.682-05:00  WARN 40639 --- [facturacion] [http-nio-8086-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.formaVenta.FormaVentaPrecioException: El precio de la forma de venta no puede ser negativo]
 2025-01-23T18:33:08.323-05:00  WARN 40639 --- [facturacion] [http-nio-8086-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.formaVenta.FormaVentaPrecioException: El precio de la forma de venta no puede estar vacío]
+2025-01-23T18:36:15.713-05:00  WARN 40639 --- [facturacion] [http-nio-8086-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoCodigoException: El código del producto ya existe]
+2025-01-23T18:36:19.118-05:00  WARN 40639 --- [facturacion] [http-nio-8086-exec-1] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-01-23T18:46:56.211-05:00  INFO 40639 --- [facturacion] [http-nio-8086-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 188 ms
+2025-01-23T18:50:36.704-05:00  INFO 40639 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T18:50:36.717-05:00  INFO 40639 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T18:50:36.750-05:00  INFO 40639 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T18:52:20.431-05:00  INFO 42125 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 42125 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T18:52:20.433-05:00  INFO 42125 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T18:52:20.456-05:00  INFO 42125 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T18:52:20.456-05:00  INFO 42125 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T18:52:20.803-05:00  INFO 42125 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T18:52:20.831-05:00  INFO 42125 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 8 JPA repository interfaces.
+2025-01-23T18:52:21.065-05:00  INFO 42125 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T18:52:21.072-05:00  INFO 42125 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T18:52:21.072-05:00  INFO 42125 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T18:52:21.095-05:00  INFO 42125 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T18:52:21.095-05:00  INFO 42125 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 638 ms
+2025-01-23T18:52:21.161-05:00  INFO 42125 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T18:52:21.186-05:00  INFO 42125 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T18:52:21.200-05:00  INFO 42125 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T18:52:21.338-05:00  INFO 42125 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T18:52:21.350-05:00  INFO 42125 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T18:52:21.535-05:00  INFO 42125 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@268c06e6
+2025-01-23T18:52:21.536-05:00  INFO 42125 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T18:52:21.566-05:00  WARN 42125 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T18:52:21.567-05:00  WARN 42125 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T18:52:22.019-05:00  INFO 42125 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T18:52:22.555-05:00  INFO 42125 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T18:52:22.731-05:00  INFO 42125 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T18:52:23.030-05:00  WARN 42125 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T18:52:23.208-05:00  INFO 42125 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T18:52:23.235-05:00  INFO 42125 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T18:52:23.243-05:00  INFO 42125 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.966 seconds (process running for 3.377)
+2025-01-23T18:54:46.008-05:00  INFO 42125 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T18:54:46.009-05:00  INFO 42125 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T18:54:46.012-05:00  INFO 42125 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-23T19:27:15.780-05:00  INFO 42125 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:27:15.803-05:00  INFO 42125 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T19:27:15.827-05:00  INFO 42125 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T19:27:20.979-05:00  INFO 43548 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 43548 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T19:27:20.981-05:00  INFO 43548 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T19:27:21.002-05:00  INFO 43548 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T19:27:21.003-05:00  INFO 43548 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T19:27:21.337-05:00  INFO 43548 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T19:27:21.368-05:00  INFO 43548 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 8 JPA repository interfaces.
+2025-01-23T19:27:21.610-05:00  INFO 43548 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T19:27:21.615-05:00  INFO 43548 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T19:27:21.615-05:00  INFO 43548 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T19:27:21.638-05:00  INFO 43548 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T19:27:21.638-05:00  INFO 43548 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 635 ms
+2025-01-23T19:27:21.698-05:00  INFO 43548 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T19:27:21.726-05:00  INFO 43548 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T19:27:21.740-05:00  INFO 43548 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T19:27:21.876-05:00  INFO 43548 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T19:27:21.887-05:00  INFO 43548 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T19:27:22.064-05:00  INFO 43548 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3deaecfa
+2025-01-23T19:27:22.065-05:00  INFO 43548 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T19:27:22.104-05:00  WARN 43548 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T19:27:22.104-05:00  WARN 43548 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T19:27:22.559-05:00  INFO 43548 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T19:27:23.021-05:00  INFO 43548 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:27:23.181-05:00  INFO 43548 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T19:27:23.435-05:00  WARN 43548 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T19:27:23.617-05:00  INFO 43548 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T19:27:23.637-05:00  INFO 43548 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T19:27:23.644-05:00  INFO 43548 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.836 seconds (process running for 3.247)
+2025-01-23T19:32:53.646-05:00  INFO 43548 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T19:32:53.646-05:00  INFO 43548 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T19:32:53.649-05:00  INFO 43548 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-01-23T19:32:53.770-05:00  WARN 43548 --- [facturacion] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2025-01-23T19:32:53.770-05:00 ERROR 43548 --- [facturacion] [http-nio-8086-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'precio_compra' cannot be null
+2025-01-23T19:32:53.779-05:00 ERROR 43548 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Column 'precio_compra' cannot be null] [insert into productos (activo,codigo,eliminado,fecha_creacion,tipo_impuesto_id,nombre,precio_compra) values (?,?,?,?,?,?,?)]; SQL [insert into productos (activo,codigo,eliminado,fecha_creacion,tipo_impuesto_id,nombre,precio_compra) values (?,?,?,?,?,?,?)]; constraint [null]] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'precio_compra' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:391) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:305) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.1.10.jar:6.1.10]
+	at jdk.proxy4/jdk.proxy4.$Proxy137.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319) ~[spring-orm-6.1.10.jar:6.1.10]
+	at jdk.proxy4/jdk.proxy4.$Proxy137.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:629) ~[spring-data-jpa-3.3.1.jar:3.3.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.3.1.jar:3.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.1.10.jar:6.1.10]
+	at jdk.proxy4/jdk.proxy4.$Proxy146.save(Unknown Source) ~[na:na]
+	at org.facturacion.facturacion.services.implementation.IProductoService.crearProducto(IProductoService.java:91) ~[main/:na]
+	at org.facturacion.facturacion.controllers.ProductoController.crearProducto(ProductoController.java:61) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-01-23T19:35:15.422-05:00  INFO 43548 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:35:15.435-05:00  INFO 43548 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T19:35:15.465-05:00  INFO 43548 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T19:35:22.116-05:00  INFO 43944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 43944 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T19:35:22.117-05:00  INFO 43944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T19:35:22.136-05:00  INFO 43944 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T19:35:22.136-05:00  INFO 43944 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T19:35:22.470-05:00  INFO 43944 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T19:35:22.501-05:00  INFO 43944 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 8 JPA repository interfaces.
+2025-01-23T19:35:22.735-05:00  INFO 43944 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T19:35:22.740-05:00  INFO 43944 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T19:35:22.740-05:00  INFO 43944 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T19:35:22.757-05:00  INFO 43944 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T19:35:22.757-05:00  INFO 43944 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 620 ms
+2025-01-23T19:35:22.819-05:00  INFO 43944 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T19:35:22.845-05:00  INFO 43944 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T19:35:22.858-05:00  INFO 43944 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T19:35:23.003-05:00  INFO 43944 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T19:35:23.015-05:00  INFO 43944 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T19:35:23.273-05:00  INFO 43944 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44304f0f
+2025-01-23T19:35:23.273-05:00  INFO 43944 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T19:35:23.306-05:00  WARN 43944 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T19:35:23.306-05:00  WARN 43944 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T19:35:23.784-05:00  INFO 43944 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T19:35:24.312-05:00  INFO 43944 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:35:24.470-05:00  INFO 43944 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T19:35:24.751-05:00  WARN 43944 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T19:35:24.929-05:00  INFO 43944 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T19:35:24.949-05:00  INFO 43944 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T19:35:24.956-05:00  INFO 43944 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 3.054 seconds (process running for 3.558)
+2025-01-23T19:35:30.073-05:00  INFO 43944 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T19:35:30.073-05:00  INFO 43944 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T19:35:30.081-05:00  INFO 43944 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-01-23T19:35:30.196-05:00 ERROR 43944 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío] with root cause
+
+org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío
+	at org.facturacion.facturacion.validators.producto.ProductoPrecioCompraValidator.validate(ProductoPrecioCompraValidator.java:21) ~[main/:na]
+	at org.facturacion.facturacion.services.validations.ProductoValidationService.validate(ProductoValidationService.java:17) ~[main/:na]
+	at org.facturacion.facturacion.services.implementation.IProductoService.crearProducto(IProductoService.java:86) ~[main/:na]
+	at org.facturacion.facturacion.controllers.ProductoController.crearProducto(ProductoController.java:61) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-01-23T19:36:35.304-05:00  INFO 43944 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:36:35.317-05:00  INFO 43944 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T19:36:35.341-05:00  INFO 43944 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T19:36:38.815-05:00  INFO 44034 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 44034 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T19:36:38.816-05:00  INFO 44034 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T19:36:38.854-05:00  INFO 44034 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T19:36:38.854-05:00  INFO 44034 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T19:36:39.306-05:00  INFO 44034 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T19:36:39.343-05:00  INFO 44034 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 8 JPA repository interfaces.
+2025-01-23T19:36:39.585-05:00  INFO 44034 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T19:36:39.590-05:00  INFO 44034 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T19:36:39.590-05:00  INFO 44034 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T19:36:39.607-05:00  INFO 44034 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T19:36:39.607-05:00  INFO 44034 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 753 ms
+2025-01-23T19:36:39.671-05:00  INFO 44034 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T19:36:39.696-05:00  INFO 44034 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T19:36:39.710-05:00  INFO 44034 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T19:36:39.848-05:00  INFO 44034 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T19:36:39.859-05:00  INFO 44034 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T19:36:40.038-05:00  INFO 44034 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5691356a
+2025-01-23T19:36:40.039-05:00  INFO 44034 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T19:36:40.063-05:00  WARN 44034 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T19:36:40.063-05:00  WARN 44034 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T19:36:40.517-05:00  INFO 44034 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T19:36:40.883-05:00  INFO 44034 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:36:41.055-05:00  INFO 44034 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T19:36:41.289-05:00  WARN 44034 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T19:36:41.471-05:00  INFO 44034 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T19:36:41.492-05:00  INFO 44034 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T19:36:41.499-05:00  INFO 44034 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.875 seconds (process running for 3.239)
+2025-01-23T19:36:45.365-05:00  INFO 44034 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T19:36:45.366-05:00  INFO 44034 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T19:36:45.368-05:00  INFO 44034 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-01-23T19:36:45.473-05:00  WARN 44034 --- [facturacion] [http-nio-8086-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío]
+2025-01-23T19:37:46.654-05:00  WARN 44034 --- [facturacion] [http-nio-8086-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío]
+2025-01-23T19:38:02.918-05:00  WARN 44034 --- [facturacion] [http-nio-8086-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede ser negativo]
+2025-01-23T19:57:15.929-05:00  INFO 44034 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:57:16.001-05:00  INFO 44034 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T19:57:16.104-05:00  INFO 44034 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T19:57:21.317-05:00  INFO 45000 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 45000 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T19:57:21.318-05:00  INFO 45000 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T19:57:21.339-05:00  INFO 45000 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T19:57:21.339-05:00  INFO 45000 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T19:57:21.684-05:00  INFO 45000 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T19:57:21.712-05:00  INFO 45000 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 8 JPA repository interfaces.
+2025-01-23T19:57:21.942-05:00  INFO 45000 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T19:57:21.947-05:00  INFO 45000 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T19:57:21.948-05:00  INFO 45000 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T19:57:21.965-05:00  INFO 45000 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T19:57:21.965-05:00  INFO 45000 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 626 ms
+2025-01-23T19:57:22.031-05:00  INFO 45000 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T19:57:22.056-05:00  INFO 45000 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T19:57:22.072-05:00  INFO 45000 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T19:57:22.215-05:00  INFO 45000 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T19:57:22.227-05:00  INFO 45000 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T19:57:22.426-05:00  INFO 45000 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@423779c2
+2025-01-23T19:57:22.427-05:00  INFO 45000 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T19:57:22.457-05:00  WARN 45000 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T19:57:22.457-05:00  WARN 45000 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T19:57:22.897-05:00  INFO 45000 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T19:57:23.335-05:00  INFO 45000 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:57:23.519-05:00  INFO 45000 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T19:57:23.803-05:00  WARN 45000 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T19:57:23.974-05:00  INFO 45000 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T19:57:23.996-05:00  INFO 45000 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T19:57:24.004-05:00  INFO 45000 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.854 seconds (process running for 3.226)
+2025-01-23T19:57:30.320-05:00  INFO 45000 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T19:57:30.320-05:00  INFO 45000 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T19:57:30.323-05:00  INFO 45000 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-23T19:57:42.146-05:00  WARN 45000 --- [facturacion] [http-nio-8086-exec-3] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-01-23T20:01:14.490-05:00  INFO 45000 --- [facturacion] [http-nio-8086-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 219 ms
+2025-01-23T20:02:38.651-05:00  INFO 45000 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T20:02:38.665-05:00  INFO 45000 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T20:02:38.711-05:00  INFO 45000 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T20:02:42.837-05:00  INFO 45266 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 45266 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T20:02:42.838-05:00  INFO 45266 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T20:02:42.858-05:00  INFO 45266 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T20:02:42.859-05:00  INFO 45266 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T20:02:43.182-05:00  INFO 45266 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T20:02:43.208-05:00  INFO 45266 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 8 JPA repository interfaces.
+2025-01-23T20:02:43.434-05:00  INFO 45266 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T20:02:43.438-05:00  INFO 45266 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T20:02:43.439-05:00  INFO 45266 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T20:02:43.455-05:00  INFO 45266 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T20:02:43.455-05:00  INFO 45266 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 596 ms
+2025-01-23T20:02:43.515-05:00  INFO 45266 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T20:02:43.541-05:00  INFO 45266 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T20:02:43.554-05:00  INFO 45266 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T20:02:43.759-05:00  INFO 45266 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T20:02:43.770-05:00  INFO 45266 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T20:02:43.930-05:00  INFO 45266 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cfc4083
+2025-01-23T20:02:43.931-05:00  INFO 45266 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T20:02:43.965-05:00  WARN 45266 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T20:02:43.965-05:00  WARN 45266 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T20:02:44.413-05:00  INFO 45266 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T20:02:44.923-05:00  INFO 45266 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T20:02:45.082-05:00  INFO 45266 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T20:02:45.323-05:00  WARN 45266 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T20:02:45.499-05:00  INFO 45266 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T20:02:45.519-05:00  INFO 45266 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T20:02:45.526-05:00  INFO 45266 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.852 seconds (process running for 3.434)
+2025-01-23T20:02:48.758-05:00  INFO 45266 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T20:02:48.758-05:00  INFO 45266 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T20:02:48.764-05:00  INFO 45266 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-01-23T20:02:49.115-05:00  INFO 45266 --- [facturacion] [http-nio-8086-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 181 ms
+2025-01-23T20:03:59.975-05:00  WARN 45266 --- [facturacion] [http-nio-8086-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoCodigoException: El código del producto ya existe]
+2025-01-23T20:04:41.424-05:00  INFO 45266 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T20:04:41.431-05:00  INFO 45266 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T20:04:41.459-05:00  INFO 45266 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T20:04:46.519-05:00  INFO 45366 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 45366 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T20:04:46.520-05:00  INFO 45366 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T20:04:46.542-05:00  INFO 45366 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T20:04:46.542-05:00  INFO 45366 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T20:04:46.870-05:00  INFO 45366 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T20:04:46.912-05:00  INFO 45366 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 8 JPA repository interfaces.
+2025-01-23T20:04:47.353-05:00  INFO 45366 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T20:04:47.358-05:00  INFO 45366 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T20:04:47.358-05:00  INFO 45366 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T20:04:47.382-05:00  INFO 45366 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T20:04:47.382-05:00  INFO 45366 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2025-01-23T20:04:47.473-05:00  INFO 45366 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T20:04:47.499-05:00  INFO 45366 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T20:04:47.513-05:00  INFO 45366 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T20:04:47.653-05:00  INFO 45366 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T20:04:47.664-05:00  INFO 45366 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T20:04:47.824-05:00  INFO 45366 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52bc0dac
+2025-01-23T20:04:47.825-05:00  INFO 45366 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T20:04:47.851-05:00  WARN 45366 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T20:04:47.851-05:00  WARN 45366 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T20:04:48.316-05:00  INFO 45366 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T20:04:48.742-05:00  INFO 45366 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T20:04:48.911-05:00  INFO 45366 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T20:04:49.159-05:00  WARN 45366 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T20:04:49.333-05:00  INFO 45366 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T20:04:49.354-05:00  INFO 45366 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T20:04:49.360-05:00  INFO 45366 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.988 seconds (process running for 3.422)
+2025-01-23T20:04:57.608-05:00  INFO 45366 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T20:04:57.608-05:00  INFO 45366 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T20:04:57.616-05:00  INFO 45366 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-01-23T20:04:57.724-05:00  WARN 45366 --- [facturacion] [http-nio-8086-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoNoEncontradoException: No se encontró el producto con ID: ]
+2025-01-23T20:05:17.884-05:00  WARN 45366 --- [facturacion] [http-nio-8086-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoNoEncontradoException: No se encontró el producto con ID: 1]
+2025-01-23T20:05:27.821-05:00  WARN 45366 --- [facturacion] [http-nio-8086-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío]
+2025-01-23T20:05:38.458-05:00  WARN 45366 --- [facturacion] [http-nio-8086-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío]
+2025-01-23T20:05:39.451-05:00  WARN 45366 --- [facturacion] [http-nio-8086-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío]
+2025-01-23T20:05:40.262-05:00  WARN 45366 --- [facturacion] [http-nio-8086-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío]
+2025-01-23T20:06:18.271-05:00  WARN 45366 --- [facturacion] [http-nio-8086-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede estar vacío]
+2025-01-23T20:06:40.850-05:00  INFO 45366 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T20:06:40.862-05:00  INFO 45366 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T20:06:40.893-05:00  INFO 45366 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T20:06:55.946-05:00  INFO 45494 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 45494 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-23T20:06:55.948-05:00  INFO 45494 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T20:06:55.972-05:00  INFO 45494 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-23T20:06:55.972-05:00  INFO 45494 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-23T20:06:56.323-05:00  INFO 45494 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T20:06:56.354-05:00  INFO 45494 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+2025-01-23T20:06:56.641-05:00  INFO 45494 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-23T20:06:56.657-05:00  INFO 45494 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-23T20:06:56.657-05:00  INFO 45494 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-23T20:06:56.710-05:00  INFO 45494 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-23T20:06:56.711-05:00  INFO 45494 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 739 ms
+2025-01-23T20:06:56.828-05:00  INFO 45494 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T20:06:56.866-05:00  INFO 45494 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-23T20:06:56.881-05:00  INFO 45494 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T20:06:57.023-05:00  INFO 45494 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T20:06:57.034-05:00  INFO 45494 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-23T20:06:57.210-05:00  INFO 45494 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d46e313
+2025-01-23T20:06:57.211-05:00  INFO 45494 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-23T20:06:57.237-05:00  WARN 45494 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T20:06:57.238-05:00  WARN 45494 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-23T20:06:57.701-05:00  INFO 45494 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T20:06:58.151-05:00  INFO 45494 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T20:06:58.322-05:00  INFO 45494 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-23T20:06:58.586-05:00  WARN 45494 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-23T20:06:58.786-05:00  INFO 45494 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-23T20:06:58.812-05:00  INFO 45494 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-23T20:06:58.819-05:00  INFO 45494 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 3.051 seconds (process running for 3.499)
+2025-01-23T20:07:03.410-05:00  INFO 45494 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-23T20:07:03.411-05:00  INFO 45494 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-23T20:07:03.413-05:00  INFO 45494 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-01-23T20:07:03.518-05:00  WARN 45494 --- [facturacion] [http-nio-8086-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoNoEncontradoException: No se encontró el producto con ID: 1]
+2025-01-23T20:09:11.609-05:00  WARN 45494 --- [facturacion] [http-nio-8086-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoNoEncontradoException: No se encontró el producto con ID: ]
+2025-01-23T20:09:50.014-05:00  WARN 45494 --- [facturacion] [http-nio-8086-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoNombreException: El nombre del producto no puede estar vacío]
+2025-01-23T20:09:59.839-05:00  WARN 45494 --- [facturacion] [http-nio-8086-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoNombreException: El nombre del producto no puede estar vacío]
+2025-01-23T20:10:06.171-05:00  WARN 45494 --- [facturacion] [http-nio-8086-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoPrecioCompraException: El precio de compra del producto no puede ser negativo]
