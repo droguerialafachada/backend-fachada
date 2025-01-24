@@ -9,11 +9,9 @@ import org.facturacion.facturacion.dto.venta.VentaDTO;
 import org.facturacion.facturacion.exceptions.cliente.ClienteNoExisteException;
 import org.facturacion.facturacion.exceptions.producto.ProductoCantidadException;
 import org.facturacion.facturacion.exceptions.venta.*;
+import org.facturacion.facturacion.repositories.FormaVentaRepository;
 import org.facturacion.facturacion.repositories.VentaRepository;
-import org.facturacion.facturacion.services.specification.ClienteService;
-import org.facturacion.facturacion.services.specification.VentaService;
-import org.facturacion.facturacion.services.specification.ProductoService;
-import org.facturacion.facturacion.services.specification.UsuarioService;
+import org.facturacion.facturacion.services.specification.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -33,7 +31,8 @@ public class IVentaService implements VentaService {
     private final ProductoService productoService;
     private final ClienteService clienteService;
     private final UsuarioService usuarioService;
-    private final IDetalleVentaService detalleFacturaService;
+    private final DetalleVentaService detalleFacturaService;
+    private final FormaVentaRepository formaVentaRepository;
     private final Double IVA = 0.19;
 
     /**
@@ -159,13 +158,16 @@ public class IVentaService implements VentaService {
             throw new VentaCanceladaException("La venta ya ha sido cancelada");
         }
 
-        //TODO: Se debe agregar a la forma de venta la cantidad de productos que se vendieron.
-        //Una vez se cancele la venta se debe devolver la cantidad de productos a la tienda.
-        /*venta.getDetalleVentaList().forEach(detalle -> {
+        venta.getDetalleVentaList().forEach(detalle -> {
             Producto producto = detalle.getProducto();
-            producto.setStock(producto.getStock() + detalle.getCantidad());
+            producto.getFormaVentas().forEach(formaVenta -> {
+                if(formaVenta.getId().equals(detalle.getFormaVenta().getId())){
+                    formaVenta.setCantidad(formaVenta.getCantidad() + detalle.getCantidad());
+                }
+                formaVentaRepository.save(formaVenta);
+            });
             productoService.guardar(producto);
-        });*/
+        });
 
         venta.setEstado(EstadoVenta.CANCELADA);
         ventaRepository.save(venta);

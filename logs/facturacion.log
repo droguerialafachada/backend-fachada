@@ -2133,3 +2133,105 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" b
 2025-01-24T12:25:53.580-05:00  INFO 11535 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-01-24T12:25:53.586-05:00  INFO 11535 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
 2025-01-24T12:27:23.755-05:00  INFO 11535 --- [facturacion] [http-nio-8086-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 175 ms
+2025-01-24T12:51:54.629-05:00  INFO 11535 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T12:51:54.638-05:00  INFO 11535 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-24T12:51:54.661-05:00  INFO 11535 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-24T12:52:33.738-05:00  INFO 12980 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 12980 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-24T12:52:33.740-05:00  INFO 12980 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-24T12:52:33.762-05:00  INFO 12980 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-24T12:52:33.762-05:00  INFO 12980 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-24T12:52:34.086-05:00  INFO 12980 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-24T12:52:34.114-05:00  INFO 12980 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 9 JPA repository interfaces.
+2025-01-24T12:52:34.338-05:00  INFO 12980 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-24T12:52:34.343-05:00  INFO 12980 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-24T12:52:34.343-05:00  INFO 12980 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-24T12:52:34.360-05:00  INFO 12980 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-24T12:52:34.360-05:00  INFO 12980 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 598 ms
+2025-01-24T12:52:34.423-05:00  INFO 12980 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-24T12:52:34.448-05:00  INFO 12980 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-24T12:52:34.462-05:00  INFO 12980 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-24T12:52:34.596-05:00  INFO 12980 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-24T12:52:34.607-05:00  INFO 12980 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-24T12:52:34.754-05:00  INFO 12980 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b721190
+2025-01-24T12:52:34.755-05:00  INFO 12980 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-24T12:52:34.776-05:00  WARN 12980 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-24T12:52:34.777-05:00  WARN 12980 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-24T12:52:35.212-05:00  INFO 12980 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-24T12:52:35.213-05:00  INFO 12980 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T12:52:35.353-05:00  INFO 12980 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-24T12:52:35.593-05:00  WARN 12980 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-24T12:52:35.773-05:00  INFO 12980 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-24T12:52:35.792-05:00  INFO 12980 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-24T12:52:35.799-05:00  INFO 12980 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.212 seconds (process running for 2.582)
+2025-01-24T12:52:44.595-05:00  INFO 12980 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-24T12:52:44.596-05:00  INFO 12980 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-24T12:52:44.604-05:00  INFO 12980 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-01-24T12:54:12.540-05:00  INFO 12980 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T12:54:12.548-05:00  INFO 12980 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-24T12:54:12.569-05:00  INFO 12980 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-24T12:54:15.609-05:00  INFO 13062 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 13062 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-24T12:54:15.610-05:00  INFO 13062 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-24T12:54:15.628-05:00  INFO 13062 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-24T12:54:15.629-05:00  INFO 13062 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-24T12:54:15.926-05:00  INFO 13062 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-24T12:54:15.953-05:00  INFO 13062 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 9 JPA repository interfaces.
+2025-01-24T12:54:16.178-05:00  INFO 13062 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-24T12:54:16.183-05:00  INFO 13062 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-24T12:54:16.184-05:00  INFO 13062 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-24T12:54:16.201-05:00  INFO 13062 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-24T12:54:16.201-05:00  INFO 13062 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 572 ms
+2025-01-24T12:54:16.259-05:00  INFO 13062 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-24T12:54:16.281-05:00  INFO 13062 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-24T12:54:16.296-05:00  INFO 13062 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-24T12:54:16.442-05:00  INFO 13062 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-24T12:54:16.458-05:00  INFO 13062 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-24T12:54:16.625-05:00  INFO 13062 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c87ae0e
+2025-01-24T12:54:16.626-05:00  INFO 13062 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-24T12:54:16.651-05:00  WARN 13062 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-24T12:54:16.652-05:00  WARN 13062 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-24T12:54:17.085-05:00  INFO 13062 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-24T12:54:17.086-05:00  INFO 13062 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T12:54:17.219-05:00  INFO 13062 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-24T12:54:17.455-05:00  WARN 13062 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-24T12:54:17.651-05:00  INFO 13062 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-24T12:54:17.672-05:00  INFO 13062 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-24T12:54:17.678-05:00  INFO 13062 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.218 seconds (process running for 2.47)
+2025-01-24T12:54:38.298-05:00  INFO 13062 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-24T12:54:38.298-05:00  INFO 13062 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-24T12:54:38.306-05:00  INFO 13062 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-01-24T12:54:46.965-05:00  INFO 13062 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T12:54:46.969-05:00  INFO 13062 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-24T12:54:46.986-05:00  INFO 13062 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-24T12:54:49.756-05:00  INFO 13095 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 13095 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-24T12:54:49.757-05:00  INFO 13095 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-24T12:54:49.774-05:00  INFO 13095 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-24T12:54:49.774-05:00  INFO 13095 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-24T12:54:50.065-05:00  INFO 13095 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-24T12:54:50.094-05:00  INFO 13095 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 9 JPA repository interfaces.
+2025-01-24T12:54:50.303-05:00  INFO 13095 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-24T12:54:50.308-05:00  INFO 13095 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-24T12:54:50.308-05:00  INFO 13095 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-24T12:54:50.323-05:00  INFO 13095 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-24T12:54:50.324-05:00  INFO 13095 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2025-01-24T12:54:50.380-05:00  INFO 13095 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-24T12:54:50.400-05:00  INFO 13095 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-24T12:54:50.411-05:00  INFO 13095 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-24T12:54:50.527-05:00  INFO 13095 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-24T12:54:50.538-05:00  INFO 13095 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-24T12:54:50.662-05:00  INFO 13095 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62b0ae2a
+2025-01-24T12:54:50.662-05:00  INFO 13095 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-24T12:54:50.682-05:00  WARN 13095 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-24T12:54:50.682-05:00  WARN 13095 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-24T12:54:51.098-05:00  INFO 13095 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-24T12:54:51.099-05:00  INFO 13095 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T12:54:51.233-05:00  INFO 13095 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-24T12:54:51.464-05:00  WARN 13095 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-24T12:54:51.637-05:00  INFO 13095 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-24T12:54:51.656-05:00  INFO 13095 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-24T12:54:51.663-05:00  INFO 13095 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.05 seconds (process running for 2.306)
+2025-01-24T12:55:06.757-05:00  INFO 13095 --- [facturacion] [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-24T12:55:06.758-05:00  INFO 13095 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-24T12:55:06.760-05:00  INFO 13095 --- [facturacion] [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-01-24T12:55:14.863-05:00  INFO 13095 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T12:55:14.870-05:00  INFO 13095 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-24T12:55:14.889-05:00  INFO 13095 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
