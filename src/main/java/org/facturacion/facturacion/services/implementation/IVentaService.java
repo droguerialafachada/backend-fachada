@@ -56,7 +56,7 @@ public class IVentaService implements VentaService {
 
         Venta venta = new Venta();
         venta.setDetalleVentaList(new ArrayList<>());
-
+        venta.setTotal(0.0);
         agregarDetalleVenta(venta, ventaDTO);
         venta.setTotal(venta.getDetalleVentaList().stream().mapToDouble(DetalleVenta::getValor).sum());
 
@@ -87,6 +87,7 @@ public class IVentaService implements VentaService {
 
             formaVenta.setCantidad(formaVenta.getCantidad() - detalle.cantidad());
             detalleVenta.setValues(detalle, producto, venta, formaVenta);
+            venta.setTotal(venta.getTotal() + detalleVenta.getValor());
             venta.getDetalleVentaList().add(detalleVenta);
         });
     }

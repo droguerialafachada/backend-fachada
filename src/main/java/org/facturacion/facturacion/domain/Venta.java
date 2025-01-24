@@ -63,11 +63,9 @@ public class Venta {
             throw new VentaDescuentoNullException("El descuento de la venta no puede ser nulo");
         if(ventaDTO.descuento() < 0 )
             throw new VentaDescuentoNegativoException("El descuento de la venta no puede ser negativo");
-        this.total = this.total - ventaDTO.descuento();
         this.descuento = ventaDTO.descuento();
         if(ventaDTO.cambio() == null) throw new VentaCambioNullException("El cambio de la venta no puede ser nulo");
         if(ventaDTO.cambio() < 0) throw new VentaCambioNegativoException("El cambio de la venta no puede ser negativo");
-        this.cambio = ventaDTO.cambio();
         if(ventaDTO.dineroRecibido() == null)
             throw new VentaDineroNullException("El dinero recibido no puede ser nulo");
         if(ventaDTO.dineroRecibido() < total - descuento)
@@ -75,5 +73,13 @@ public class Venta {
         if(ventaDTO.dineroRecibido() < 0)
             throw new VentaCambioNegativoException("El dinero recibido no puede ser negativo");
         this.dineroRecibido = ventaDTO.dineroRecibido();
+        this.total = this.total - ventaDTO.descuento();
+        if(this.dineroRecibido > this.total - this.descuento){
+            this.cambio = this.dineroRecibido - this.total ;
+            System.out.println("cambio = " + cambio);
+            if(!this.cambio.equals(ventaDTO.cambio()))
+                throw new VentaCambioNegativoException("El cambio de la venta no es correcto");
+        }
+
     }
 }
