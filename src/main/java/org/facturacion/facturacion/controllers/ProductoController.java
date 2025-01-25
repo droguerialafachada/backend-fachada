@@ -123,12 +123,12 @@ public class ProductoController {
 
     /**
      * Este método se encarga de verificar si un producto fue eliminado.
-     * @param id Identificador del producto a verificar.
+     * @param codigo Identificador del producto a verificar.
      * @return True si el producto fue eliminado, false en caso contrario.
      */
-    @GetMapping("/fue-eliminado/{id}")
-    public ResponseEntity<Boolean> fueEliminado(@PathVariable String id){
-        return ResponseEntity.ok(this.productoService.fueEliminado(id));
+    @GetMapping("/fue-eliminado/{codigo}")
+    public ResponseEntity<Boolean> fueEliminado(@PathVariable String codigo){
+        return ResponseEntity.ok(this.productoService.fueEliminado(codigo));
     }
 
     /**

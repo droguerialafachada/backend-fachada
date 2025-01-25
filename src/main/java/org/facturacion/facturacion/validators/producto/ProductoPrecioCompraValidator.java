@@ -21,7 +21,11 @@ public class ProductoPrecioCompraValidator implements ProductoValidator<Object> 
         if (precioCompra == null) {
             throw new ProductoPrecioCompraException("El precio de compra del producto no puede estar vacío");
         }
-
+        try{
+            Double.parseDouble(String.valueOf(precioCompra));
+        }catch (NumberFormatException e){
+            throw new ProductoPrecioCompraException("El precio de compra del producto debe ser un número");
+        }
         if(precioCompra < 0) {
             throw new ProductoPrecioCompraException("El precio de compra del producto no puede ser negativo");
         }

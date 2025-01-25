@@ -184,10 +184,10 @@ public class IProductoService implements ProductoService {
      * @return Booleano que indica si el producto fue eliminado.
      */
     @Override
-    public Boolean fueEliminado(String id) {
-        return productoRepository.findById(id)
+    public Boolean fueEliminado(String codigo) {
+        return productoRepository.findByCodigo(codigo)
                 .map(Producto::isEliminado)
-                .orElse(false);
+                .orElseThrow(() -> new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo));
     }
 
     /**
@@ -198,6 +198,7 @@ public class IProductoService implements ProductoService {
     public void recuperarProducto(String id) {
         Producto producto = obtenerProducto(id);
         producto.setEliminado(false);
+        producto.setActivo(true);
         productoRepository.save(producto);
     }
 
