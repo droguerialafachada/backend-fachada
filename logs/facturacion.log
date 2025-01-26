@@ -274,3 +274,109 @@
 2025-01-25T15:33:54.712-05:00  WARN 36614 --- [facturacion] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=37m37s967ms).
 2025-01-25T16:05:39.426-05:00  WARN 36614 --- [facturacion] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m44s709ms).
 2025-01-25T16:06:46.165-05:00  WARN 36614 --- [facturacion] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s744ms).
+2025-01-26T10:40:11.234-05:00  INFO 3109 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 3109 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-26T10:40:11.235-05:00  INFO 3109 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-26T10:40:11.254-05:00  INFO 3109 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-26T10:40:11.254-05:00  INFO 3109 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-26T10:40:11.583-05:00  INFO 3109 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-26T10:40:11.611-05:00  INFO 3109 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 9 JPA repository interfaces.
+2025-01-26T10:40:11.842-05:00  INFO 3109 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-26T10:40:11.846-05:00  INFO 3109 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-26T10:40:11.846-05:00  INFO 3109 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-26T10:40:11.863-05:00  INFO 3109 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-26T10:40:11.863-05:00  INFO 3109 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 609 ms
+2025-01-26T10:40:11.927-05:00  INFO 3109 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-26T10:40:11.953-05:00  INFO 3109 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-26T10:40:11.967-05:00  INFO 3109 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-26T10:40:12.104-05:00  INFO 3109 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-26T10:40:12.116-05:00  INFO 3109 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-26T10:40:12.333-05:00  INFO 3109 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59798b70
+2025-01-26T10:40:12.334-05:00  INFO 3109 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-26T10:40:12.369-05:00  WARN 3109 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-26T10:40:12.369-05:00  WARN 3109 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-26T10:40:12.806-05:00  INFO 3109 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-26T10:40:12.808-05:00  INFO 3109 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-26T10:40:12.943-05:00  INFO 3109 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-26T10:40:13.181-05:00  WARN 3109 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-26T10:40:13.352-05:00  INFO 3109 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-26T10:40:13.371-05:00  INFO 3109 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-26T10:40:13.378-05:00  INFO 3109 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.293 seconds (process running for 2.706)
+2025-01-26T10:40:15.420-05:00  INFO 3109 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-26T10:40:15.422-05:00  INFO 3109 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-26T10:40:15.433-05:00  INFO 3109 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-26T11:04:24.743-05:00  INFO 4554 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 4554 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-26T11:04:24.744-05:00  INFO 4554 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-26T11:04:24.763-05:00  INFO 4554 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-26T11:04:24.764-05:00  INFO 4554 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-26T11:04:25.101-05:00  INFO 4554 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-26T11:04:25.130-05:00  INFO 4554 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 9 JPA repository interfaces.
+2025-01-26T11:04:25.369-05:00  INFO 4554 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-26T11:04:25.376-05:00  INFO 4554 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-26T11:04:25.376-05:00  INFO 4554 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-26T11:04:25.402-05:00  INFO 4554 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-26T11:04:25.402-05:00  INFO 4554 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 638 ms
+2025-01-26T11:04:25.466-05:00  INFO 4554 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-26T11:04:25.491-05:00  INFO 4554 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-26T11:04:25.506-05:00  INFO 4554 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-26T11:04:25.644-05:00  INFO 4554 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-26T11:04:25.655-05:00  INFO 4554 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-26T11:04:25.823-05:00  INFO 4554 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9cc311e
+2025-01-26T11:04:25.824-05:00  INFO 4554 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-26T11:04:25.849-05:00  WARN 4554 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-26T11:04:25.850-05:00  WARN 4554 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-26T11:04:26.394-05:00  INFO 4554 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-26T11:04:26.858-05:00  INFO 4554 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-26T11:04:27.021-05:00  INFO 4554 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-26T11:04:27.265-05:00  WARN 4554 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-26T11:04:27.442-05:00  INFO 4554 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-26T11:04:27.464-05:00  INFO 4554 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-26T11:04:27.471-05:00  INFO 4554 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.878 seconds (process running for 3.232)
+2025-01-26T11:06:50.983-05:00  INFO 4554 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-26T11:06:50.984-05:00  INFO 4554 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-26T11:06:50.985-05:00  INFO 4554 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-26T11:06:51.324-05:00  INFO 4554 --- [facturacion] [http-nio-8086-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 193 ms
+2025-01-26T11:07:36.798-05:00  WARN 4554 --- [facturacion] [http-nio-8086-exec-8] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-01-26T11:12:00.651-05:00  INFO 4554 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-26T11:12:00.656-05:00  INFO 4554 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-26T11:12:00.675-05:00  INFO 4554 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-26T11:12:09.775-05:00  INFO 4954 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 4954 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-26T11:12:09.775-05:00  INFO 4954 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-26T11:12:09.795-05:00  INFO 4954 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-26T11:12:09.795-05:00  INFO 4954 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-26T11:12:10.111-05:00  INFO 4954 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-26T11:12:10.139-05:00  INFO 4954 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 9 JPA repository interfaces.
+2025-01-26T11:12:10.361-05:00  INFO 4954 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-26T11:12:10.366-05:00  INFO 4954 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-26T11:12:10.367-05:00  INFO 4954 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-26T11:12:10.384-05:00  INFO 4954 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-26T11:12:10.384-05:00  INFO 4954 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 588 ms
+2025-01-26T11:12:10.450-05:00  INFO 4954 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-26T11:12:10.477-05:00  INFO 4954 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-26T11:12:10.490-05:00  INFO 4954 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-26T11:12:10.620-05:00  INFO 4954 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-26T11:12:10.631-05:00  INFO 4954 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-26T11:12:10.787-05:00  INFO 4954 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66d0d856
+2025-01-26T11:12:10.787-05:00  INFO 4954 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-26T11:12:10.816-05:00  WARN 4954 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-26T11:12:10.816-05:00  WARN 4954 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-26T11:12:11.264-05:00  INFO 4954 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-26T11:12:11.265-05:00  INFO 4954 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-26T11:12:11.396-05:00  INFO 4954 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-26T11:12:11.637-05:00  WARN 4954 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-26T11:12:11.802-05:00  INFO 4954 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-26T11:12:11.821-05:00  INFO 4954 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-26T11:12:11.828-05:00  INFO 4954 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.196 seconds (process running for 2.517)
+2025-01-26T11:12:53.396-05:00  INFO 4954 --- [facturacion] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-26T11:12:53.397-05:00  INFO 4954 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-26T11:12:53.400-05:00  INFO 4954 --- [facturacion] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-01-26T11:12:53.477-05:00  WARN 4954 --- [facturacion] [http-nio-8086-exec-1] PageModule$PlainPageSerializationWarning : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-01-26T11:13:21.708-05:00  INFO 4954 --- [facturacion] [http-nio-8086-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 188 ms
+2025-01-26T11:13:29.053-05:00  WARN 4954 --- [facturacion] [http-nio-8086-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoActivoException: El producto debe estar activo]
+2025-01-26T11:19:14.164-05:00  WARN 4954 --- [facturacion] [http-nio-8086-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.producto.ProductoCantidadException: No hay suficiente cantidad del producto Ibuprofeno para la venta]
+2025-01-26T11:19:36.149-05:00  WARN 4954 --- [facturacion] [http-nio-8086-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.facturacion.facturacion.exceptions.venta.VentaCambioNegativoException: El cambio de la venta no es correcto]

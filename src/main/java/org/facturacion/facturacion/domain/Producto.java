@@ -35,9 +35,6 @@ public class Producto {
     @Column(nullable = false)
     private boolean eliminado;
 
-    @Column(nullable = false)
-    private Double precioCompra;
-
     @ManyToOne
     @JoinColumn(name = "tipo_impuesto_id")
     private TipoImpuesto impuesto;
@@ -52,6 +49,5 @@ public class Producto {
     public void actualizar(ActualizarProductoDTO productoDTO) {
         this.nombre = productoDTO.nombre();
         this.activo = productoDTO.activo();
-        this.precioCompra = productoDTO.precioCompra();
     }
 }

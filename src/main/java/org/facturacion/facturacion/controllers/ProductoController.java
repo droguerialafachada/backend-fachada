@@ -1,7 +1,6 @@
 package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
-import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaRequest;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;

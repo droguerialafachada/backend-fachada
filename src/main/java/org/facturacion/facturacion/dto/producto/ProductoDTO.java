@@ -8,7 +8,6 @@ public record ProductoDTO(
         String codigo,
         String nombre,
         boolean activo,
-        Double precioCompra,
         Date fechaCreacion
 ) {
 
@@ -18,7 +17,6 @@ public record ProductoDTO(
                 producto.getCodigo(),
                 producto.getNombre(),
                 producto.getActivo(),
-                producto.getPrecioCompra(),
                 producto.getFechaCreacion()
         );
     }

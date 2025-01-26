@@ -37,7 +37,7 @@ public class DetalleVenta {
     public void setValues(DetalleVentaDTO detalle, Producto producto, Venta venta,
                           FormaVenta formaVenta){
 
-        this.valor = detalle.cantidad() * formaVenta.getPrecio();
+        this.valor = detalle.cantidad() * formaVenta.getPrecioVenta();
         this.cantidad = detalle.cantidad();
         this.producto = producto;
         this.formaVenta = formaVenta;

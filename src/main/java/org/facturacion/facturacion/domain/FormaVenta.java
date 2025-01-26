@@ -22,7 +22,10 @@ public class FormaVenta {
     private String nombre;
 
     @Column(nullable = false)
-    private Double precio; // Precio para esta unidad de medida
+    private Double precioVenta; // Precio para esta unidad de medida
+
+    @Column(nullable = false)
+    private Double precioCompra;
 
     @Column(nullable = false)
     private Integer cantidad;
@@ -36,7 +39,7 @@ public class FormaVenta {
      */
     public void actualizarFormaVenta(ActualizarFormaVentaDTO formaVentaDTO) {
         this.nombre = formaVentaDTO.nombre();
-        this.precio = formaVentaDTO.precio();
+        this.precioCompra = formaVentaDTO.precioCompra();
         this.cantidad = formaVentaDTO.cantidad();
         this.activo = true;
     }

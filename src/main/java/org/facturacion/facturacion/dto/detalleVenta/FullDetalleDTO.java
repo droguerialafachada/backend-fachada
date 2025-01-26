@@ -7,7 +7,8 @@ import java.util.List;
 public record FullDetalleDTO(
         Integer id,
         Integer cantidad,
-        Double precioUnitario,
+        Double precioCompra,
+        Double precioVenta,
         Double total,
         String producto,
         String formaVenta
@@ -22,7 +23,8 @@ public record FullDetalleDTO(
         return new FullDetalleDTO(
                 detalleVenta.getId(),
                 detalleVenta.getCantidad(),
-                detalleVenta.getFormaVenta().getPrecio(),
+                detalleVenta.getFormaVenta().getPrecioCompra(),
+                detalleVenta.getFormaVenta().getPrecioVenta(),
                 detalleVenta.getValor(),
                 detalleVenta.getProducto().getNombre(),
                 detalleVenta.getFormaVenta().getNombre()

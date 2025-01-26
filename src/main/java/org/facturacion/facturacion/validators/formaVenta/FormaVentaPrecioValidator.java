@@ -13,9 +13,9 @@ public class FormaVentaPrecioValidator implements FormaVentaValidator<Object> {
     public void validate(Object dto) {
         Double precio = null;
         if (dto instanceof CrearFormaVentaDTO crearFormaVentaDTO) {
-            precio = crearFormaVentaDTO.precio();
+            precio = crearFormaVentaDTO.precioCompra();
         } else if (dto instanceof ActualizarFormaVentaDTO actualizarFormaVentaDTO) {
-            precio = actualizarFormaVentaDTO.precio();
+            precio = actualizarFormaVentaDTO.precioCompra();
         }
 
         if (precio == null) {

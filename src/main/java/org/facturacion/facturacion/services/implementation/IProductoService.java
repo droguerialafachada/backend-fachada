@@ -19,7 +19,6 @@ import org.facturacion.facturacion.services.specification.ProductoService;
 import org.facturacion.facturacion.services.validations.FormaVentaValidationService;
 import org.facturacion.facturacion.services.validations.ProductoValidationService;
 import org.facturacion.facturacion.utils.Constants;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

@@ -14,7 +14,7 @@ public record FormaVentaDTO(
         return new FormaVentaDTO(
                 formaVenta.getId(),
                 formaVenta.getNombre(),
-                formaVenta.getPrecio(),
+                formaVenta.getPrecioCompra(),
                 formaVenta.getCantidad()
         );
     }

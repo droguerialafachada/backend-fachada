@@ -10,7 +10,6 @@ public record FullProductoDTO(
         String codigo,
         String nombre,
         boolean activo,
-        Double precioCompra,
         Date fechaCreacion,
         List<FormaVentaDTO> formaVentas
 ) {
@@ -20,7 +19,6 @@ public record FullProductoDTO(
                 producto.getCodigo(),
                 producto.getNombre(),
                 producto.getActivo(),
-                producto.getPrecioCompra(),
                 producto.getFechaCreacion(),
                 producto.getFormaVentas().stream().map(FormaVentaDTO::fromEntity).toList()
         );

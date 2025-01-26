@@ -1,7 +1,6 @@
 package org.facturacion.facturacion.validators.producto;
 
 import lombok.AllArgsConstructor;
-import org.facturacion.facturacion.domain.TipoImpuesto;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.exceptions.producto.ProductoImpuestoException;
 import org.facturacion.facturacion.repositories.TipoImpuestoRepository;
