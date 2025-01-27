@@ -7,6 +7,7 @@ import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.domain.TipoImpuesto;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
+import org.facturacion.facturacion.dto.formaVenta.FormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.FullProductoDTO;
@@ -300,6 +301,14 @@ public class IProductoService implements ProductoService {
                 .filter(fv -> Objects.equals(fv.getId(), Long.parseLong(integer+"")))
                 .findFirst()
                 .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
+    }
+
+    @Override
+    public List<FormaVentaDTO> obtenerFormasVenta(String codigo) {
+        if(codigo == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
+        if (productoRepository.findByCodigo(codigo).isEmpty()) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
+        Producto producto = productoRepository.findByCodigo(codigo).get();
+        return producto.getFormaVentas().stream().map(FormaVentaDTO::fromEntity).toList();
     }
 
 

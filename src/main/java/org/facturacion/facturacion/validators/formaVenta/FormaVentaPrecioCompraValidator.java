@@ -21,7 +21,7 @@ public class FormaVentaPrecioCompraValidator implements FormaVentaValidator<Obje
         }
 
         if (precioCompra == null) {
-            throw new ProductoPrecioCompraException("El precio de compra de la forma venta producto no puede estar vacío");
+            throw new ProductoPrecioCompraException("El precio de compra de la forma venta no puede estar vacío");
         }
         try{
             Double.parseDouble(String.valueOf(precioCompra));

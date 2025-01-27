@@ -1,10 +1,7 @@
 package org.facturacion.facturacion.handlers.formaVenta;
 
 import org.facturacion.facturacion.dto.validationError.ValidationError;
-import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaActivoException;
-import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaCantidadInvalidaException;
-import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaNombreException;
-import org.facturacion.facturacion.exceptions.formaVenta.FormaVentaPrecioException;
+import org.facturacion.facturacion.exceptions.formaVenta.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -32,6 +29,11 @@ public class FormaVentaHandler {
 
     @ExceptionHandler(FormaVentaCantidadInvalidaException.class)
     public ResponseEntity<ValidationError> handleFormaVentaCantidadInvalidaException(FormaVentaCantidadInvalidaException e){
+        return new ResponseEntity<>(buildError(e.getMessage(), "/productos"), org.springframework.http.HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(FormaVentaGananciaException.class)
+    public ResponseEntity<ValidationError> handleFormaVentaGananciaException(FormaVentaGananciaException e){
         return new ResponseEntity<>(buildError(e.getMessage(), "/productos"), org.springframework.http.HttpStatus.BAD_REQUEST);
     }
 }

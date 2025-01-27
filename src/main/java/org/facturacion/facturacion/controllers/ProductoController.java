@@ -2,6 +2,7 @@ package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaRequest;
+import org.facturacion.facturacion.dto.formaVenta.FormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.FullProductoDTO;
@@ -166,5 +167,16 @@ public class ProductoController {
     @GetMapping("/obtener-producto-completo/{codigo}")
     public ResponseEntity<FullProductoDTO> obtenerProductoCompletoPorCodigo(@PathVariable String codigo){
         return ResponseEntity.ok(this.productoService.obtenerProductoCompletoPorCodigo(codigo));
+    }
+
+    /**
+     * Este metodo se encarga de obtener las formas de venta de un producto
+     * dado su codigo.
+     * @param codigo Codigo del producto.
+     * @return Lista
+     */
+    @GetMapping("/obtener-formas-venta/{codigo}")
+    public ResponseEntity<List<FormaVentaDTO>> obtenerFormasVenta(@PathVariable String codigo){
+        return ResponseEntity.ok(this.productoService.obtenerFormasVenta(codigo));
     }
 }

@@ -5,17 +5,19 @@ import org.facturacion.facturacion.domain.FormaVenta;
 public record FormaVentaDTO(
         Long id,
         String nombre,
-        Double precio,
-        Integer cantidad
+        Double precioCompra,
+        Integer cantidad,
+        Double precioVenta
 ) {
 
 
     public static FormaVentaDTO fromEntity(FormaVenta formaVenta) {
         return new FormaVentaDTO(
                 formaVenta.getId(),
-                formaVenta.getNombre(),
+                formaVenta.getNombre().toUpperCase(),
                 formaVenta.getPrecioCompra(),
-                formaVenta.getCantidad()
+                formaVenta.getCantidad(),
+                formaVenta.getPrecioVenta()
         );
     }
 }

@@ -21,6 +21,9 @@ public class ProductoNombreValidator implements ProductoValidator<Object> {
         if (nombre == null || nombre.isEmpty()) {
             throw new ProductoNombreException("El nombre del producto no puede estar vacío");
         }
+        if(nombre.length() < 3)
+            throw new ProductoNombreException("El nombre del producto debe tener al menos 3 caracteres");
+
     }
 
 }

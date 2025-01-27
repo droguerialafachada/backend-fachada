@@ -3,6 +3,7 @@ package org.facturacion.facturacion.services.specification;
 import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
+import org.facturacion.facturacion.dto.formaVenta.FormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
 import org.facturacion.facturacion.dto.producto.FullProductoDTO;
@@ -49,4 +50,6 @@ public interface ProductoService {
     FullProductoDTO obtenerProductoCompletoPorCodigo(String codigo);
 
     FormaVenta findFormaVentaByProductoAndId(Producto producto, Integer integer);
+
+    List<FormaVentaDTO> obtenerFormasVenta(String codigo);
 }
