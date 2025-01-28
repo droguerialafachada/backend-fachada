@@ -106,10 +106,10 @@ public class ProductoController {
      * Para realizar una venta.
      * @param cantidad Cantidad a verificar.
      */
-    @GetMapping("/verificar-cantidad/{cantidad}/{idProducto}/{idFormaVenta}")
+    @GetMapping("/verificar-cantidad/{cantidad}/{idProducto}/{nombreFormaVenta}")
     public ResponseEntity<Boolean> verificarCantidad(@PathVariable Integer cantidad, @PathVariable String idProducto,
-                                                     @PathVariable Integer idFormaVenta) {
-        return ResponseEntity.ok(this.productoService.verificarCantidad(cantidad, idProducto, idFormaVenta));
+                                                     @PathVariable String nombreFormaVenta) {
+        return ResponseEntity.ok(this.productoService.verificarCantidad(cantidad, idProducto, nombreFormaVenta));
     }
     /**
      * Este método se encarga de verificar si un producto está activo.

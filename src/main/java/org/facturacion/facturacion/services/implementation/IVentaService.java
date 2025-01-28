@@ -94,13 +94,11 @@ public class IVentaService implements VentaService {
 
             DetalleVenta detalleVenta = new DetalleVenta();
             Producto producto = productoService.findByCodigo(detalle.codigoProducto());
-            FormaVenta formaVenta = productoService.findFormaVentaByProductoAndId(producto, detalle.formaVenta());
-
-            if(!productoService.verificarCantidad(detalle.cantidad(), detalle.codigoProducto(), detalle.formaVenta())){
+            FormaVenta formaVenta = productoService.findFormaVentaByProductoAndNombre(producto, detalle.nombreformaVenta());
+            if(!productoService.verificarCantidad(detalle.cantidad(), detalle.codigoProducto(), detalle.nombreformaVenta())){
                 String mensaje = "No hay suficiente cantidad del producto "+ producto.getNombre()+ " para la venta";
                 throw new ProductoCantidadException(mensaje);
             }
-
             formaVenta.setCantidad(formaVenta.getCantidad() - detalle.cantidad());
             detalleVenta.setValues(detalle, producto, venta, formaVenta);
             venta.setTotal(venta.getTotal() + detalleVenta.getValor());

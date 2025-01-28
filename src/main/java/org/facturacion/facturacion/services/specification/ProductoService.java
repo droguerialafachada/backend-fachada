@@ -27,7 +27,7 @@ public interface ProductoService {
 
     List<String> getTiposImpuestos();
 
-    Boolean verificarCantidad(Integer cantidad, String id, Integer idFormaVenta);
+    Boolean verificarCantidad(Integer cantidad, String id, String nombreFormaVenta);
 
     Boolean isActivo(String id);
 
@@ -49,7 +49,7 @@ public interface ProductoService {
 
     FullProductoDTO obtenerProductoCompletoPorCodigo(String codigo);
 
-    FormaVenta findFormaVentaByProductoAndId(Producto producto, Integer integer);
+    FormaVenta findFormaVentaByProductoAndNombre(Producto producto, String nombre);
 
     List<FormaVentaDTO> obtenerFormasVenta(String codigo);
 }

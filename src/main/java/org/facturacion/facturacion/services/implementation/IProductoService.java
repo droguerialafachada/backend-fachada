@@ -156,15 +156,17 @@ public class IProductoService implements ProductoService {
 
     /**
      * Verifica si la cantidad de un producto es suficiente para realizar una venta.
-     * @param cantidad Cantidad a verificar.
-     * @param codigo Código del producto.
+     *
+     * @param cantidad         Cantidad a verificar.
+     * @param codigo           Código del producto.
+     * @param nombreFormaVenta
      * @return Booleano que indica si la cantidad es suficiente.
      */
     @Override
-    public Boolean verificarCantidad(Integer cantidad, String codigo, Integer idFormaVenta) {
+    public Boolean verificarCantidad(Integer cantidad, String codigo, String nombreFormaVenta) {
         Producto producto = obtenerProducto(codigo);
         FormaVenta formaVenta = producto.getFormaVentas().stream()
-                .filter(fv -> Objects.equals(fv.getId(), Long.parseLong(idFormaVenta+"")))
+                .filter(fv -> fv.getNombre().equalsIgnoreCase(nombreFormaVenta))
                 .findFirst()
                 .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
         return formaVenta.getCantidad() >= cantidad;
@@ -180,7 +182,7 @@ public class IProductoService implements ProductoService {
 
     /**
      * Verifica si un producto fue eliminado.
-     * @param id Id del producto.
+     * @param codigo del producto.
      * @return Booleano que indica si el producto fue eliminado.
      */
     @Override
@@ -274,7 +276,7 @@ public class IProductoService implements ProductoService {
         if(producto == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
 
         FormaVenta formaVenta = producto.getFormaVentas().stream()
-                .filter(fv -> Objects.equals(fv.getId(), formaVentaDTO.id()))
+                .filter(fv -> fv.getNombre().equalsIgnoreCase(formaVentaDTO.nombre()))
                 .findFirst()
                 .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
 
@@ -295,10 +297,10 @@ public class IProductoService implements ProductoService {
     }
 
     @Override
-    public FormaVenta findFormaVentaByProductoAndId(Producto producto, Integer integer) {
+    public FormaVenta findFormaVentaByProductoAndNombre(Producto producto, String nombre) {
         if(producto == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO);
         return producto.getFormaVentas().stream()
-                .filter(fv -> Objects.equals(fv.getId(), Long.parseLong(integer+"")))
+                .filter(fv -> fv.getNombre().equalsIgnoreCase(nombre))
                 .findFirst()
                 .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
     }
