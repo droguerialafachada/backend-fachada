@@ -34,9 +34,6 @@ public class Cliente {
     private String correo;
 
     @Column(nullable = false)
-    private boolean activo;
-
-    @Column(nullable = false)
     private boolean eliminado;
 
     @Column(nullable = false)
@@ -49,6 +46,5 @@ public class Cliente {
         this.setNombre(clienteDTO.nombre());
         this.setDireccion(clienteDTO.direccion());
         this.setCorreo(clienteDTO.correo());
-        this.setActivo(clienteDTO.activo());
     }
 }

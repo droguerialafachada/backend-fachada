@@ -21,6 +21,6 @@ public record CrearClienteDTO(
 ) {
 
         public  Cliente toEntity(){
-                return new Cliente(null, cedula, nombre, direccion, correo, true,false, new Date(), null);
+                return new Cliente(null, cedula, nombre, direccion, correo, false, new Date(), null);
         }
 }

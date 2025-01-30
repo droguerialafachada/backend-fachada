@@ -26,7 +26,7 @@ public class ClienteHandler {
      */
     @ExceptionHandler(ClienteExisteException.class)
     public ResponseEntity<ValidationError> handleClienteExisteException(ClienteExisteException e){
-        return new ResponseEntity<>(buildError(e.getMessage(), "/clientes/verificar-cliente"), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(buildError(e.getMessage(), "/clientes/verificar-cliente"), HttpStatus.NOT_FOUND);
     }
     /**
      * Este metodo se encarga de manejar la excepcion ClienteNoExisteException

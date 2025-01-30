@@ -8,7 +8,6 @@ public record ClienteDTO(
        String cedula,
        String direccion,
        String correo,
-       boolean activo,
        Date fechaCreacion,
        String nombre,
        Integer id
@@ -19,7 +18,6 @@ public record ClienteDTO(
                 cliente.getCedula(),
                 cliente.getDireccion(),
                 cliente.getCorreo(),
-                cliente.isActivo(),
                 cliente.getFechaCreacion(),
                 cliente.getNombre(),
                 cliente.getId()

@@ -8,7 +8,6 @@ import java.util.List;
 public record CrearProductoDTO(
         String codigo,
         String nombre,
-        String activo,
         String impuesto,
         List<CrearFormaVentaDTO> formasVenta
 ) {
