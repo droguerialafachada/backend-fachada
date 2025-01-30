@@ -2,30 +2,63 @@ version: '3.8'
 
 services:
   mysql:
-    image: mysql:8.0
+    image: mysql
     container_name: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: facturacion_db
-      MYSQL_USER: facturacion_user
-      MYSQL_PASSWORD: facturacion_password
     volumes:
-      - mysql_data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql  # Volumen nombrado
     ports:
       - "3306:3306"
+    networks:
+      - facturacion_network
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.3'
 
   facturacion:
-    image: facturacion-remates7a
-    container_name: facturacion
+    image: ariazp/back-drogueria
+    container_name: back-drogueria
     environment:
-      DATASOURCE_URL: jdbc:mysql://mysql:3306/facturacion_db
-      DATASOURCE_USERNAME: facturacion_user
-      DATASOURCE_PASSWORD: facturacion_password
-      API-URL: facturacion:8086
+      DATASOURCE_URL: jdbc:mysql://192.34.62.170:3306/facturacion_db
+      DATASOURCE_USERNAME: root
+      DATASOURCE_PASSWORD: root
     depends_on:
       - mysql
     ports:
       - "8086:8086"
+    restart: always
+    networks:
+      - facturacion_network
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.3'
+
+  front-drogueria:
+    image: ariazp/ng-droguerias
+    container_name: front-drogueria
+    environment:
+      API_URL: http://facturacion:8086  # Usa el nombre del servicio
+    depends_on:
+      - facturacion
+    ports:
+      - "80:80"  # Ajusta según el puerto de tu contenedor
+    networks:
+      - facturacion_network
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.3'
 
 volumes:
-  mysql_data:
+  mysql_data:  # Solo si usas volumen nombrado
+
+networks:
+  facturacion_network:
+    driver: bridge
