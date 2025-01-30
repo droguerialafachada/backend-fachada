@@ -29,7 +29,6 @@ public interface ProductoService {
 
     Boolean verificarCantidad(Integer cantidad, String id, String nombreFormaVenta);
 
-    Boolean isActivo(String id);
 
     Boolean fueEliminado(String id);
 

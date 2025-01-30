@@ -7,7 +7,6 @@ import java.util.Date;
 public record ProductoDTO(
         String codigo,
         String nombre,
-        boolean activo,
         Date fechaCreacion
 ) {
 
@@ -16,7 +15,6 @@ public record ProductoDTO(
         return new ProductoDTO(
                 producto.getCodigo(),
                 producto.getNombre(),
-                producto.getActivo(),
                 producto.getFechaCreacion()
         );
     }

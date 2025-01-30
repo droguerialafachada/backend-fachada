@@ -9,7 +9,6 @@ import java.util.List;
 public record FullProductoDTO(
         String codigo,
         String nombre,
-        boolean activo,
         Date fechaCreacion,
         List<FormaVentaDTO> formaVentas
 ) {
@@ -18,7 +17,6 @@ public record FullProductoDTO(
         return new FullProductoDTO(
                 producto.getCodigo(),
                 producto.getNombre(),
-                producto.getActivo(),
                 producto.getFechaCreacion(),
                 producto.getFormaVentas().stream().map(FormaVentaDTO::fromEntity).toList()
         );

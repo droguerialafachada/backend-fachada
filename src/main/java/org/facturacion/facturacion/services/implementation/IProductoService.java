@@ -52,7 +52,7 @@ public class IProductoService implements ProductoService {
     @Override
     public Page<ProductoDTO> listarProducto(int page, int size) {
         Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "fechaCreacion"));
-        return productoRepository.findAllByEliminadoIsFalseAndActivoTrue(pageable).map(ProductoDTO::fromEntity);
+        return productoRepository.findAllByEliminadoIsFalse(pageable).map(ProductoDTO::fromEntity);
     }
 
     /**
@@ -62,7 +62,7 @@ public class IProductoService implements ProductoService {
     @Override
     public List<ProductoDTO> listarProducto() {
         IProductoService.setHayCambiosProducto(false);
-        return productoRepository.findAllByEliminadoIsFalseAndActivoTrue().stream().map(ProductoDTO::fromEntity).toList();
+        return productoRepository.findAllByEliminadoIsFalse().stream().map(ProductoDTO::fromEntity).toList();
     }
 
     @Override
@@ -173,14 +173,6 @@ public class IProductoService implements ProductoService {
     }
 
     /**
-     * Verifica si un producto está activo.
-     * @param id Id del producto.
-     * @return Booleano que indica si el producto está activo.
-     */
-    @Override
-    public Boolean isActivo(String id) {return obtenerProductoPorId(id).activo();}
-
-    /**
      * Verifica si un producto fue eliminado.
      * @param codigo del producto.
      * @return Booleano que indica si el producto fue eliminado.
@@ -200,7 +192,6 @@ public class IProductoService implements ProductoService {
     public void recuperarProducto(String id) {
         Producto producto = obtenerProducto(id);
         producto.setEliminado(false);
-        producto.setActivo(true);
         productoRepository.save(producto);
     }
 

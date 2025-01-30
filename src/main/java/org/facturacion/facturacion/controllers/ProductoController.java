@@ -111,15 +111,6 @@ public class ProductoController {
                                                      @PathVariable String nombreFormaVenta) {
         return ResponseEntity.ok(this.productoService.verificarCantidad(cantidad, idProducto, nombreFormaVenta));
     }
-    /**
-     * Este método se encarga de verificar si un producto está activo.
-     * @param id Identificador del producto a verificar.
-     * @return True si el producto está activo, false en caso contrario.
-     */
-    @GetMapping("/verificar-activo/{id}")
-    public ResponseEntity<Boolean> verificarActivo(@PathVariable String id){
-        return ResponseEntity.ok(this.productoService.isActivo(id));
-    }
 
     /**
      * Este método se encarga de verificar si un producto fue eliminado.

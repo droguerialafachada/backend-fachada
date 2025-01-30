@@ -17,7 +17,6 @@ public record CrearProductoDTO(
         Producto producto = new Producto();
         producto.setCodigo(codigo);
         producto.setNombre(nombre.substring(0,1).toUpperCase() + nombre.substring(1).toLowerCase());
-        producto.setActivo(activo.equals("1"));
         producto.setEliminado(false);
         producto.setFechaCreacion(new java.util.Date());
         producto.setFormaVentas(formasVenta.stream().map(fv -> CrearFormaVentaDTO.toEntity(fv, producto)).toList());

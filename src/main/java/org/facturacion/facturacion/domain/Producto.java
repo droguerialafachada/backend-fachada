@@ -27,9 +27,6 @@ public class Producto {
     private String nombre;
 
     @Column(nullable = false)
-    private Boolean activo;
-
-    @Column(nullable = false)
     private Date fechaCreacion;
 
     @Column(nullable = false)
@@ -48,6 +45,5 @@ public class Producto {
      */
     public void actualizar(ActualizarProductoDTO productoDTO) {
         this.nombre = productoDTO.nombre();
-        this.activo = productoDTO.activo();
     }
 }
