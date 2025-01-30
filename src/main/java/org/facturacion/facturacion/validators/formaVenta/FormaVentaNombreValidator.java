@@ -15,7 +15,7 @@ public class FormaVentaNombreValidator implements FormaVentaValidator<Object> {
         if (dto instanceof CrearFormaVentaDTO crearFormaVentaDTO) {
             nombre = crearFormaVentaDTO.nombre();
         } else if (dto instanceof ActualizarFormaVentaDTO actualizarFormaVentaDTO) {
-            nombre = actualizarFormaVentaDTO.nombre();
+            nombre = actualizarFormaVentaDTO.nuevoNombre();
         }
 
         if (nombre == null || nombre.isBlank()) {

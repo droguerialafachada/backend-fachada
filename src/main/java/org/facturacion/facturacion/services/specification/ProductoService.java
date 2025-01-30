@@ -15,8 +15,6 @@ import java.util.List;
 public interface ProductoService {
     Page<ProductoDTO> listarProducto(int page, int size);
 
-    ProductoDTO obtenerProductoPorId(String id);
-
     ProductoDTO crearProducto(CrearProductoDTO productoDTO);
 
     ProductoDTO actualizarProducto(ActualizarProductoDTO productoDTO);
@@ -44,7 +42,8 @@ public interface ProductoService {
 
     Producto findByCodigo(String codigo);
 
-    FullProductoDTO actualizarFormaVenta(String codigo, ActualizarFormaVentaDTO formaVentaDTO);
+    FullProductoDTO actualizarFormaVenta(String codigo,
+                                         ActualizarFormaVentaDTO formaVentaDTO, String nombreFormaVenta);
 
     FullProductoDTO obtenerProductoCompletoPorCodigo(String codigo);
 

@@ -7,6 +7,7 @@ import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.domain.TipoImpuesto;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
+import org.facturacion.facturacion.dto.formaVenta.CrearFormaVentaDTO;
 import org.facturacion.facturacion.dto.formaVenta.FormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
@@ -71,17 +72,6 @@ public class IProductoService implements ProductoService {
     }
 
     /**
-     * Obtiene un producto por su ID.
-     * @param id Id del producto.
-     * @return Producto encontrado.
-     */
-    @Override
-    public ProductoDTO obtenerProductoPorId(String id) {
-        Producto producto = obtenerProducto(id);
-        return ProductoDTO.fromEntity(producto);
-    }
-
-    /**
      * Crea un producto.
      * @param productoDTO DTO con los datos del producto.
      * @return Producto creado.
@@ -96,12 +86,29 @@ public class IProductoService implements ProductoService {
         if(productoDTO.formasVenta().isEmpty())
             throw new ProductoFormaVentaException("El producto debe tener al menos una forma de venta");
 
+        verificarNombresFormasVenta(productoDTO.formasVenta());
+
         productoValidationService.validate(productoDTO);
         productoDTO.formasVenta().forEach(formaVentaValidationService::validate);
         TipoImpuesto impuesto = validarImpuesto(productoDTO.impuesto());
         Producto producto = prepararProductoParaCrear(productoDTO, impuesto);
         IProductoService.setHayCambiosProducto(true);
         return ProductoDTO.fromEntity(productoRepository.save(producto));
+    }
+
+    /**
+     * Este método verifica que los nombres de las formas de venta no estén duplicados.
+     * @param crearFormaVentaDTOS Lista de formas de venta.
+     */
+    private void verificarNombresFormasVenta(List<CrearFormaVentaDTO> crearFormaVentaDTOS) {
+        for (int i = 0; i < crearFormaVentaDTOS.size(); i++) {
+            for (int j = i + 1; j < crearFormaVentaDTOS.size(); j++) {
+                if (crearFormaVentaDTOS.get(i).nombre().trim().equalsIgnoreCase(
+                        crearFormaVentaDTOS.get(j).nombre().trim())) {
+                    throw new ProductoFormaVentaException("Los nombres de las formas de venta no pueden estar duplicados");
+                }
+            }
+        }
     }
 
     /**
@@ -113,7 +120,9 @@ public class IProductoService implements ProductoService {
     public ProductoDTO actualizarProducto(ActualizarProductoDTO productoDTO) {
         Producto producto = obtenerProducto(productoDTO.codigo());
         productoValidationService.validate(productoDTO);
+        TipoImpuesto impuesto = validarImpuesto(productoDTO.impuesto());
         producto.actualizar(productoDTO);
+        producto.setImpuesto(impuesto);
         IProductoService.setHayCambiosProducto(true);
         return ProductoDTO.fromEntity(productoRepository.save(producto));
     }
@@ -259,7 +268,7 @@ public class IProductoService implements ProductoService {
     }
 
     @Override
-    public FullProductoDTO actualizarFormaVenta(String codigo, ActualizarFormaVentaDTO formaVentaDTO) {
+    public FullProductoDTO actualizarFormaVenta(String codigo, ActualizarFormaVentaDTO formaVentaDTO, String nombreFormaVenta) {
 
         if(formaVentaDTO == null) throw new ProductoFormaVentaException("La forma de venta no puede estar vacía");
 
@@ -267,7 +276,7 @@ public class IProductoService implements ProductoService {
         if(producto == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
 
         FormaVenta formaVenta = producto.getFormaVentas().stream()
-                .filter(fv -> fv.getNombre().equalsIgnoreCase(formaVentaDTO.nombre()))
+                .filter(fv -> fv.getNombre().equalsIgnoreCase(nombreFormaVenta))
                 .findFirst()
                 .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
 

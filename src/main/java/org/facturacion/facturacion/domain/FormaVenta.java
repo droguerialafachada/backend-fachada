@@ -38,7 +38,7 @@ public class FormaVenta {
      * @param formaVentaDTO DTO con los nuevos datos de la forma de venta.
      */
     public void actualizarFormaVenta(ActualizarFormaVentaDTO formaVentaDTO) {
-        this.nombre = formaVentaDTO.nombre().toUpperCase();
+        this.nombre = formaVentaDTO.nuevoNombre().toUpperCase();
         this.precioCompra = formaVentaDTO.precioCompra();
         this.cantidad = formaVentaDTO.cantidad();
         this.activo = true;

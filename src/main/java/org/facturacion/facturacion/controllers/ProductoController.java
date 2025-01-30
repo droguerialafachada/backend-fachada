@@ -79,7 +79,8 @@ public class ProductoController {
      */
     @PutMapping("/actualizar-forma-venta")
     public ResponseEntity<FullProductoDTO> actualizarFormaVenta(@RequestBody ActualizarFormaVentaRequest request) {
-        return ResponseEntity.ok(this.productoService.actualizarFormaVenta(request.codigo(), request.formaVentaDTO()));
+        return ResponseEntity.ok(this.productoService.actualizarFormaVenta(request.codigo(),
+                request.formaVentaDTO(), request.nombreFormaVenta()));
     }
 
 
