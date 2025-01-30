@@ -1321,3 +1321,33 @@ java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because th
 2025-01-30T15:27:30.578-05:00  INFO 79482 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-30T15:27:30.582-05:00  INFO 79482 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-30T15:27:30.609-05:00  INFO 79482 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-30T15:28:13.447-05:00  INFO 80093 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Starting FacturacionApplication using Java 17.0.10 with PID 80093 (/Users/aariaz/Desktop/GOT/facturacion/build/classes/java/main started by aariaz in /Users/aariaz/Desktop/GOT/facturacion)
+2025-01-30T15:28:13.448-05:00  INFO 80093 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-30T15:28:13.472-05:00  INFO 80093 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-30T15:28:13.472-05:00  INFO 80093 --- [facturacion] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-30T15:28:13.824-05:00  INFO 80093 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-30T15:28:13.852-05:00  INFO 80093 --- [facturacion] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 9 JPA repository interfaces.
+2025-01-30T15:28:14.087-05:00  INFO 80093 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2025-01-30T15:28:14.093-05:00  INFO 80093 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-30T15:28:14.093-05:00  INFO 80093 --- [facturacion] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-30T15:28:14.110-05:00  INFO 80093 --- [facturacion] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-30T15:28:14.111-05:00  INFO 80093 --- [facturacion] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 639 ms
+2025-01-30T15:28:14.183-05:00  INFO 80093 --- [facturacion] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-30T15:28:14.221-05:00  INFO 80093 --- [facturacion] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-30T15:28:14.241-05:00  INFO 80093 --- [facturacion] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-30T15:28:14.434-05:00  INFO 80093 --- [facturacion] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-30T15:28:14.445-05:00  INFO 80093 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-30T15:28:14.596-05:00  INFO 80093 --- [facturacion] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1923df97
+2025-01-30T15:28:14.597-05:00  INFO 80093 --- [facturacion] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-30T15:28:14.624-05:00  WARN 80093 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-30T15:28:14.625-05:00  WARN 80093 --- [facturacion] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-01-30T15:28:15.174-05:00  INFO 80093 --- [facturacion] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-30T15:28:15.175-05:00  INFO 80093 --- [facturacion] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T15:28:15.315-05:00  INFO 80093 --- [facturacion] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-30T15:28:15.580-05:00  WARN 80093 --- [facturacion] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-30T15:28:15.788-05:00  INFO 80093 --- [facturacion] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-01-30T15:28:15.810-05:00  INFO 80093 --- [facturacion] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path '/'
+2025-01-30T15:28:15.817-05:00  INFO 80093 --- [facturacion] [restartedMain] o.f.facturacion.FacturacionApplication   : Started FacturacionApplication in 2.538 seconds (process running for 2.967)
+2025-01-30T15:31:22.837-05:00  INFO 80093 --- [facturacion] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T15:31:22.850-05:00  INFO 80093 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-30T15:31:22.884-05:00  INFO 80093 --- [facturacion] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

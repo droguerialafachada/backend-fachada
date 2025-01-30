@@ -10,6 +10,7 @@ public record FullProductoDTO(
         String codigo,
         String nombre,
         Date fechaCreacion,
+        String impuesto,
         List<FormaVentaDTO> formaVentas
 ) {
 
@@ -18,6 +19,7 @@ public record FullProductoDTO(
                 producto.getCodigo(),
                 producto.getNombre(),
                 producto.getFechaCreacion(),
+                producto.getImpuesto().getNombre(),
                 producto.getFormaVentas().stream().map(FormaVentaDTO::fromEntity).toList()
         );
     }
