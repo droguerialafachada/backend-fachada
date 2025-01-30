@@ -13,11 +13,7 @@ services:
       - "3306:3306"
     networks:
       - facturacion_network
-    deploy:
-      resources:
-        limits:
-          memory: 128M
-          cpus: '0.3'
+
 
   facturacion:
     image: ariazp/back-drogueria
@@ -33,11 +29,6 @@ services:
     restart: always
     networks:
       - facturacion_network
-    deploy:
-      resources:
-        limits:
-          memory: 128M
-          cpus: '0.3'
 
   front-drogueria:
     image: ariazp/ng-droguerias
@@ -50,11 +41,6 @@ services:
       - "80:80"  # Ajusta según el puerto de tu contenedor
     networks:
       - facturacion_network
-    deploy:
-      resources:
-        limits:
-          memory: 128M
-          cpus: '0.3'
 
 volumes:
   mysql_data:  # Solo si usas volumen nombrado
