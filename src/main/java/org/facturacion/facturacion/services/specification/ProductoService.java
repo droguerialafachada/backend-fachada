@@ -50,4 +50,6 @@ public interface ProductoService {
     FormaVenta findFormaVentaByProductoAndNombre(Producto producto, String nombre);
 
     List<FormaVentaDTO> obtenerFormasVenta(String codigo);
+
+    Boolean eliminarFormaVenta(String codigo, String nombreFormaVenta);
 }

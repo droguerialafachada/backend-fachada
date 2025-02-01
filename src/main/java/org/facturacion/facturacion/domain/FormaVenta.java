@@ -31,7 +31,7 @@ public class FormaVenta {
     private Integer cantidad;
 
     @Column(nullable = false)
-    private Boolean activo;
+    private Boolean eliminado;
 
     /**
      * Actualiza los datos de una forma de venta existente.
@@ -41,6 +41,6 @@ public class FormaVenta {
         this.nombre = formaVentaDTO.nuevoNombre().toUpperCase();
         this.precioCompra = formaVentaDTO.precioCompra();
         this.cantidad = formaVentaDTO.cantidad();
-        this.activo = true;
+        this.eliminado = false;
     }
 }

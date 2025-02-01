@@ -171,4 +171,15 @@ public class ProductoController {
     public ResponseEntity<List<FormaVentaDTO>> obtenerFormasVenta(@PathVariable String codigo){
         return ResponseEntity.ok(this.productoService.obtenerFormasVenta(codigo));
     }
+
+    /**
+     * Este método permite eliminar una forma de venta de un producto.
+     * dado el codigo del producto y el nombre de la forma de venta.
+     */
+
+    @DeleteMapping("/eliminar-forma-venta/{codigo}/{nombreFormaVenta}")
+    public ResponseEntity<Boolean> eliminarFormaVenta(@PathVariable String codigo, @PathVariable String nombreFormaVenta){
+        return ResponseEntity.ok(this.productoService.eliminarFormaVenta(codigo, nombreFormaVenta));
+    }
+
 }

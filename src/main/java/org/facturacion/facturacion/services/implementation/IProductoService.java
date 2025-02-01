@@ -239,6 +239,7 @@ public class IProductoService implements ProductoService {
      * @return Tipo de impuesto encontrado.
      */
     private TipoImpuesto validarImpuesto(String nombreImpuesto) {
+        System.out.println("nombreImpuesto = " + nombreImpuesto);
         return tipoImpuestoRepository.findByNombre(nombreImpuesto)
                 .orElseThrow(() -> new ProductoImpuestoException(Constants.ERROR_IMPUESTO_NO_ENCONTRADO));
     }
@@ -311,6 +312,18 @@ public class IProductoService implements ProductoService {
         if (productoRepository.findByCodigo(codigo).isEmpty()) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
         Producto producto = productoRepository.findByCodigo(codigo).get();
         return producto.getFormaVentas().stream().map(FormaVentaDTO::fromEntity).toList();
+    }
+
+    @Override
+    public Boolean eliminarFormaVenta(String codigo, String nombreFormaVenta) {
+       Producto producto = findByCodigo(codigo);
+         FormaVenta formaVenta = producto.getFormaVentas().stream()
+                .filter(fv -> fv.getNombre().equalsIgnoreCase(nombreFormaVenta))
+                .findFirst()
+                .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
+        producto.getFormaVentas().remove(formaVenta);
+        productoRepository.save(producto);
+        return true;
     }
 
 

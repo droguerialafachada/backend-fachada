@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.dto.efactura.CrearEFacturaDTO;
 import org.facturacion.facturacion.dto.efactura.EFacturaDTO;
 import org.facturacion.facturacion.services.specification.FacturaElectronicaService;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,9 +26,10 @@ public class FacturaElectronicaController {
      * Este método se encarga de listar todas las facturas electrónicas registradas en la base de datos.
      * @return Lista de facturas electrónicas registradas.
      */
-    @GetMapping()
-    public ResponseEntity<List<EFacturaDTO>> obtenerFacturaElectronica(){
-        return ResponseEntity.ok(this.facturaElectronicaService.obtenerFacturasElectronica());
+    @GetMapping("/obtener-efacturas")
+    public ResponseEntity<Page<EFacturaDTO>> obtenerFacturaElectronica(@RequestParam(defaultValue = "0") int page,
+                                                                             @RequestParam(defaultValue = "10") int size){
+        return ResponseEntity.ok(this.facturaElectronicaService.obtenerFacturasElectronica(page, size));
     }
     /**
      * Este método se encarga de obtener una factura electrónica por su id.

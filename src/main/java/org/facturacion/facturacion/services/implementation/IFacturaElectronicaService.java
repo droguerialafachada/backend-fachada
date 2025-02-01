@@ -11,6 +11,10 @@ import org.facturacion.facturacion.exceptions.efactura.VentaCanceladaException;
 import org.facturacion.facturacion.repositories.FacturaElectronicaRepository;
 import org.facturacion.facturacion.repositories.VentaRepository;
 import org.facturacion.facturacion.services.specification.FacturaElectronicaService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -26,15 +30,15 @@ public class IFacturaElectronicaService implements FacturaElectronicaService {
         private final VentaRepository ventaRepository;
         /**
          * Este metodo obtiene todas las facturas electronicas
+         *
          * @return List<EFacturaDTO> Lista de facturas electronicas
          */
         @Override
-        public List<EFacturaDTO> obtenerFacturasElectronica() {
-            return facturaElectronicaRepository
-                    .findAll()
-                    .stream()
-                    .map(EFacturaDTO::fromEntity)
-                    .toList();
+        public Page<EFacturaDTO> obtenerFacturasElectronica(int page, int size) {
+            Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "fecha"));
+
+            return facturaElectronicaRepository.findAll(pageable)
+                    .map(EFacturaDTO::fromEntity);
         }
         /**
          * Este metodo obtiene una factura electronica por su id
