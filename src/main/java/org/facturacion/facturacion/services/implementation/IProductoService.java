@@ -335,7 +335,7 @@ public class IProductoService implements ProductoService {
     @Override
     public Boolean guardarFormaVenta(String codigo, CrearFormaVentaDTO crearFormaVentaDTO) {
         Producto producto = findByCodigo(codigo);
-
+        formaVentaValidationService.validate(crearFormaVentaDTO);
         producto.getFormaVentas().stream()
                 .filter(fv -> fv.getNombre().trim().equalsIgnoreCase(crearFormaVentaDTO.nombre().trim()))
                 .findFirst()
