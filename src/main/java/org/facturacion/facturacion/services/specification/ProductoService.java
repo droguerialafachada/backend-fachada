@@ -3,6 +3,7 @@ package org.facturacion.facturacion.services.specification;
 import org.facturacion.facturacion.domain.FormaVenta;
 import org.facturacion.facturacion.domain.Producto;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaDTO;
+import org.facturacion.facturacion.dto.formaVenta.CrearFormaVentaDTO;
 import org.facturacion.facturacion.dto.formaVenta.FormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
@@ -52,4 +53,6 @@ public interface ProductoService {
     List<FormaVentaDTO> obtenerFormasVenta(String codigo);
 
     Boolean eliminarFormaVenta(String codigo, String nombreFormaVenta);
+
+    Boolean guardarFormaVenta(String codigo, CrearFormaVentaDTO crearFormaVentaDTO);
 }

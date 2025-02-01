@@ -311,20 +311,53 @@ public class IProductoService implements ProductoService {
         if(codigo == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
         if (productoRepository.findByCodigo(codigo).isEmpty()) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
         Producto producto = productoRepository.findByCodigo(codigo).get();
-        return producto.getFormaVentas().stream().map(FormaVentaDTO::fromEntity).toList();
+        return producto.getFormaVentas().stream()
+                .filter(fv -> !fv.getEliminado())
+                .map(FormaVentaDTO::fromEntity).toList();
     }
 
     @Override
     public Boolean eliminarFormaVenta(String codigo, String nombreFormaVenta) {
        Producto producto = findByCodigo(codigo);
-         FormaVenta formaVenta = producto.getFormaVentas().stream()
+        if(producto == null) throw new ProductoNoEncontradoException(Constants.ERROR_PRODUCTO_NO_ENCONTRADO + codigo);
+        if(producto.getFormaVentas().isEmpty()) throw new ProductoFormaVentaException("El producto no tiene formas de venta");
+        int cantidadFormasVenta = (int) producto.getFormaVentas().stream().filter(fv -> !fv.getEliminado()).count();
+        if(cantidadFormasVenta == 1) throw new ProductoFormaVentaException("El producto debe tener al menos una forma de venta");
+        FormaVenta formaVenta = producto.getFormaVentas().stream()
                 .filter(fv -> fv.getNombre().equalsIgnoreCase(nombreFormaVenta))
                 .findFirst()
                 .orElseThrow(() -> new ProductoFormaVentaException("La forma de venta no existe"));
-        producto.getFormaVentas().remove(formaVenta);
+        formaVenta.setEliminado(true);
         productoRepository.save(producto);
         return true;
     }
+
+    @Override
+    public Boolean guardarFormaVenta(String codigo, CrearFormaVentaDTO crearFormaVentaDTO) {
+        Producto producto = findByCodigo(codigo);
+
+        producto.getFormaVentas().stream()
+                .filter(fv -> fv.getNombre().trim().equalsIgnoreCase(crearFormaVentaDTO.nombre().trim()))
+                .findFirst()
+                .ifPresentOrElse(
+                        fv -> {
+                            fv.setEliminado(false);
+                            fv.setCantidad(crearFormaVentaDTO.cantidad());
+                            fv.setPrecioCompra(crearFormaVentaDTO.precioCompra());
+                            fv.setPrecioVenta(crearFormaVentaDTO.precioVenta());
+                            formaVentaRepository.save(fv); // Este guardado es válido porque estamos actualizando una entidad existente
+                        },
+                        () -> {
+                            FormaVenta formaVenta = CrearFormaVentaDTO.toEntity(crearFormaVentaDTO, producto);
+                            formaVenta.setProducto(producto);
+                            producto.getFormaVentas().add(formaVenta);
+                            productoRepository.save(producto); // Esto debería ser suficiente para persistir `formaVenta`
+                        }
+                );
+
+        return true;
+    }
+
 
 
 }

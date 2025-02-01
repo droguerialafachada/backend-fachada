@@ -2,6 +2,7 @@ package org.facturacion.facturacion.controllers;
 
 import lombok.AllArgsConstructor;
 import org.facturacion.facturacion.dto.formaVenta.ActualizarFormaVentaRequest;
+import org.facturacion.facturacion.dto.formaVenta.CrearFormaVentaRequest;
 import org.facturacion.facturacion.dto.formaVenta.FormaVentaDTO;
 import org.facturacion.facturacion.dto.producto.ActualizarProductoDTO;
 import org.facturacion.facturacion.dto.producto.CrearProductoDTO;
@@ -180,6 +181,11 @@ public class ProductoController {
     @DeleteMapping("/eliminar-forma-venta/{codigo}/{nombreFormaVenta}")
     public ResponseEntity<Boolean> eliminarFormaVenta(@PathVariable String codigo, @PathVariable String nombreFormaVenta){
         return ResponseEntity.ok(this.productoService.eliminarFormaVenta(codigo, nombreFormaVenta));
+    }
+
+    @PostMapping("/guardar-forma-venta")
+    public ResponseEntity<Boolean> guardarFormaVenta(@RequestBody CrearFormaVentaRequest request){
+        return ResponseEntity.ok(this.productoService.guardarFormaVenta(request.codigo(), request.formaVentaDTO()));
     }
 
 }

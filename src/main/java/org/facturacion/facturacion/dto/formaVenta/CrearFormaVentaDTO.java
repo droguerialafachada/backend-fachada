@@ -7,8 +7,7 @@ public record CrearFormaVentaDTO(
         String nombre,
         Double precioCompra,
         Double precioVenta,
-        Integer cantidad,
-        Boolean activo
+        Integer cantidad
 ) {
 
     public static CrearFormaVentaDTO fromEntity(FormaVenta formaVenta) {
@@ -16,8 +15,7 @@ public record CrearFormaVentaDTO(
                 formaVenta.getNombre(),
                 formaVenta.getPrecioCompra(),
                 formaVenta.getPrecioVenta(),
-                formaVenta.getCantidad(),
-                formaVenta.getActivo()
+                formaVenta.getCantidad()
         );
     }
 
@@ -27,7 +25,7 @@ public record CrearFormaVentaDTO(
         formaVenta.setPrecioCompra(formaVentaDTO.precioCompra());
         formaVenta.setPrecioVenta(formaVentaDTO.precioVenta());
         formaVenta.setCantidad(formaVentaDTO.cantidad());
-        formaVenta.setActivo(formaVentaDTO.activo());
+        formaVenta.setEliminado(false);
         formaVenta.setProducto(producto);
         return formaVenta;
     }

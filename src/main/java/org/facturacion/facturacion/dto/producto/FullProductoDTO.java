@@ -20,7 +20,9 @@ public record FullProductoDTO(
                 producto.getNombre(),
                 producto.getFechaCreacion(),
                 producto.getImpuesto().getNombre(),
-                producto.getFormaVentas().stream().map(FormaVentaDTO::fromEntity).toList()
+                producto.getFormaVentas().stream()
+                        .filter(formaVenta -> !formaVenta.getEliminado())
+                        .map(FormaVentaDTO::fromEntity).toList()
         );
     }
 }
