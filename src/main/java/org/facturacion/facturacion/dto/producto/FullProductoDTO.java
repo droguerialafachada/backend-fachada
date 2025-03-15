@@ -12,6 +12,7 @@ public record FullProductoDTO(
         Date fechaCreacion,
         Date fechaVencimiento,
         String impuesto,
+        String lote,
         List<FormaVentaDTO> formaVentas
 ) {
 
@@ -22,6 +23,7 @@ public record FullProductoDTO(
                 producto.getFechaCreacion(),
                 producto.getFechaVencimiento(),
                 producto.getImpuesto().getNombre(),
+                producto.getLote(),
                 producto.getFormaVentas().stream()
                         .filter(formaVenta -> !formaVenta.getEliminado())
                         .map(FormaVentaDTO::fromEntity).toList()

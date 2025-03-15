@@ -6,6 +6,7 @@ public record ActualizarProductoDTO(
         String codigo,
         String nombre,
         String impuesto,
-        Date fechaVencimiento
+        Date fechaVencimiento,
+        String lote
 ) {
 }

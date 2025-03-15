@@ -123,6 +123,8 @@ public class IProductoService implements ProductoService {
         TipoImpuesto impuesto = validarImpuesto(productoDTO.impuesto());
         producto.actualizar(productoDTO);
         producto.setImpuesto(impuesto);
+        producto.setLote(productoDTO.lote());
+        producto.setFechaVencimiento(productoDTO.fechaVencimiento());
         IProductoService.setHayCambiosProducto(true);
         return ProductoDTO.fromEntity(productoRepository.save(producto));
     }
