@@ -32,6 +32,9 @@ public class Producto {
     @Column(nullable = false)
     private boolean eliminado;
 
+    @Column(nullable = false)
+    private Date fechaVencimiento;
+
     @ManyToOne
     @JoinColumn(name = "tipo_impuesto_id")
     private TipoImpuesto impuesto;

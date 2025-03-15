@@ -7,7 +7,8 @@ import java.util.Date;
 public record ProductoDTO(
         String codigo,
         String nombre,
-        Date fechaCreacion
+        Date fechaCreacion,
+        Date fechaVencimiento
 ) {
 
     public static ProductoDTO fromEntity(Producto producto) {
@@ -15,7 +16,8 @@ public record ProductoDTO(
         return new ProductoDTO(
                 producto.getCodigo(),
                 producto.getNombre(),
-                producto.getFechaCreacion()
+                producto.getFechaCreacion(),
+                producto.getFechaVencimiento()
         );
     }
 }
