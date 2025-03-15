@@ -35,6 +35,9 @@ public class Producto {
     @Column(nullable = false)
     private Date fechaVencimiento;
 
+    @Column(nullable = false)
+    private String lote;
+
     @ManyToOne
     @JoinColumn(name = "tipo_impuesto_id")
     private TipoImpuesto impuesto;
